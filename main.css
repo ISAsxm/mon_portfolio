@@ -213,6 +213,21 @@ header{
 /*************************************/
         /* style section skills*/
 /*************************************/
+
+
+/* pour placer les buttons dans le flux */
+#about-me-button{
+    display: flex;
+    justify-content: center;   
+}
+
+/* cf style general pour les autres styles des buttons */
+#about-me-button a{
+    margin: 10px;
+}
+/*************************************/
+        /* style section skills*/
+/*************************************/
 #skills{
     background-color: rgba(255, 170, 128, 0.04);
 
