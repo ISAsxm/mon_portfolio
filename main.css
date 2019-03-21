@@ -1,0 +1,378 @@
+    /*************************************/
+            /* style mobileFirst */
+    /*************************************/
+/*************************************/
+        /* style general */
+/*************************************/
+/* mise en place de la grille */
+main{
+    display: grid;
+    grid-template-columns: 1 auto;
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: "header" "about"
+    "skills" "contact"
+    "footer";
+}
+header{
+    grid-area: header;
+}
+#about{
+    grid-area: about;
+}
+#skills{
+    grid-area: skills;
+}
+#contact{
+    grid-area: contact;
+}
+footer{
+    grid-area: footer;
+}
+/* pour oter les styles par defaut des listes et des liens */
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li,
+a{
+    list-style: none;
+    text-decoration: none;
+    display: block;
+    color: #1c1c1c;
+}
+
+/* style general des sections et div */
+header,
+section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* pour pousser les elements a droite */
+.push{
+    margin-left: auto;
+}
+
+/* style des icones */
+
+i{
+    border: solid rgba(239, 13, 51, 0.08);
+    color: #ef0d33;
+    border-radius: 50%;
+    transition: background-color 2s ease-out, color 2s ease-out;
+}
+/* style general des bouttons */
+
+.button{
+    margin: auto;
+    padding:10px;
+    background-color: #ffffff;
+    color: #ef0d33;
+    border: solid #ef0d33;
+    border-radius: 10px;
+    width: 150px;
+}
+.button:hover{
+    background-color: #ef0d33;
+    border: solid #f4f4f4;
+    color: #ffffff;
+}
+/*************************************/
+        /* style du header */
+/*************************************/
+
+/* style principal du header */
+header{
+    background: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255,255, 255, 0.1)), url(images/background_portfolio_black.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #ffffff;
+} 
+
+/* style section menu dans header */
+
+/* pour positionner le menu et le logo avant le home*/
+#menu{
+    flex-direction: row;
+    align-items: center;
+    order: -1;
+    width: 100%;
+    text-align: left;
+}
+.sticky{
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    background-color: rgba(255,255,255,0.8);
+    color: #1c1c1c;
+    z-index: 999;
+}
+.sticky #burger-button,
+.sticky #menu-nav a{
+    transition: color 1s ease-in-out;
+    color: #1c1c1c;
+}
+/* pour aerer le menu */
+#menu span,
+#container-burger{
+    padding: 10px 20px 10px 20px;
+}
+
+/* pour effacer la nav menu */
+#menu-nav{
+    display: none;
+}
+
+/* style du menu burger */
+
+/* style de l'icone */
+#burger-button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    padding:0px;
+    color: #ffffff;
+}
+#burger-button:hover{
+    color: #ef0d33;
+    transform: scale(1.5);
+    transition: transform .2s ease-out;
+}
+/* style de la side-bar */
+#burger-sidebar{
+    position: fixed;
+    z-index: 20;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #1c1c1c;
+    /* pour la positioner sur le cote */
+    transform: translateX(-100%);
+    transition: transform .2s ease-out;
+    
+}
+
+/* style du contenu de la sidebar */
+
+/* pour faire apparaitre le contenu */
+#burger-sidebar #menu-nav{
+    display: inherit;
+}
+
+/* pour aligner la liste */
+#burger-sidebar #menu-nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+#burger-sidebar #menu-nav a{
+    color: #ffffff;
+    padding: 10px;
+}
+#burger-sidebar #menu-nav a:hover{
+    color: #ef0d33;
+}
+/* pour faire apparaitre la sidebar sur la page */
+.burger-activated #burger-sidebar{
+    transform: translateX(0);
+}    
+
+/* style section home dans header */
+
+/* pour centrer le container du titre et des logo */
+#home{
+    margin: auto;
+}
+
+/* pour centrer le contenu */
+#home h1, 
+#home h2, 
+#home div{
+    margin: auto;
+}
+/* pour aerer */
+#home div{
+    padding: 20px 0px 20px 0px;
+}
+#home i{
+    padding: 6px;
+    color: #ffffff;
+    border: none; 
+}
+#home a:hover{
+   background: none;
+}
+
+/*************************************/
+        /* style section skills*/
+/*************************************/
+#skills{
+    background-color: rgba(255, 170, 128, 0.04);
+
+}
+
+/*pour placer les div containers dans les containers */
+.container.skills{
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    background-color:  rgba(255, 170, 128, 0.05);
+}
+
+/* style des div containers */
+.container.it{
+    flex-direction: row;
+    justify-content: center;
+}
+.container.it i{
+    margin: 10px;
+    padding: .9rem;
+    color : #ef0d33;
+    background : rgba(239, 13, 51, 0.09);
+}
+.container.case{
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+}
+.container.case:hover i{
+    color : #ef0d33;
+    background : rgba(239, 13, 51, 0.09);
+}
+/* pour centrer dans le container */
+.container.case i, 
+.container.case h2,
+.container.case p{
+    padding: 20px;
+    margin: auto;
+}
+.container.case i{
+    padding: 20px;
+    margin: 10px;
+}
+
+/*************************************/
+    /* style de la section contact */       
+/*************************************/
+
+/* cf style general pour les autres styles du button */
+
+/*************************************/
+        /* style du footer */       
+/*************************************/
+footer{
+    background-color: rgb(0, 0, 0);
+    display:flex;
+}
+footer small{
+    color: #ef0d33;
+    margin: auto;
+    padding:20px;
+}
+    /***************************************************/
+            /* fin du style mobile First */
+    /***************************************************/
+
+/* ******************************************************************** */
+
+    /***************************************************/
+            /* style avec mediaquery a partir de 768px */
+    /***************************************************/
+@media screen and (min-width: 768px){
+
+    .main{
+        grid-template-columns: 30vw 70vw;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:"header header" 
+                            "about skills" 
+                            "contact skills"
+                            "footer footer";
+    }
+}
+
+
+
+    
+
+    /***************************************************/
+                    /* fin du style 768px */
+    /***************************************************/
+
+/* ******************************************************************** */
+
+    /***************************************************/
+            /* style avec mediaquery a partir de 1050px */
+    /***************************************************/
+
+@media screen and (min-width: 1050px){
+        /*************************************/
+                /* style general */
+        /*************************************/
+        
+        /* cf style mobileFirst */
+
+.main{
+    grid-template-columns: 40vw 60vw;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:"header header" 
+                        "about skills" 
+                        "contact skills"
+                        "footer footer";
+}
+        
+        /*************************************/
+                /* style du menu dans header */
+        /*************************************/
+        
+    /* pour effacer le menu burger */
+#burger-button, 
+#burger-sidebar, 
+.burger-activated{
+    display: none;
+}
+        
+    /* pour replacer la nav menu */
+#menu-nav{
+    display: inherit;
+}
+        
+    /* pour positionner la nav menu */
+header ul{
+    display: flex; 
+}
+        
+#menu a{
+    color: #ffffff;
+    padding: 10px;
+}
+
+
+/*************************************/
+        /* style section skills*/
+/*************************************/
+
+/*pour placer les div conteners dans les conteners */
+.container.skills{
+    flex-direction: row;
+}
+
+
+/*************************************/
+    /* style de la section contact */       
+/*************************************/
+
+/* cf style general pour les autres styles du button */
+.button-form{
+    width: 150px;
+}
+
+
+
+
+}  
