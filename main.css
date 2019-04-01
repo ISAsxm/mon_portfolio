@@ -5,15 +5,15 @@
         /* style general */
 /*************************************/
 /* mise en place de la grille */
-main{
+/* main{
     display: grid;
     grid-template-columns: 1 auto;
     grid-template-rows: repeat(5,auto);
     grid-template-areas: "header" "about"
     "skills" "contact"
     "footer";
-}
-header{
+} */
+/* header{
     grid-area: header;
 }
 #about{
@@ -27,7 +27,7 @@ header{
 }
 footer{
     grid-area: footer;
-}
+} */
 /* pour oter les styles par defaut des listes et des liens */
 ul{
     padding: 0;
@@ -43,45 +43,92 @@ a{
 }
 
 /* style general des sections et div */
-header,
-section{
+.container{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.container{
+.row{
     display: flex;
-    flex-direction: column;
 }
-
 /* pour pousser les elements a droite */
 .push{
     margin-left: auto;
 }
 
-/* style des icones */
-
-i{
-    border: solid rgba(239, 13, 51, 0.08);
-    color: #ef0d33;
-    border-radius: 50%;
-    transition: background-color 2s ease-out, color 2s ease-out;
-}
 /* style general des bouttons */
-
 .button{
     margin: auto;
     padding:10px;
     background-color: #ffffff;
-    color: #ef0d33;
-    border: solid #ef0d33;
+    color:rgb(255, 109, 97);
+    border: solid rgb(255, 109, 97);
     border-radius: 10px;
     width: 150px;
 }
+/* pour animer les buttons */
+@keyframes shake {
+    0% { transform: translate(1px, 1px); }
+    
+    50% { transform: translate(-1px, 2px); }
+    
+    100% { transform: translate(1px, -2px); }
+}
+
 .button:hover{
-    background-color: #ef0d33;
+    background-image: linear-gradient(to right bottom, #ffaa81, #ff916f, #ff7563, #ff545d, #ff1e5c);
     border: solid #f4f4f4;
     color: #ffffff;
+    animation: shake 0.5s ;
+}
+
+
+
+/* police generale */
+body{
+    /* font-family: 'Atma', cursive; */
+    font-size: 1.2rem;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    
+}
+h1:not(.white){
+    background: linear-gradient(to right bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* h1:not(.white)::before{
+    content:"";
+    position: absolute;
+    background-color: rgba(255, 170, 128, 0.1);
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+} */
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+h3{
+    font-size: 1rem;
+    font-weight: 900;
+}
+h4{
+    font-size: 1rem;
+    font-weight: 400;
+}
+p{
+    /* font-family: 'Buda', cursive; */
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(142, 142, 142);
+    text-align: justify;
 }
 /*************************************/
         /* style du header */
@@ -89,10 +136,11 @@ i{
 
 /* style principal du header */
 header{
-    background: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255,255, 255, 0.1)), url(images/background_portfolio_black.jpg);
     background-size: cover;
     height: 100vh;
     color: #ffffff;
+    /* background-image: linear-gradient(to right bottom, #ffaa81, #ff916f, #ff7563, #ff545d, #ff1e5c); */
+    background: linear-gradient(to right bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33);
 } 
 
 /* style section menu dans header */
@@ -105,17 +153,25 @@ header{
     width: 100%;
     text-align: left;
 }
+#menu img{
+    padding: 10px;
+    padding-right: 0px;
+}
 .sticky{
     transition: all 0.5s ease-in-out;
     position: fixed;
-    background-color: rgba(255,255,255,0.8);
-    color: #1c1c1c;
+    background: linear-gradient(to right bottom, rgba(255, 170, 129,0.3), rgba(255, 145, 111, 0.3),rgba(255, 117, 99, 0.3), rgba(255, 84, 93, 0.3), rgba(255, 30, 92, 0.2));
+    color: rgb(92, 92, 92);
     z-index: 999;
 }
 .sticky #burger-button,
 .sticky #menu-nav a{
     transition: color 1s ease-in-out;
-    color: #1c1c1c;
+    color: rgb(92, 92, 92);
+}
+.sticky #menu-nav a:hover{
+    transform: scale(1.1);
+    border-bottom: 0.5px solid rgb(92, 92, 92);
 }
 /* pour aerer le menu */
 #menu span,
@@ -130,7 +186,7 @@ header{
 
 /* style du menu burger */
 
-/* style de l'icone */
+/* style de l'icone burger*/
 #burger-button{
     cursor: pointer;
     background: none;
@@ -141,7 +197,6 @@ header{
     color: #ffffff;
 }
 #burger-button:hover{
-    color: #ef0d33;
     transform: scale(1.5);
     transition: transform .2s ease-out;
 }
@@ -152,11 +207,11 @@ header{
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: #1c1c1c;
-    /* pour la positioner sur le cote */
+    text-align: left;
+    /* background-color: rgba(255, 170, 128, 0.9); */
+    background-image: linear-gradient(to right bottom, rgba(255, 170, 129,0.8), rgba(255, 145, 111, 0.8),rgba(255, 117, 99, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 30, 92,0.8));
     transform: translateX(-100%);
     transition: transform .2s ease-out;
-    
 }
 
 /* style du contenu de la sidebar */
@@ -175,9 +230,11 @@ header{
 #burger-sidebar #menu-nav a{
     color: #ffffff;
     padding: 10px;
+    background-color: #ff545d;
+    border-bottom: 1px solid #ff1e5c;
 }
 #burger-sidebar #menu-nav a:hover{
-    color: #ef0d33;
+    color:#ff1e5c;
 }
 /* pour faire apparaitre la sidebar sur la page */
 .burger-activated #burger-sidebar{
@@ -191,74 +248,109 @@ header{
     margin: auto;
 }
 
-/* pour centrer le contenu */
-#home h1, 
-#home h2, 
-#home div{
-    margin: auto;
+/* pour aerer le titre */
+#home h1{
+    padding: 10px;
 }
-/* pour aerer */
-#home div{
-    padding: 20px 0px 20px 0px;
+
+.big-bubble{
+    position: absolute;
+    background-color: rgba(255, 170, 128, 0.3);
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
 }
+/* .small-bubble{
+    position: absolute;
+    background-color: rgba(255, 170, 128, 0.8);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+} */
+
 #home i{
-    padding: 6px;
+    padding: 5px;
     color: #ffffff;
-    border: none; 
+    border: none;
+    background-color: rgba(255, 170, 128, 0.6);
+}
+#home i:hover{
+    background-color: rgba(255, 170, 128, 0.3); 
 }
 #home a:hover{
    background: none;
 }
 
 /*************************************/
+        /* style section about*/
+/*************************************/
+#about{
+    background: linear-gradient(to right top, rgba(255, 170, 129, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 145, 111, 0.8));
+}
+
+
+/*************************************/
         /* style section skills*/
 /*************************************/
-
-
+#skills{
+    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 30, 92,0.8));
+}
 /* pour placer les buttons dans le flux */
-#about-me-button{
+#skills-button{
     display: flex;
     justify-content: center;   
 }
 
 /* cf style general pour les autres styles des buttons */
-#about-me-button a{
+#skills-button a{
     margin: 10px;
 }
-/*************************************/
-        /* style section skills*/
-/*************************************/
-#skills{
-    background-color: rgba(255, 170, 128, 0.04);
-
-}
-
 /*pour placer les div containers dans les containers */
 .container.skills{
     justify-content: space-around;
     flex-wrap: nowrap;
-    background-color:  rgba(255, 170, 128, 0.05);
+}
+.logo{
+    text-align: center;
 }
 
-/* style des div containers */
-.container.it{
-    flex-direction: row;
-    justify-content: center;
+.logo img{
+    margin: auto;
+    max-width: 50px;
+    max-height: 50px;
 }
-.container.it i{
-    margin: 10px;
-    padding: .9rem;
-    color : #ef0d33;
-    background : rgba(239, 13, 51, 0.09);
+
+
+
+
+/*************************************/
+    /* style de la section projects */       
+/*************************************/
+#projects{
+    
+    background: linear-gradient(to right top, rgba(255, 170, 129, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 30, 92,0.8));
 }
+
+/* #projects{
+    background: linear-gradient(to right top, rgba(255, 170, 129, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 30, 92,0.8));
+} */
 .container.case{
     padding: 20px;
     margin: 20px;
     background-color: #ffffff;
 }
+/* style des icones */
+i{
+    border: solid rgba(255, 145, 111, 0.6);
+    color: rgb(255, 145, 111);
+    border-radius: 50%;
+    transition: background-color 2s ease-out, color 2s ease-out;
+}
+
 .container.case:hover i{
-    color : #ef0d33;
-    background : rgba(239, 13, 51, 0.09);
+    border: solid rgba(255, 30, 92, 0.2);
+    color : #ff1e5c;
+    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.5), rgba(255, 84, 93, 0.5), rgba(255, 145, 111, 0.5)); 
 }
 /* pour centrer dans le container */
 .container.case i, 
@@ -271,22 +363,26 @@ header{
     padding: 20px;
     margin: 10px;
 }
-
 /*************************************/
     /* style de la section contact */       
 /*************************************/
 
-/* cf style general pour les autres styles du button */
-
+#contact{
+    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 145, 111, 0.8)); 
+}
+#contact input{
+    box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.3);
+}
 /*************************************/
         /* style du footer */       
 /*************************************/
 footer{
-    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to right bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33);
+    /* background-color: rgba(255, 170, 128, 0.09); */
     display:flex;
 }
 footer small{
-    color: #ef0d33;
+    color: #ffffff;
     margin: auto;
     padding:20px;
 }
@@ -299,7 +395,7 @@ footer small{
     /***************************************************/
             /* style avec mediaquery a partir de 768px */
     /***************************************************/
-@media screen and (min-width: 768px){
+/* @media screen and (min-width: 768px){
 
     .main{
         grid-template-columns: 30vw 70vw;
@@ -309,7 +405,7 @@ footer small{
                             "contact skills"
                             "footer footer";
     }
-}
+} */
 
 
 
@@ -326,20 +422,15 @@ footer small{
     /***************************************************/
 
 @media screen and (min-width: 1050px){
-        /*************************************/
-                /* style general */
-        /*************************************/
         
-        /* cf style mobileFirst */
-
-.main{
+/* .main{
     grid-template-columns: 40vw 60vw;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:"header header" 
                         "about skills" 
                         "contact skills"
                         "footer footer";
-}
+} */
         
         /*************************************/
                 /* style du menu dans header */
@@ -366,27 +457,28 @@ header ul{
     color: #ffffff;
     padding: 10px;
 }
+#menu-nav a:hover{
+    transform: scale(1.1);
+    border-bottom: 0.5px solid #ffffff;
+}
+/*************************************/
+        /* style section about*/
+/*************************************/
 
 
 /*************************************/
         /* style section skills*/
 /*************************************/
-
-/*pour placer les div conteners dans les conteners */
-.container.skills{
+.container.logo{
     flex-direction: row;
 }
-
+/*************************************/
+        /* style section skills*/
+/*************************************/
 
 /*************************************/
     /* style de la section contact */       
 /*************************************/
-
-/* cf style general pour les autres styles du button */
-.button-form{
-    width: 150px;
-}
-
 
 
 

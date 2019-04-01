@@ -15,12 +15,11 @@
 
 <body>
     <main>
-        <header>
+        <header class="container">
             <!----------- start section menu avec barre de navigation et logo -------->
-            <section id="menu">
-                <img src="images/logo_hi.png" id="logo" alt="logo" width="50px" height="50px">
-                <span><a href="#profil">HUGUES Isabelle</a>
-                </span>
+            <section id="menu" class="container">
+                <img src="images/logo_hi.png" id="logo" alt="logo" width="50px" height="50px"/>
+                <span>Isabelle HUGUES</span>
                 <div id="container-burger" class="container push">
                     <div id="burger-content" class="container">
                         <nav id="menu-nav">
@@ -28,6 +27,7 @@
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#about">About Me</a></li>
                                 <li><a href="#skills">Compétences</a></li>
+                                <li><a href="#projects">Réalisations</a></li>
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
                         </nav>
@@ -37,11 +37,12 @@
                     </div>
                 </div>
             </section>
+            
             <!------------- end section menu avec barre de navigation et logo ------->
             <!------------- start section home avec titre et reseaux sociaux ---------->
-            <section id="home">
-                <h1>hello</h1>
-                <h2>i am a web developer</h2>
+            <section id="home" class="container">
+                <div class="big-bubble"></div>
+                <h1 class="white"> développeuse web &amp mobile</h1>
                 <div>
                     <i class="fas fa-code"></i>
                     <i class="fab fa-html5"></i>
@@ -52,111 +53,202 @@
                     <i class="fas fa-code"></i>
                 </div>
             </section>
+            <!-- <span><i class="fas fa-angle-double-down"></i></span> -->
             <!------------- end section home avec titre et reseaux sociaux ------------>
             <!--///////////// end header//////////////-->
         </header>
         <!--///////////// start section about//////////////-->
-        <section id="about">
+        <section id="about" class="container">
             <h1>about me.</h1>
-            <h3>en quelques mots...</h3>
-            <p>I am The Friendly Island Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </p>
-            <p>I am The Friendly Island Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </p>
+            <div class="container case">
+                <p>Développeuse Web junior dynamique et réactive, j'aime les défis et 
+                    prend plaisir à trouver la solution Web la mieux adaptée à chaque projet.
+                    Je m'épanoui à toujours repousser mes limites et possède une 
+                    inssassiable soif de connaissances.<br/>
+                    Les besoins des clients sont au centre de mes préoccupations et j'ai à coeur 
+                    de répondre au mieux à leurs attentes.<br/>
+                    Je sais faire preuve d'autonomie tout en appréçiant le travail en équipe
+                    et les relations humaines.
+                </p>
+                <!-- <p>Après m'être investie plus de 13 années en qualité de vendeuse, j'ai entrepris
+                une reconversion professionnelle mûrement réfléchie dans le domaine du numérique
+                , qui me passionne depuis plusieurs années.<br/>
+                J'ai intégré une formation de développeur web et mobile auprès de It-Akademy à
+                St-Genis-Pouilly, et entamé ainsi une nouvelle carrière.
+                </p> -->
+            </div>
             <!--///////////// end section about//////////////-->
         </section>
         <!--///////////// start section skills//////////////-->
-        <section id="skills">
-            <h1>Compétences Web.</h1>
-            <!------------- start section it skills avec listing des langages ---------->
-            <div class="container it">
-                <i class="fas fa-laptop-code"></i>
-                <i class="fas fa-desktop"></i>
-                <i class="fas fa-terminal"></i>
-                <i class="fas fa-code"></i>
-                <i class="fas fa-code"></i>
-
-            </div>
+        <section id="skills" class="container">
+            <h1>compétences.</h1>
             <div class="container skills">
-                    <h2>Compétences Web.</h2>
-                <div class="container case">
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.
-                    </p>
-                    <div id="about-me-button">
-                            <a href="#" class="button">consulter mon CV</a>
-                            <a href="#" class="button">me contacter</a>
+                    <!-- <h2>Compétences Web.</h2> -->
+                    <div class="container case">
+                            <p>
+                                Voici un apperçu de mes compétences en langages informatique et autres technologies
+                                internet.<br/>
+                                N'hésitez pas à consulter mon CV pour découvrir plus en détail mon parcours professionnel
+                                et les diverses compétences que j'ai développées au cours de mes formations et de mes emplois.
+                            </p>
+                            <div id="skills-button">
+                                    <a href="#" class="button">consulter mon CV</a>
+                                    <a href="#" class="button">me contacter</a>
+                            </div>
                     </div>
-                </div>
+                    <div class="container">
+                        <h2>competences front-end</h2>
+                            <div class="logo container">
+                                <div class="container case">
+                                    <img src="images/logo_it_languages/logo_html5.png" alt="logo HTML5" />
+                                    <h3>HTML5</h3>
+                                    <p>Elaboration de documents HTML dans le respect des normes du W3C.</p>
+                                </div>
+                                <div class="container case">
+                                    <img src="images/logo_it_languages/logo_css3.png" alt="logo CSS3" />
+                                    <h3>CSS3</h3>
+                                    <p>Mise en forme de documents HTML selon un template et création libre.</p>
+                                </div>
+                                <div class="container case">
+                                    <img src="images/logo_it_languages/logo_js.png" alt="logo JavaScript"> 
+                                    <h3>JavaScript</h3>
+                                    <p>Réalisations de scripts pour le dynamisme et l'intéractivité de pages web</p>
+                                </div>
+                            </div>
+                            <div class="logo container">
+                                <div class="container case">
+                                    <img src="images/logo_it_languages/logo_jQuery.png" alt="logo JQuery">
+                                    <h3>jQuery</h3>
+                                    <p>Utilisation de jQuery lors d'un projet de blog pour rendre dynamique l'interface client
+                                        et communiquer avec le serveur.
+                                    </p>
+                                </div>
+                                <div class="container case">
+                                    <img src="images/logo_it_languages/logo_bootstrap.png" alt="logo bootstrap">
+                                    <h3>Bootstrap</h3>
+                                    <p>Utilisation de Bootstrap lors d'un projet de blog</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="container">
+                            <h2>competences back-end</h2>
+                            <div class="logo container">
+                                <div class="container case">
+                                    <img src="images/logo_it_languages/logo_ajax.png" alt="logo AJAX">
+                                    <h3>AJAX</h3>
+                                    <p>Envoi de requêtes au serveur via les protocoles POST et GET</p>
+                                </div>
+                                
+                                <div class="container case">
+                                    <img src="images/logo_it_languages/logo_php.png" alt="logo PHP">
+                                    <h3>PHP</h3>
+                                    <p>Elaboration de scripts afin de communiquer avec une base de données, réalisation de CRUD</p>
+                                </div>
+                                <div class="container case">
+                                    <img src="images/logo_it_languages/logo_MySQL.png" alt="logo MySql">
+                                    <h3>MySql</h3>
+                                    <p>Requêtes SQL pour insérer, lire, modifier et effacer des données dans une base de données</p>
+                                </div>
+                                <div class="container case">
+                                    <img src="images/logo_it_languages/logo_python.png" alt="logo Python">
+                                    <h3>Python</h3>
+                                    <p>Réalisations d'un script permettant de calculer le pourcentage de réussite d'un élève à un examen</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <h2>autres compétences web</h2>
+                                <div class="logo container">
+                                    <div class="container case">
+                                        <img src="images/logo_it_languages/logo_WordPress.png" alt="logo WordPress">
+                                        <h3>WordPress</h3>
+                                        <p></p>
+                                    </div>
+                                    <div class="container case">
+                                        <img src="images/logo_it_languages/logo_rwd.png" alt="logo Responsive Design">
+                                        <h3>RWD</h3>
+                                        <p>Réalisations en MobileFirst ou DesktopFirst, utilisation des mediaQuerries et des grid layout</p>
+                                    </div>
+                                    <div class="container case">
+                                        <img src="images/logo_it_languages/logo_gimp.png" alt="logo Gimp">
+                                        <h3>Gimp</h3>
+                                        <p>Suivi du tuto sur openclassroom afin d'améliorer mes performances</p>
+                                    </div>
+                                    <div class="container case">
+                                            <img src="images/logo_it_languages/Virtualbox_logo.png" alt="logo VScode">
+                                            <h3>Virtualisation</h3>
+                                            <p>Machine virtuelle vagrant</p>
+                                        </div>
+                                    <div class="container case">
+                                        <img src="images/logo_it_languages/logo_vscode.png" alt="logo VScode">
+                                        <h3>VisualStudiocode</h3>
+                                        <p>Mon environnement de travail</p>
+                                    </div>
+                                </div>
+                        </div>
             </div>
-            <!------------- end section it skills avec listing des langages ------->
-            <!------------- start section projet avec description ---------->
-            <div class="container skills">
-                <h2>Réalisations.</h2>
+            <!--///////////// end section skills//////////////-->
+            </section>
+            <!--///////////// start section projet //////////////-->
+            <section id="projects" class="container skills">
+                <h1>Réalisations.</h1>
                 <div class="container case">
                     <span><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i></span>
-                    <h2>projet princess</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.
+                    <h2><a href="#" class="button">projet site vitrine</a></h2>
+                    <p>Projet d'intégration web qui consistait à reproduire un site internet vitrine, thème libre, à partir d'un template.
+                        Pour mener à bien ce projet, j'ai tout d'abord réalisé un wireframe de la maquette afin de shématiser ma structure HTML.
+                        Une fois la maquette analysée et les différents éléments repérés, j'ai réalisé mon fichier HTML pour ensuite coder le fichier CSS 
+                        afin de mettre en forme la structure et les animations en respectant les exigences du template.
+                        La mise en page terminée, j'ai intégré des scripts en JavaScript pour rendre les animations dynanmiques.
+                        <br/><br/>
+                        Pour réaliser ce projet, j'ai exploité mes compétences Front-end en HTML, CSS et JS 
+                        mais également ma capacité d'analyse lors de la création du wireframe et 
+                        ma sensibilité artistique lors du choix des couleurs, des photos et des polices.
                     </p>
                 </div>
                 <div class="container case">
-                    <span><i class="fas fa-network-wired"></i><i class="fab fa-php"></i><i class="fas fa-database"></i></span>
-                    <h2>projet blog</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.
+                        
+                    
+                        <span><i class="fas fa-network-wired"></i><i class="fab fa-php"></i><i class="fas fa-database"></i></span>
+                    <p>Projet orienté Back-end, dans lequel j'ai utilisé des requêtes AJAX, du JavaScript et JQuery côté client,
+                    PHP et MySql côté serveur en me servant de JSON pour communiquer entre les deux.
+                    Pour la réalisation de ce blog, j'ai tout d'abord orienté le projet vers la partie back-end, 
+                    en codant les scripts nécéssaires pour l'échange de données. Puis j'ai commencer à développer les fichiers 
+                    qui me permettrait de faire un C. R. U. D. Une fois les scripts opérationnels, j'ai porté mon intérêt
+                    côté Front-end et ai réalisé la page d'accueil de ce blog en utilisant Bootstrap pour la structure HTML/CSS 
+                    et AJAX/JQuerry pour l'affichage des données et le dynamisme des animations.
+                    <br/><br/>
+                    Pour développer ce projet, j'ai utilisé mes compétences Back-end, notamment en PHP/MySql 
+                    pour la gestion de la base de donnée et renvoyer les réponses côté client.
+                    J'ai aussi exploiter mes compétences en Front-end en intégrant des effets lors de l'affichage 
+                    des réponses du serveur et en customisant la page d'accueil réalisée avec Bootstrap.
                     </p>
+                    <h2><a href="#" class="button">projet blog</a></h2>
                 </div>
 
             </div>
 
-            <!--///////////// end section skills//////////////-->
+            <!--///////////// end section projects//////////////-->
         </section>
         <!--///////////// start section contact//////////////-->
-        <section id="contact">
-            <input type="submit" value="contact" class="button button-form" />
-            <i class="fab fa-github"></i>
+        <section id="contact" class="container">
+                <!-- <h1>contact</h1> -->
+            <!-- <div class="container case"> -->
+            <input type="submit" value="Me contacter" class="button button-form" />
+        <!-- </div> -->
+        <div class="container">
+                <span><i class="fab fa-github"></i><i class="fab fa-facebook"></i>
+                </span>
+            </div>
             <!--///////////// end section contact//////////////-->
         </section>
-
-        <footer>
+    </main>
+        <footer class="container">
             <small>Copy Right 2019 &copy; By Isabelle Hugues All Rights Reserved</small>
         </footer>
 
-    </main>
+    
 
     <script src="main.js"></script>
 </body>
