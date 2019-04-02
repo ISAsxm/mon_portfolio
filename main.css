@@ -256,9 +256,10 @@ header{
 .big-bubble{
     position: absolute;
     background-color: rgba(255, 170, 128, 0.3);
-    border-radius: 50%;
+    border-radius: 4rem;
     width: 8rem;
     height: 8rem;
+    box-shadow: 2px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
 }
 /* .small-bubble{
     position: absolute;
@@ -273,6 +274,7 @@ header{
     color: #ffffff;
     border: none;
     background-color: rgba(255, 170, 128, 0.6);
+    box-shadow: 1px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
 }
 #home i:hover{
     background-color: rgba(255, 170, 128, 0.3); 
@@ -308,21 +310,49 @@ header{
 /*pour placer les div containers dans les containers */
 .container.skills{
     justify-content: space-around;
-    flex-wrap: nowrap;
 }
 .logo{
     text-align: center;
-}
-
-.logo img{
     margin: auto;
-    max-width: 50px;
-    max-height: 50px;
+    background: none;
 }
 
-
-
-
+.it-skills{
+   display: flex;
+   flex-wrap: wrap;
+}
+.it-logo{
+    position: relative;
+    width: 15%;
+}
+.logo img{
+    width: 100%;
+    height: auto;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:#f4f4f4;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: .3s ease;
+  }
+  .it-logo:hover .overlay {
+    transform: scale(1);
+  }
+  .text {
+  color: rgb(142, 142, 142);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 /*************************************/
     /* style de la section projects */       
 /*************************************/
@@ -471,6 +501,11 @@ header ul{
 /*************************************/
 .container.logo{
     flex-direction: row;
+}
+
+.it-skills{
+    display: flex;
+    flex-wrap: wrap;
 }
 /*************************************/
         /* style section skills*/
