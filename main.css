@@ -86,7 +86,7 @@ a{
 
 /* police generale */
 body{
-    /* font-family: 'Atma', cursive; */
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
 }
 
@@ -98,7 +98,9 @@ h1{
 }
 h1:not(.white){
     background: linear-gradient(to right bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33);
+    background: -webkit-linear-gradient(to right bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 /* h1:not(.white)::before{
@@ -113,6 +115,7 @@ h1:not(.white){
 h2{
     font-size: 1.5rem;
     font-weight: 900;
+    color:  #ff545d
 }
 
 h3{
@@ -125,6 +128,7 @@ h4{
 }
 p{
     /* font-family: 'Buda', cursive; */
+    font-family: 'Arapey', serif;
     font-size: 1rem;
     font-weight: 400;
     color: rgb(142, 142, 142);
@@ -259,15 +263,13 @@ header{
     border-radius: 4rem;
     width: 8rem;
     height: 8rem;
-    box-shadow: 2px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 5px 10px inset rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: 2px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 2px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
+    -o-box-shadow: 2px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
+    
 }
-/* .small-bubble{
-    position: absolute;
-    background-color: rgba(255, 170, 128, 0.8);
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-} */
+
 
 #home i{
     padding: 5px;
@@ -287,7 +289,7 @@ header{
         /* style section about*/
 /*************************************/
 #about{
-    background: linear-gradient(to right top, rgba(255, 170, 129, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 145, 111, 0.8));
+    background: linear-gradient(to right top, rgba(255, 170, 129, 0.6), rgba(255, 84, 93, 0.6), rgba(255, 145, 111, 0.6));
 }
 
 
@@ -295,7 +297,7 @@ header{
         /* style section skills*/
 /*************************************/
 #skills{
-    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 30, 92,0.8));
+    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.6), rgba(255, 84, 93, 0.6), rgba(255, 30, 92,0.6));
 }
 /* pour placer les buttons dans le flux */
 #skills-button{
@@ -313,12 +315,15 @@ header{
 }
 .logo{
     text-align: center;
-    margin: auto;
+    margin:20px;
     background: none;
+    padding: 20px;
+    /* background-color: #ffffff; */
 }
 
 .it-skills{
    display: flex;
+   justify-content: space-evenly;
    flex-wrap: wrap;
 }
 .it-logo{
@@ -358,7 +363,7 @@ header{
 /*************************************/
 #projects{
     
-    background: linear-gradient(to right top, rgba(255, 170, 129, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 30, 92,0.8));
+    background: linear-gradient(to right top, rgba(255, 170, 129, 0.6), rgba(255, 84, 93, 0.6), rgba(255, 30, 92,0.6));
 }
 
 /* #projects{
@@ -398,7 +403,7 @@ i{
 /*************************************/
 
 #contact{
-    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 145, 111, 0.8)); 
+    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.6), rgba(255, 84, 93, 0.6), rgba(255, 145, 111, 0.6)); 
 }
 #contact input{
     box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.3);
@@ -499,14 +504,8 @@ header ul{
 /*************************************/
         /* style section skills*/
 /*************************************/
-.container.logo{
-    flex-direction: row;
-}
 
-.it-skills{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 /*************************************/
         /* style section skills*/
 /*************************************/
