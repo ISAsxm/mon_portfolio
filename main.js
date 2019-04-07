@@ -22,7 +22,7 @@ button.addEventListener('click',function(e){
 // /////////////////////////////////////////////
 window.onscroll = function(){
    stickyMenu();
-   
+   underlineMenu();
 };
 
 // je recupere mon menu et mon header
@@ -42,3 +42,50 @@ function stickyMenu(){
 }
 
 }
+
+// ////////////////////////////////////////////////////
+      // pour le menu general souligne mediaquery >1050px//
+// ////////////////////////////////////////////////////
+function underlineMenu(){
+      // je recupere le contenu de mon menu
+      var menuNav = document.querySelectorAll('#menu-nav a');
+      
+      // je recupere mes sections et leur hauteur
+      var home = document.querySelector('header').offsetTop;
+      var about = document.getElementById('about').offsetTop;
+      var skills = document.getElementById('skills').offsetTop;
+      var projects = document.getElementById('projects').offsetTop;
+      var contact = document.getElementById('contact').offsetTop;
+      
+      // je definit dans quelle condition ajouter la classe underline
+            if((window.scrollY == home) && (window.scrollY < about)){
+                  menuNav[0].classList.add('underline');
+            }else{
+                  menuNav[0].classList.remove('underline');
+            } 
+       
+            if((window.scrollY >= about) && (window.scrollY < skills)){
+                  menuNav[1].classList.add('underline');
+            }else{
+                  menuNav[1].classList.remove('underline');
+            }
+      
+            if((window.scrollY >= skills) && (window.scrollY < projects)){
+                  menuNav[2].classList.add('underline');
+            }else{
+                  menuNav[2].classList.remove('underline');
+            }
+      
+            if((window.scrollY >= projects) && (window.scrollY < contact)){
+                  menuNav[3].classList.add('underline');
+            }else{
+                  menuNav[3].classList.remove('underline');
+            }
+
+            if(window.scrollY >= contact){
+                  menuNav[6].classList.add('underline');
+            }else{
+                  menuNav[6].classList.remove('underline');
+            }
+}
+      
