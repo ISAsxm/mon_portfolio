@@ -8,9 +8,9 @@
 /* main{
     display: grid;
     grid-template-columns: 1 auto;
-    grid-template-rows: repeat(5,auto);
+    grid-template-rows: repeat(6,auto);
     grid-template-areas: "header" "about"
-    "skills" "contact"
+    "skills" "projects" "contact"
     "footer";
 } */
 /* header{
@@ -21,6 +21,9 @@
 }
 #skills{
     grid-area: skills;
+}
+#projects{
+    grid-area: projects;
 }
 #contact{
     grid-area: contact;
@@ -51,6 +54,13 @@ a{
 .row{
     display: flex;
 }
+
+.case{
+    padding: 20px;
+    margin: 20px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
 /* pour pousser les elements a droite */
 .push{
     margin-left: auto;
@@ -64,7 +74,7 @@ a{
     color:rgb(255, 109, 97);
     border: solid rgb(255, 109, 97);
     border-radius: 10px;
-    width: 150px;
+    width: 250px;
 }
 
 .button:hover{
@@ -85,20 +95,21 @@ body{
 h1{
     font-size: 3rem;
     font-weight: 900;
-    text-transform: capitalize;
 }
-h1:not(.white){
+/* h1:not(.white){
     background: linear-gradient(to right bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33);
     background: -webkit-linear-gradient(to right bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+} */
+h1:not(.white){
+    color: #293133;
 }
-
 h2{
     font-size: 1.5rem;
     font-weight: 900;
-    color:  #ff545d
+    color: #293133;
 }
 
 h3{
@@ -109,14 +120,17 @@ h4{
     font-size: 1rem;
     font-weight: 400;
 }
+h1,h2,h3{
+    text-transform: capitalize;
+}
+
 p{
     font-family: 'Heebo', sans-serif;
-    /* font-family: 'Arapey', serif; */
     font-size: 1rem;
     font-weight: 400;
-    /* color: rgb(142, 142, 142); */
     color: #8a5e6c;
 }
+
 /*************************************/
         /* style du header */
 /*************************************/
@@ -126,9 +140,9 @@ header{
     background-size: cover;
     height: 100vh;
     color: #ffffff;
-    background-image: linear-gradient(to right bottom, #ffaa81, #ff9c76, #ff8d6d, #ff7e66, #ff6d61, #ff625f, #ff575d, #ff4a5c, #ff425c, #ff385c, #ff2d5c, #ff1e5c);
+    /* background-image: linear-gradient(to right bottom, #ffaa81, #ff9c76, #ff8d6d, #ff7e66, #ff6d61, #ff625f, #ff575d, #ff4a5c, #ff425c, #ff385c, #ff2d5c, #ff1e5c); */
     /* background-image: linear-gradient(to right bottom, #ffaa81, #ff916f, #ff7563, #ff545d, #ff1e5c); */
-    /* background: linear-gradient(to right bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33); */
+    background: linear-gradient(to right bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33);
 } 
 
 /* style section menu dans header */
@@ -193,7 +207,6 @@ header{
     top: 0;
     left: 0;
     text-align: left;
-    /* background-color: rgba(255, 170, 128, 0.9); */
     background-image: linear-gradient(to right bottom, rgba(255, 170, 129,0.8), rgba(255, 145, 111, 0.8),rgba(255, 117, 99, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 30, 92,0.8));
     transform: translateX(-100%);
     transition: transform .2s ease-out;
@@ -248,68 +261,106 @@ header{
 
 @keyframes wheelOpacity{
     from{opacity: 0.3;}
-    10% {opacity: 0.5;}
+    10%{opacity: 0.5;}
     60%{opacity: 0.7;}
     to{opacity: 0.9;}
     
 }
 .big-bubble{
     position: absolute;
-    background-color: rgba(255, 170, 128, 0.3);
+    background-color: rgba(255, 170, 128,0.3);
     border-radius: 4rem;
     width: 8rem;
     height: 8rem;
-    box-shadow: 2px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
-    -webkit-box-shadow: 2px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
-    -moz-box-shadow: 2px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
-    -o-box-shadow: 2px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
+    box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
+    -o-box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
     animation: wheelOpacity 5s forwards;
 }
 
+@keyframes iBubbles {
+    0% {
+        opacity:1;
+        width: 5px;
+        height: 5px;
+        font-size:1px;
+        transform:translate(0, 200px);
+    }
+    100% {
+        opacity:1;
+        width: 30px;
+        height: 30px;
+        font-size:25px;
+        transform:translate( 0, -250px);
+    }
+}
+.i-bubbles{
+    margin:auto;
+    width: 400px;
+    height: 50px;
+}
 
+header:hover i{
+    animation: iBubbles 1.5s infinite alternate;
+}
 #home i{
+    
+    opacity: 0;
     padding: 5px;
     color: #ffffff;
     border: none;
     background-color: rgba(255, 170, 128, 0.6);
     box-shadow: 1px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
 }
-#home i:hover{
-    background-color: rgba(255, 170, 128, 0.3); 
+#home i:nth-of-type(2) {
+
+    animation-delay: 0.3s;
 }
+#home i:nth-of-type(3) {
+
+    animation-delay: 0.6s;
+}
+#home i:nth-of-type(4) {
+
+    animation-delay: 0.8s;
+}
+#home i:nth-of-type(5) {
+
+    animation-delay: 0.7s;
+}
+#home i:nth-of-type(6) {
+
+    animation-delay: 0.5s;
+}
+#home i:nth-of-type(7) {
+
+    animation-delay: 0.4s;
+}
+
 #home a:hover{
    background: none;
 }
-.fab{
-    width: 1.5rem;
-}
+
 /*************************************/
         /* style section about*/
 /*************************************/
-/* #about{
-    background: linear-gradient(to right top, rgba(255, 170, 129, 0.6), rgba(255, 84, 93, 0.6), rgba(255, 145, 111, 0.6));
-} */
 
-/* plus orange */
 #about{
-    background: linear-gradient(to right top, rgba(255, 170, 129, 0.3), rgba(255, 109, 97, 0.3), rgba(255, 56, 92,0.3));
+    background: #b054c8;
 }
 .pitch{
     padding: 20px;
 }
 .pitch p{
-    /* color: rgb(100, 100, 100); */
-    color: #8a5e6c;
+    color: #293133;
 }
 /*************************************/
         /* style section skills*/
 /*************************************/
-/* #skills{
-    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.6), rgba(255, 84, 93, 0.6), rgba(255, 30, 92,0.6));
-} */
-/* plus orange */
+
 #skills{
-    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.3), rgba(255, 109, 97, 0.3), rgba(255, 56, 92,0.3));
+    background: #eb3996;
 }
 /* pour placer les buttons dans le flux */
 #skills-button{
@@ -333,12 +384,7 @@ header{
     display: flex;
     flex-direction: column;
 }
-.logo{
-    margin:20px;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
-}
+
 .logo img{
     max-width: 70%;
 }
@@ -347,75 +393,61 @@ header{
     flex-direction: column;
     text-align: left;
 }
-.logo:hover h4{
-    color: #9bdeac;
+.logo h4{
+    color: #b054c8;
 }
-.logo:hover h3{
-    color: #ffaa81;
+.logo h3{
+    color: #eb3996;
 }
+
 /*************************************/
     /* style de la section projects */       
 /*************************************/
-/* #projects{
-    
-    background: linear-gradient(to right top, rgba(255, 170, 129, 0.6), rgba(255, 84, 93, 0.6), rgba(255, 30, 92,0.6));
-} */
 
-/* plus orange */
 #projects{
-    background: linear-gradient(to right top, rgba(255, 170, 129, 0.3), rgba(255, 109, 97, 0.3), rgba(255, 56, 92,0.3));
+   background:  #fe4559;
 }
 
-.container.case{
-    padding: 20px;
-    margin: 20px;
-    background-color: #ffffff;
-    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
-}
 /* style des icones */
 i{
-    border: solid rgba(255, 145, 111, 0.6);
-    color: #ff545d;
+    /* border: solid rgba(255, 145, 111, 0.6); */
+    border: solid rgba(254, 69, 89,0.8);
+    /* color: #ff545d; */
+    color: rgba(254, 69, 89,0.8);
+    background-color: none;
     border-radius: 50%;
-    transition: background-image 6s ease, color 2s ease;
+    transition: background-color 2s ease, color 2s ease;
 }
 
 .project:hover i{
-    border: solid rgba(255, 30, 92, 0.2);
-    background-image: linear-gradient(to right bottom, rgba(255, 170, 129, 0.1), rgba(255, 84, 93, 0.1), rgba(255, 145, 111, 0.1)); 
+    background: rgba(254, 69, 89,0.5);
+    color: #fff;
 }
 /* pour centrer dans le container */
-.container.case i, 
-.container.case h2,
-.container.case p{
+#projects h2,
+#projects p{
     padding: 20px;
     margin: auto;
 }
-.container.case i{
+#projects i{
     padding: 20px;
     margin: 10px;
 }
 
+#projects .container{
+    margin: 30px;
+}
 video{
     margin:auto;
 }
 /*************************************/
     /* style de la section contact */       
 /*************************************/
-
-/* #contact{
-    padding: 50px;
-    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.6), rgba(255, 84, 93, 0.6), rgba(255, 145, 111, 0.6)); 
-} */
-
-/* plus orange */
 #contact{
     padding: 50px;
-    background: linear-gradient(to right bottom, rgba(255, 170, 129, 0.3), rgba(255, 109, 97, 0.3), rgba(255, 56, 92,0.3));
+    background: #b054c8;
 }
-#contact input{
-    box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.3);
-}
+
 /*************************************/
         /* style du footer */       
 /*************************************/
@@ -442,10 +474,11 @@ footer small{
 
     .main{
         grid-template-columns: 30vw 70vw;
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(5, auto);
         grid-template-areas:"header header" 
-                            "about skills" 
-                            "contact skills"
+                            "about contact" 
+                            "skills skills"
+                            "projects projects"
                             "footer footer";
     }
 } */
@@ -468,10 +501,11 @@ footer small{
         
 /* .main{
     grid-template-columns: 40vw 60vw;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas:"header header" 
-                        "about skills" 
-                        "contact skills"
+                        "about about" 
+                        "skills skills"
+                        "projects projects"
                         "footer footer";
 } */
         
@@ -533,7 +567,7 @@ header ul{
 /*************************************/
         /* style section realisations */
 /*************************************/
-.container.projects{
+.proj-row{
     flex-direction: row;
 }
 .project{
