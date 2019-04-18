@@ -255,7 +255,8 @@ header{
 #home h1{
     padding: 10px;
     z-index: 1;
-    animation: shadow 5s forwards;
+    animation: shadow 2s forwards;
+    
 }
 
 
