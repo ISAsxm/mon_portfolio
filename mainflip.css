@@ -382,27 +382,64 @@ header:hover i{
     color: #8a5e6c;
 }
 /*pour placer les div containers dans les containers */
-.container.skills{
-    justify-content: space-around;
-}
+
 .logo-content{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .logo img{
     max-width: 70%;
+    margin: 5px;
 }
-.logo-txt{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
+
 .logo h4{
     color: #b054c8;
 }
 .logo h3{
     color: #eb3996;
+}
+
+/* pour animer les flip cards */
+
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 20px;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background: rgba(255,255,255,0.9);
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-back {
+    background: rgba(255,255,255,0.9);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
 }
 
 /*************************************/
@@ -555,20 +592,19 @@ header ul{
         /* style section skills*/
 /*************************************/
 
-.logo-content{
-    flex-direction: row;
-}
 
 .logo img{
     max-width: 100%;
 }
 .logo{
     flex-direction: column;
-    width: 70%;    
+    /* width: 50%;     */
 }
 .logo-txt{
     text-align: center;
 }
+
+
 /*************************************/
         /* style section realisations */
 /*************************************/
