@@ -29,8 +29,8 @@ window.onscroll = function(){
 var menu = document.getElementById('menu');
 
 // je recupere la distance de mon header
-var startSticky = window.innerHeight;
-
+// var startSticky = window.innerHeight;
+var startSticky = document.getElementById('i-bubbles').offsetTop;
 // j'ajoute mon menu a mes autres sections
 // des qu'il depasse la taille de mon header
 function stickyMenu(){

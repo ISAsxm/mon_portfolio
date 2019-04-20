@@ -296,7 +296,7 @@ header{
         transform:translate( 0, -250px);
     }
 }
-.i-bubbles{
+#i-bubbles{
     margin:auto;
     width: 400px;
     height: 50px;
@@ -488,6 +488,8 @@ i{
 }
 video{
     margin:auto;
+    width: 100%;
+    height: auto;
 }
 /*************************************/
     /* style de la section contact */       
@@ -619,6 +621,7 @@ header ul{
 .project{
     width: 70%;
 }
+
 /*************************************/
     /* style de la section contact */       
 /*************************************/
