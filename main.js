@@ -88,4 +88,25 @@ function underlineMenu(){
                   menuNav[6].classList.remove('underline');
             }
 }
+
+// ////////////////////////////////////////////////////////////////// //
+      // pour l'effet smooth lors du scroll du menu vers les ancres //
+// ////////////////////////////////////////////////////////////////// //
       
+$(document).ready(function(){
+
+      $('.js-scrollTo').on('click', function(){
+
+            var section = $(this).attr('href');
+            var speed = 750;
+            $('html, body').animate({ scrollTop: $(section).offset().top}, speed);
+            return false;
+      });
+});
+
+// pour enlever le menu 
+
+$('#burger-sidebar').on('mouseleave', function(){
+
+      this.parentNode.classList.toggle('burger-activated');
+})
