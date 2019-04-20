@@ -56,7 +56,7 @@ function underlineMenu(){
       var skills = document.getElementById('skills').offsetTop;
       var projects = document.getElementById('projects').offsetTop;
       var contact = document.getElementById('contact').offsetTop;
-      
+      var foot = document.querySelector('footer').offsetTop;
       // je definit dans quelle condition ajouter la classe underline
             if((window.scrollY == home) && (window.scrollY < about)){
                   menuNav[0].classList.add('underline');
@@ -82,11 +82,12 @@ function underlineMenu(){
                   menuNav[3].classList.remove('underline');
             }
 
-            if(window.scrollY >= contact){
-                  menuNav[6].classList.add('underline');
+            if((window.scrollY >= contact) && (window.scrollY < foot)){
+                  menuNav[4].classList.add('underline');
             }else{
-                  menuNav[6].classList.remove('underline');
+                  menuNav[4].classList.remove('underline');
             }
+            
 }
 
 // ////////////////////////////////////////////////////////////////// //
