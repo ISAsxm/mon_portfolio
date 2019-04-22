@@ -319,13 +319,34 @@ header:hover i{
     background: rgba(176, 84, 200, 0.9);
     padding-bottom: 20px;
 }
+
+.clipping{
+    clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    /* clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 85%); */
+    background: rgba(255,255,255,0.9);
+    /* margin-top: 20px; */
+    margin: 20px;
+}
+
 .pitch{
     padding: 20px;
+    margin-bottom: 60px;
+    /* margin-top: 30px; */
 }
+
 .pitch p{
-    color: #293133;
+    color: #8a5e6c;
+    /* color: #293133; */
     text-align: left;
     line-height: 1.5rem;
+}
+/* pour l'autre clip path */
+/* .pitch p:nth-of-type(1){
+    padding-top:30px;
+} */
+.pitch p:nth-of-type(2){
+    padding-bottom:100px;
+    margin-bottom:100px;
 }
 /*************************************/
         /* style section skills*/
@@ -569,7 +590,10 @@ header ul{
 /*************************************/
         /* style section about*/
 /*************************************/
-
+.pitch p:nth-of-type(2){
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
 /*************************************/
         /* style section skills*/
 /*************************************/
