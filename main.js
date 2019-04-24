@@ -52,10 +52,10 @@ function underlineMenu(){
       
       // je recupere mes sections et leur hauteur
       var home = document.querySelector('header').offsetTop;
-      var about = document.getElementById('about').offsetTop;
-      var skills = document.getElementById('skills').offsetTop;
-      var projects = document.getElementById('projects').offsetTop;
-      var contact = document.getElementById('contact').offsetTop;
+      var about = document.getElementById('about').offsetTop-10;
+      var skills = document.getElementById('skills').offsetTop-10;
+      var projects = document.getElementById('projects').offsetTop-10;
+      var contact = document.getElementById('contact').offsetTop-10;
 
       // je definit dans quelle condition ajouter la classe underline
             if((window.scrollY == home) && (window.scrollY < about)){
@@ -103,11 +103,17 @@ $(document).ready(function(){
             $('html, body').animate({ scrollTop: $(section).offset().top}, speed);
             return false;
       });
+
+
+// ////////////////////////////////////////////////////////////////// //
+      // pour fermer le menu en versions natel //
+// ////////////////////////////////////////////////////////////////// //
+
+      $('#burger-sidebar').on('mouseleave', function(){
+
+            this.parentNode.classList.toggle('burger-activated');
+      });
+
+      
+// fin du document ready function
 });
-
-// pour enlever le menu 
-
-$('#burger-sidebar').on('mouseleave', function(){
-
-      this.parentNode.classList.toggle('burger-activated');
-})
