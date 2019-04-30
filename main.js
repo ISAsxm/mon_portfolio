@@ -1,3 +1,9 @@
+$(document).ready(function(){
+
+// ////////////////////////////////////////////////////////////////// //
+      // pour  le menu en versions natel //
+// ////////////////////////////////////////////////////////////////// //
+
 // je recupere le contenu du menu et ma sidebar
 
 var content = document.getElementById('burger-content');
@@ -14,8 +20,15 @@ var button = document.getElementById('burger-button');
 button.addEventListener('click',function(e){
     
    this.parentNode.classList.toggle('burger-activated');
-
+   
+   if($('#container-burger').hasClass('burger-activated')){
+      
+      $('#burger-button').html('&#10006;');
+   }else{
+      $('#burger-button').html('&#9776;');
+    }
 });
+
 
 // /////////////////////////////////////////////
       // pour le menusticky mediaquery >1050px//
@@ -30,7 +43,7 @@ var menu = document.getElementById('menu');
 
 // je recupere la distance de mon header
 // var startSticky = window.innerHeight;
-var startSticky = document.getElementById('i-bubbles').offsetTop;
+var startSticky = document.getElementById('home').offsetTop;
 // j'ajoute mon menu a mes autres sections
 // des qu'il depasse la taille de mon header
 function stickyMenu(){
@@ -94,7 +107,7 @@ function underlineMenu(){
       // pour l'effet smooth lors du scroll du menu vers les ancres //
 // ////////////////////////////////////////////////////////////////// //
       
-$(document).ready(function(){
+
 
       $('.js-scrollTo').on('click', function(){
 
@@ -102,16 +115,6 @@ $(document).ready(function(){
             var speed = 750;
             $('html, body').animate({ scrollTop: $(section).offset().top}, speed);
             return false;
-      });
-
-
-// ////////////////////////////////////////////////////////////////// //
-      // pour fermer le menu en versions natel //
-// ////////////////////////////////////////////////////////////////// //
-
-      $('#burger-sidebar').on('mouseleave', function(){
-
-            this.parentNode.classList.toggle('burger-activated');
       });
 
       

@@ -72,19 +72,21 @@ body{
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 900;
     text-transform: capitalize;
 }
 
 h1:not(.white){
     color: #293133;
+    padding: 50px 0 50px 0;
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 900;
     color: #293133;
+    padding: 20px 0 50px 0;
 }
 
 h3{
@@ -139,7 +141,7 @@ header{
 /* pour aerer le menu */
 #menu span,
 #container-burger{
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 10px;
 }
 
 /* pour effacer la nav menu */
@@ -158,11 +160,13 @@ header{
     font-size: 2rem;
     padding:0;
     color: #ffffff;
+    z-index: 21;
 }
 #burger-button:hover{
     transform: scale(1.5);
     transition: transform .2s ease-out;
 }
+
 /* style de la side-bar */
 #burger-sidebar{
     position: fixed;
@@ -313,11 +317,12 @@ header:hover i{
 #about{
     background: #b054c8;
     /* background: rgba(176, 84, 200, 0.9); */
-    padding: 50px 0 50px 0;
+    padding: 50px 0 80px 0;
 }
 
 .clipping{
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    -moz-clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
 }
 
@@ -332,7 +337,7 @@ header:hover i{
     line-height: 1.5rem;
 }
 
-.pitch p:nth-of-type(2){
+.pitch p:nth-of-type(3){
     padding-bottom:100px;
     margin-bottom:100px;
 }
@@ -343,13 +348,16 @@ header:hover i{
 #skills{
     background: #eb3996;
     /* background: rgba(235, 57, 150,0.9); */
-    padding: 50px 0 50px 0;
+    padding: 50px 0 80px 0;
 }
 
 #skills h2{
     text-transform: uppercase;
 }
 
+.it-skills{
+    padding-bottom: 50px;
+}
 /*pour placer les div containers dans les containers */
 
 .logo-content{
@@ -404,6 +412,7 @@ header:hover i{
     -webkit-box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
     box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
     -webkit-clip-path: inset(0 0 0 0 round 0 20% 0 20%);
+    -moz--clip-path: inset(0 0 0 0 round 0 20% 0 20%);
     clip-path: inset(0 0 0 0 round 0 20% 0 20%);
 }
 
@@ -411,6 +420,7 @@ header:hover i{
     background: #ffffff;
     transform: rotateY(180deg);
     -webkit-clip-path: inset(0 0 0 0 round 20% 0 20% 0);
+    -moz-clip-path: inset(0 0 0 0 round 20% 0 20% 0);
     clip-path: inset(0 0 0 0 round 20% 0 20% 0);
 }
 
@@ -428,7 +438,7 @@ header:hover i{
 #projects{
    background:  #fe4559;
    /* background:  rgba(254, 69, 89,0.9); */
-   padding: 50px 0 50px 0;
+   padding: 50px 0 80px 0;
 }
 
 /* style des icones */
@@ -475,9 +485,9 @@ video{
     /* style de la section contact */       
 /*************************************/
 #contact{
-    padding: 50px 0 50px 0;
-    background: #b054c8;
     /* background: rgba(176, 84, 200, 0.9); */
+    background: #b054c8;
+    padding: 50px 0 80px 0;
 }
 
 /* pour placer les buttons dans le flux */
@@ -527,6 +537,7 @@ footer{
     background-image: linear-gradient(to right bottom, #ffaa81, #ff9c76, #ff8d6d, #ff7e66, #ff6d61, #ff625f, #ff575d, #ff4a5c, #ff425c, #ff385c, #ff2d5c, #ff1e5c);
     /* background-image: linear-gradient(to bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33); */
     display:flex;
+    padding: 20px 0 20px 0;
 }
 footer small{
     color: #ffffff;
@@ -583,7 +594,7 @@ header ul{
 /*************************************/
         /* style section about*/
 /*************************************/
-.pitch p:nth-of-type(2){
+.pitch p:nth-of-type(3){
     padding-bottom: 50px;
     margin-bottom: 50px;
 }
