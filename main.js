@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 // ////////////////////////////////////////////////////////////////// //
-      // pour  le menu en versions natel //
+      // pour  le menu en versions mobile //
 // ////////////////////////////////////////////////////////////////// //
 
 // je recupere le contenu du menu et ma sidebar
@@ -28,7 +28,6 @@ button.addEventListener('click',function(e){
       $('#burger-button').html('&#9776;');
     }
 });
-
 
 // /////////////////////////////////////////////
       // pour le menusticky mediaquery >1050px//
@@ -106,8 +105,8 @@ function underlineMenu(){
 // ////////////////////////////////////////////////////////////////// //
       // pour l'effet smooth lors du scroll du menu vers les ancres //
 // ////////////////////////////////////////////////////////////////// //
-      
-
+// je selectionne la classe js qui va me servir à déclencher l'accélération
+// du scroll et assigne une vitesse lors du scroll à mon document html
 
       $('.js-scrollTo').on('click', function(){
 
@@ -117,6 +116,16 @@ function underlineMenu(){
             return false;
       });
 
-      
+// ////////////////////////////////////////////////////////////////// //
+      // pour l'effet des flip card version mobile //
+// ////////////////////////////////////////////////////////////////// //
+// j'ajoute/enlève la rotation au click des cartes
+
+      $('.flip-card').on('click', function(){
+
+            $(this).children(':first').toggleClass('flippy');
+            
+     });
+
 // fin du document ready function
 });

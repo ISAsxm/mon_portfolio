@@ -53,7 +53,6 @@ a{
 .row{
     display: flex;
 }
-
 .case{
     padding: 20px;
     margin: 20px;
@@ -68,11 +67,11 @@ a{
 /* police generale */
 body{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 h1{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 900;
     text-transform: capitalize;
 }
@@ -83,24 +82,24 @@ h1:not(.white){
 }
 
 h2{
-    font-size: 2rem;
-    font-weight: 900;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #293133;
     padding: 20px 0 50px 0;
 }
 
 h3{
     font-size: 1rem;
-    font-weight: 900;
+    font-weight: 700;
 }
 h4{
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
 }
 
 p{
     font-family: 'Heebo', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
     color: #8a5e6c;
 }
@@ -124,18 +123,22 @@ header{
     flex-direction: row;
     align-items: center;
     order: -1;
-    width: 100%;
+    width: 100vw;
     text-align: left;
 }
+ /*pour le logo  */
 #menu img{
     padding: 10px;
     padding-right: 0;
+    width:20px;
+    height:25px;
 }
+
 .sticky{
-    transition: all 1s;
     position: fixed;
     background: linear-gradient(to right bottom, rgba(255, 170, 129,0.8), rgba(255, 185, 111, 0.8),rgba(255, 117, 99, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 30, 92, 0.8));
     z-index: 999;
+    /* transition: all 1s; */
 }
 
 /* pour aerer le menu */
@@ -157,14 +160,10 @@ header{
     background: none;
     border: none;
     outline: none;
-    font-size: 2rem;
+    font-size: 1rem;
     padding:0;
     color: #ffffff;
     z-index: 21;
-}
-#burger-button:hover{
-    transform: scale(1.5);
-    transition: transform .2s ease-out;
 }
 
 /* style de la side-bar */
@@ -198,9 +197,7 @@ header{
     background-color: #ff545d;
     border-bottom: 1px solid #ff1e5c;
 }
-#burger-sidebar #menu-nav a:hover{
-    color:#ffaa81;
-}
+
 /* pour faire apparaitre la sidebar sur la page */
 .burger-activated #burger-sidebar{
     transform: translateY(0);
@@ -222,11 +219,10 @@ header{
 #home h1{
     padding: 10px;
     z-index: 1;
-    animation: shadow 2s forwards;
-    
+    animation: shadow 4s forwards;
 }
 
-/* animation de la bulle */
+/* animation de la bulle du titre principal*/
 @keyframes wheelOpacity{
     from{opacity: 0.3;}
     10%{opacity: 0.5;}
@@ -240,74 +236,16 @@ header{
     border-radius: 4rem;
     width: 8rem;
     height: 8rem;
+    margin:5px;
     -webkit-box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
     -moz-box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
     -o-box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
     box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
-    animation: wheelOpacity 5s forwards;
-}
-
-/* animation des icones bulles lors du hover */
-@keyframes iBubbles {
-    0% {
-        opacity:1;
-        width: 5px;
-        height: 5px;
-        font-size:1px;
-        transform:translate(0, 200px);
-    }
-    100% {
-        opacity:1;
-        width: 30px;
-        height: 30px;
-        font-size:25px;
-        transform:translate( 0, -250px);
-    }
+    animation: wheelOpacity 4s;
 }
 
 #i-bubbles{
-    margin:auto;
-    width: 400px;
-    height: 50px;
-}
-
-header:hover i{
-    animation: iBubbles 1.5s infinite alternate;
-}
-
-#home i{
-    opacity: 0;
-    padding: 5px;
-    width: 4px;
-    height: 4px;
-    color: #ffffff;
-    border: none;
-    background-color: rgba(255, 170, 128, 0.6);
-    box-shadow: 1px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
-}
-#home i:nth-of-type(2) {
-
-    animation-delay: 0.3s;
-}
-#home i:nth-of-type(3) {
-
-    animation-delay: 0.6s;
-}
-#home i:nth-of-type(4) {
-
-    animation-delay: 0.8s;
-}
-#home i:nth-of-type(5) {
-
-    animation-delay: 0.7s;
-}
-#home i:nth-of-type(6) {
-
-    animation-delay: 0.5s;
-}
-#home i:nth-of-type(7) {
-
-    animation-delay: 0.4s;
+    display: none;
 }
 
 /*************************************/
@@ -316,7 +254,6 @@ header:hover i{
 
 #about{
     background: #b054c8;
-    /* background: rgba(176, 84, 200, 0.9); */
     padding: 50px 0 80px 0;
 }
 
@@ -338,7 +275,7 @@ header:hover i{
 }
 
 .pitch p:nth-of-type(3){
-    padding-bottom:100px;
+    padding-bottom:200px;
     margin-bottom:100px;
 }
 /*************************************/
@@ -347,7 +284,6 @@ header:hover i{
 
 #skills{
     background: #eb3996;
-    /* background: rgba(235, 57, 150,0.9); */
     padding: 50px 0 80px 0;
 }
 
@@ -376,7 +312,9 @@ header:hover i{
     margin-bottom: 0;
     text-transform: uppercase;
 }
-
+.logo h5{
+    margin: auto;
+}
 /* pour animer les flip cards */
 
 .flip-card{
@@ -393,10 +331,6 @@ header:hover i{
     height: 100%;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner{
-    transform: rotateY(180deg);
 }
 
 .flip-card-front, .flip-card-back{
@@ -431,28 +365,18 @@ header:hover i{
 .flip-card-back p{
     padding: 5px;
 }
+/* pour animation js au click */
+.flippy{
+    transform: rotateY(180deg);
+}
+
 /*************************************/
     /* style de la section projects */       
 /*************************************/
 
 #projects{
    background:  #fe4559;
-   /* background:  rgba(254, 69, 89,0.9); */
    padding: 50px 0 80px 0;
-}
-
-/* style des icones */
-i{
-    border: solid rgba(254, 69, 89,0.8);
-    color: rgba(254, 69, 89,0.8);
-    background-color: none;
-    border-radius: 50%;
-    transition: background-color 2s ease, color 2s ease;
-}
-
-.project:hover i{
-    background: rgba(254, 69, 89,0.5);
-    color: #fff;
 }
 
 /* pour centrer dans le container */
@@ -467,11 +391,6 @@ i{
     text-transform: uppercase;
 }
 
-#projects i{
-    padding: 20px;
-    margin: 10px;
-}
-
 #projects .container{
     margin: 30px;
 }
@@ -481,32 +400,35 @@ video{
     width: 100%;
     height: auto;
 }
+
+#projects span{
+    display:none;
+}
 /*************************************/
     /* style de la section contact */       
 /*************************************/
 #contact{
-    /* background: rgba(176, 84, 200, 0.9); */
     background: #b054c8;
     padding: 50px 0 80px 0;
 }
 
 /* pour placer les buttons dans le flux */
 #contact-button{
-    justify-content: space-evenly;   
+    /* justify-content: space-evenly;  */
+    justify-content: center;   
 }
 
 /* style des bouttons */
 .button{
-    margin: auto;
     padding:10px;
     background-color: #ffffff;
     color:rgb(255, 109, 97);
     border: solid rgb(255, 109, 97);
-    border-radius: 10px;
-    width: 30%;
+    border-radius: 40px;
+    /* border-radius: 10px; */
+    /* width: 30%; */
 }
-
-.button:hover{
+.button:active{
     background-image: linear-gradient(to right bottom, #ffaa81, #ff916f, #ff7563, #ff545d, #ff1e5c);
     border: solid #f4f4f4;
     color: #ffffff;
@@ -535,7 +457,6 @@ iframe{
 /*************************************/
 footer{
     background-image: linear-gradient(to right bottom, #ffaa81, #ff9c76, #ff8d6d, #ff7e66, #ff6d61, #ff625f, #ff575d, #ff4a5c, #ff425c, #ff385c, #ff2d5c, #ff1e5c);
-    /* background-image: linear-gradient(to bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33); */
     display:flex;
     padding: 20px 0 20px 0;
 }
@@ -544,31 +465,97 @@ footer small{
     margin: auto;
     padding:20px;
 }
-
     /***************************************************/
             /* fin du style mobile First */
     /***************************************************/
-
 /* ******************************************************************** */
+    /***************************************************/
+            /* style avec mediaquery a partir de 780px */
+    /***************************************************/
+@media screen and (min-width: 780px){
 
+    /* police generale */
+body{
+    font-size: 1.2rem;
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 20px 0 50px 0;
+}
+
+h3{
+    font-size: 1rem;
+    font-weight: 900;
+}
+h4{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* pour le menu burger */
+#burger-button{
+    font-size: 2rem;
+}
+/*pour le logo  */
+#menu img{
+    width:30px;
+    height:35px;
+}
+/* style du paragraphe dans section about */
+.pitch p:nth-of-type(3){
+    padding-bottom:100px;
+    margin-bottom:100px;
+}
+/* style des icones section realisations */
+#projects span{
+    display:initial;
+}
+#projects i{
+    border: solid rgba(254, 69, 89,0.8);
+    color: rgba(254, 69, 89,0.8);
+    border-radius: 50%;
+    padding: 20px;
+    margin: 10px;
+    transition: background-color 2s ease, color 2s ease;
+    transition: all 2s ease;
+}
+}
+/***************************************************/
+            /* fin du style mediaquery 780px */
+    /***************************************************/
+/* ******************************************************************** */
     /***************************************************/
             /* style avec mediaquery a partir de 1050px */
     /***************************************************/
 
 @media screen and (min-width: 1050px){
         
-
 /*************************************/
-    /* style du menu dans header */
-/*************************************/
-        
+        /* style du header */
+/*************************************/ 
+ /*pour le logo  */
+ #menu img{
+     width:50px;
+     height:55px;
+}
     /* pour effacer le menu burger */
 #burger-button, 
 #burger-sidebar, 
 .burger-activated{
     display: none;
 }
-        
+    
     /* pour replacer la nav menu */
 #menu-nav{
     display: inherit;
@@ -588,8 +575,73 @@ header ul{
     transition: transform 1s ;
 }
 
+    /* class pour animation menu js */
 .underline{
     border-bottom: 0.5px solid; 
+}
+
+    /* animation des icones bulles lors du hover */
+@keyframes iBubbles {
+    0% {
+        opacity:1;
+        width: 5px;
+        height: 5px;
+        font-size:1px;
+        transform:translate(0, 200px);
+    }
+    100% {
+        opacity:1;
+        width: 30px;
+        height: 30px;
+        font-size:25px;
+        transform:translate( 0, -250px);
+    }
+}
+
+#i-bubbles{
+    display: initial;
+    margin:auto;
+    width: 400px;
+    height: 50px;
+}
+header:hover i{
+    animation: iBubbles 1.5s infinite alternate;
+}
+
+#home i{
+    opacity: 0;
+    padding: 5px;
+    width: 4px;
+    height: 4px;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 170, 128, 0.6);
+    box-shadow: 1px 2px 5px 1px inset rgba(255, 255, 255, 0.3);
+}
+#home i:nth-of-type(2) {
+
+    animation-delay: 0.3s;
+}
+#home i:nth-of-type(3) {
+
+    animation-delay: 0.6s;
+}
+#home i:nth-of-type(4) {
+
+    animation-delay: 0.8s;
+}
+#home i:nth-of-type(5) {
+
+    animation-delay: 0.7s;
+}
+#home i:nth-of-type(6) {
+
+    animation-delay: 0.5s;
+}
+#home i:nth-of-type(7) {
+
+    animation-delay: 0.4s;
 }
 /*************************************/
         /* style section about*/
@@ -601,7 +653,6 @@ header ul{
 /*************************************/
         /* style section skills*/
 /*************************************/
-
 .logo{
     flex-direction: column;
 }
@@ -612,6 +663,13 @@ header ul{
     justify-content: center;
 }
 
+.logo h5{
+    display: none;
+}
+/* pour animation des flip-card */
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
 /*************************************/
     /* style section realisations */
 /*************************************/
@@ -620,6 +678,27 @@ header ul{
 }
 .project{
     width: 70%;
+}
+
+.project:hover i{
+    background: rgba(254, 69, 89,0.5);
+    color: #ffffff !important;
+}
+
+/*************************************/
+    /* style section contact */
+/*************************************/
+.button{
+    padding:10px;
+    border-radius: 40px;
+    width: 20%;
+    /* width: 30%; */
+}
+/* pour l'animation des bouttons */
+.button:hover{
+    background: linear-gradient(to right bottom, #ffaa81, #ff916f, #ff7563, #ff545d, #ff1e5c);
+    border: solid #f4f4f4;
+    color: #ffffff;
 }
 
 }  
