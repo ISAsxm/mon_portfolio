@@ -21,12 +21,12 @@ button.addEventListener('click',function(e){
     
    this.parentNode.classList.toggle('burger-activated');
    
-   if($('#container-burger').hasClass('burger-activated')){
+//    if($('#container-burger').hasClass('burger-activated')){
       
-      $('#burger-button').html('&#10006;');
-   }else{
-      $('#burger-button').html('&#9776;');
-    }
+//        $('#burger-button').html('&#10006;');
+//     }else{
+//        $('#burger-button').html('&#9776;');
+//     }
 });
 
 // /////////////////////////////////////////////
@@ -110,6 +110,7 @@ function underlineMenu(){
 
       $('.js-scrollTo').on('click', function(){
 
+            $('#container-burger').removeClass('burger-activated');
             var section = $(this).attr('href');
             var speed = 750;
             $('html, body').animate({ scrollTop: $(section).offset().top}, speed);

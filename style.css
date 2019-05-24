@@ -125,6 +125,7 @@ header{
     order: -1;
     width: 100vw;
     text-align: left;
+    font-size: 1.2rem;
 }
  /*pour le logo  */
 #menu img{
@@ -160,7 +161,7 @@ header{
     background: none;
     border: none;
     outline: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding:0;
     color: #ffffff;
     z-index: 21;
@@ -315,6 +316,8 @@ header{
 }
 .logo h5{
     margin: auto;
+    color: #8a5e6c;
+    font-size: 0.8rem;
 }
 /* pour animer les flip cards */
 
