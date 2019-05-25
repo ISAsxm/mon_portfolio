@@ -461,25 +461,19 @@ iframe{
 #toTopBtn{
     display: none; 
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 10px;
+    right: 10px;
     z-index: 99;
-    /* background: #ffaa81; */
-    /* background: linear-gradient(to right bottom, #ffaa81, #ff916f, #ff7563, #ff545d, #ff1e5c); */
-    /* border: solid #ffffff; */
-    /* color: #ffffff; */
-    /* cursor: pointer; */
-    padding: 5px;
-    /* padding: 15px; */
+    padding: 10px;
     border-radius: 50%;
-    /* font-size: 18px; */
+    font-size: 1.5rem;
     color: #ffffff;
-    background-color: #ff545d;
-    border: 1px solid #ff1e5c;
+    background-color: #ffaa81;
+    /* border: solid rgb(255, 109, 97); */
 }
 #toTopBtn:hover {
     background-color: #ffffff;
-    color:rgb(255, 109, 97);
+    color:#ffaa81;
     /* border: solid rgb(255, 109, 97); */
 }
 /*************************************/
