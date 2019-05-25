@@ -35,6 +35,7 @@ button.addEventListener('click',function(e){
 window.onscroll = function(){
    stickyMenu();
    underlineMenu();
+   scrollFunction();
 };
 
 // je recupere mon menu et mon header
@@ -44,7 +45,7 @@ var menu = document.getElementById('menu');
 // var startSticky = window.innerHeight;
 var startSticky = document.getElementById('home').offsetTop;
 // j'ajoute mon menu a mes autres sections
-// des qu'il depasse la taille de mon header
+// des qu'il depasse la taille de mon header/home
 function stickyMenu(){
 
       if(window.scrollY >= startSticky){
@@ -127,6 +128,30 @@ function underlineMenu(){
             $(this).children(':first').toggleClass('flippy');
             
      });
+
+// ////////////////////////////////////////////////////////////////// //
+                  // pour le button sroll to top //
+// ////////////////////////////////////////////////////////////////// //
+
+//pour faire apparaître le button retour au top lors du scroll down
+
+function scrollFunction() {
+
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("toTopBtn").style.display = "block";
+  } else {
+    document.getElementById("toTopBtn").style.display = "none";
+  }
+}
+
+// au click du button, retour au début du document
+$('#toTopBtn').on('click', function(){
+      
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+});
+
+
 
 // fin du document ready function
 });
