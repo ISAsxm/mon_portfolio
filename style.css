@@ -279,6 +279,11 @@ header{
     padding-bottom:120px;
     margin-bottom:100px;
 }
+#about a{
+    display: inline;
+    color: #8a5e6c;
+    text-decoration: underline #8a5e6c;
+}
 /*************************************/
         /* style section skills*/
 /*************************************/
@@ -318,6 +323,7 @@ header{
     margin: auto;
     color: #8a5e6c;
     font-size: 0.8rem;
+    text-decoration: underline #8a5e6c;
 }
 /* pour animer les flip cards */
 
@@ -383,11 +389,10 @@ header{
    padding: 50px 0 80px 0;
 }
 
-/* pour centrer dans le container */
-/* #projects h2, */
 #projects p{
     padding: 20px;
     margin: auto;
+    line-height: 1.5rem;
 }
 
 #projects h2::first-letter{
@@ -396,9 +401,16 @@ header{
 #projects h2{
     padding:60px;
 }
-/* #projects .container{
-    margin: 30px;
-} */
+
+.fade h2{
+    color: #fe4559;
+}
+
+.fade a{
+    color: #ffaa81;
+    text-decoration: underline #ffaa81;
+    transform: scale(1.1);
+}
 
 video,
 #projects img{
@@ -411,19 +423,13 @@ video,
     display:none;
 }
 
-
-/* ...............................test pour slideshow .............................*/
-
 .mySlides1, .mySlides2 {
     display: none
 }
-/* video {vertical-align: middle;} */
 
-/* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
-  margin: auto;
+  margin: 30px;
 }
 
 /* pour les buttons next et prev */
@@ -431,28 +437,30 @@ video,
 .prev2, .next2 {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 5%;
   width: auto;
   padding: 16px;
-  margin-top: -22px;
-  color: white;
+  margin-top: -10px;
+  color: #fe4559;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.5rem;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
 }
-
+.prev,
+.prev2{
+    left:0;
+    border-radius: 0 3px 3px 0;
+}
 .next,
 .next2 {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
+}
 
 .prev:hover, .next:hover,
 .prev2:hover, .next2:hover {
-    background-color: #f1f1f1;
-    color: black;
+    background-color: #ffaa81;
+    color: #ffffff;
 }
 #projects .container{
     margin:  20px auto 20px auto;
@@ -467,8 +475,6 @@ video,
     from {opacity: .4} 
     to {opacity: 1}
 }
-
-/* ...............................fin du test pour slideshow .............................*/
 
 /*************************************/
     /* style de la section contact */       
@@ -531,12 +537,10 @@ iframe{
     font-size: 1.5rem;
     color: #ffffff;
     background-color: #ffaa81;
-    /* border: solid rgb(255, 109, 97); */
 }
 #toTopBtn:hover {
     background-color: #ffffff;
     color:#ffaa81;
-    /* border: solid rgb(255, 109, 97); */
 }
 /*************************************/
         /* style du footer */       
@@ -736,6 +740,16 @@ header:hover i{
     padding-bottom: 50px;
     margin-bottom: 50px;
 }
+#about a{
+    color:#fe4559;
+    text-decoration: underline #fe4559;
+}
+#about a:hover{
+    color: #ffaa81;
+    text-decoration: underline #ffaa81;
+    transform: scale(1.1);
+    transition: transform 1s;
+}
 /*************************************/
         /* style section skills*/
 /*************************************/
@@ -769,6 +783,29 @@ header:hover i{
 .project:hover i{
     background: rgba(254, 69, 89,0.5);
     color: #ffffff !important;
+}
+
+.fade a{
+    color: #fe4559;
+    text-decoration: underline #fe4559;
+}
+.fade a:hover{
+    color: #ffaa81;
+    text-decoration: underline #ffaa81;
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.slideshow-container {
+    margin: auto;
+}
+/* pour les buttons next et prev */
+.prev, .next,
+.prev2, .next2 {
+  top: 50%;
+  margin-top: -22px;
+  color: white;
+  font-size: 1.6rem;
 }
 
 /*************************************/
