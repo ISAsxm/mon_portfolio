@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 // ////////////////////////////////////////////////////////////////// //
-      // pour  le menu en versions mobile //
+            // pour  le menu en versions mobile //
 // ////////////////////////////////////////////////////////////////// //
 
 // je recupere le contenu du menu et ma sidebar
@@ -29,15 +29,18 @@ button.addEventListener('click',function(e){
 //     }
 });
 
-// /////////////////////////////////////////////
-      // pour le menusticky mediaquery >1050px//
-// /////////////////////////////////////////////
+// ///////////////////////////////////////////// //
+      // pour appeler les animations au scroll //
+// ///////////////////////////////////////////// //
 window.onscroll = function(){
    stickyMenu();
    underlineMenu();
    scrollFunction();
 };
 
+// ///////////////////////////////////////////// //
+      // pour le menusticky mediaquery >1050px//
+// ///////////////////////////////////////////// //
 // je recupere mon menu et mon header
 var menu = document.getElementById('menu');
 
@@ -52,13 +55,13 @@ function stickyMenu(){
             menu.classList.add('sticky');
       }else {
             menu.classList.remove('sticky');
-}
+      }
 
 }
 
-// ////////////////////////////////////////////////////
-      // pour le menu general souligne mediaquery >1050px//
-// ////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////// //
+      // pour le menu souligne mediaquery >1050px//
+// ///////////////////////////////////////////////////////// //
 function underlineMenu(){
       // je recupere le contenu de mon menu
       var menuNav = document.querySelectorAll('#menu-nav a');
@@ -100,7 +103,6 @@ function underlineMenu(){
             }else{
                   menuNav[4].classList.remove('underline');
             }
-            
 }
 
 // ////////////////////////////////////////////////////////////////// //
@@ -119,7 +121,7 @@ function underlineMenu(){
       });
 
 // ////////////////////////////////////////////////////////////////// //
-      // pour l'effet des flip card version mobile //
+            // pour l'effet des flip card version mobile //
 // ////////////////////////////////////////////////////////////////// //
 // j'ajoute/enlève la rotation au click des cartes
 
@@ -151,8 +153,10 @@ $('#toTopBtn').on('click', function(){
       document.documentElement.scrollTop = 0;
 });
 
-
-//test pour slide
+// ////////////////////////////////////////////////////////////////// //
+                  // pour les slides section projects //
+// ////////////////////////////////////////////////////////////////// //
+// je défini 2 slideshow pour mes 2 catégories de projets
 
 var slideIndex = [1,1];
 var slideId = ["mySlides1", "mySlides2"]
@@ -162,6 +166,7 @@ showSlides(1, 1);
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
 }
+// au click des fleches je montre le projet suivant ou le precedant
 $('.prev').on('click', function(){
       plusSlides(-1, 0);
 });
@@ -185,8 +190,7 @@ function showSlides(n, no) {
   }
   x[slideIndex[no]-1].style.display = "block";  
 }
-    
-//fin du test pour slide
+
 
 // fin du document ready function
 });
