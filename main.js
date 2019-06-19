@@ -44,7 +44,7 @@ window.onscroll = function(){
 // je recupere mon menu et mon header
 var menu = document.getElementById('menu');
 
-// je recupere la distance de mon header
+// je recupere la taille de mon header
 // var startSticky = window.innerHeight;
 var startSticky = document.getElementById('home').offsetTop;
 // j'ajoute mon menu a mes autres sections

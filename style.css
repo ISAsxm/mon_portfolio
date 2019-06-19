@@ -1,49 +1,21 @@
-    /*************************************/
-            /* style mobileFirst */
-    /*************************************/
+        /*************************************/
+                /* style mobileFirst */
+        /*************************************/
 /*************************************/
         /* style general */
 /*************************************/
-/* mise en place de la grille */
-/* main{
-    display: grid;
-    grid-template-columns: 1 auto;
-    grid-template-rows: repeat(6,auto);
-    grid-template-areas: "header" "about"
-    "skills" "projects" "contact"
-    "footer";
-} */
-/* header{
-    grid-area: header;
-}
-#about{
-    grid-area: about;
-}
-#skills{
-    grid-area: skills;
-}
-#projects{
-    grid-area: projects;
-}
-#contact{
-    grid-area: contact;
-}
-footer{
-    grid-area: footer;
-} */
+
 /* pour oter les styles par defaut des listes et des liens */
 ul{
     padding: 0;
     margin: 0;
 }
-
 li,
 a{
     list-style: none;
     text-decoration: none;
     display: block;
 }
-
 /* style general des sections et div */
 .container{
     display: flex;
@@ -69,25 +41,19 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
 }
-
 h1{
     font-size: 2.5rem;
     font-weight: 900;
     text-transform: capitalize;
 }
-
 h1:not(.white){
     color: #293133;
-    /* padding: 20px 0 20px 0; */
 }
-
 h2{
     font-size: 1.5rem;
     font-weight: 700;
     color: #293133;
-    /* padding: 20px 0 20px 0; */
 }
-
 h3{
     font-size: 1rem;
     font-weight: 700;
@@ -96,14 +62,12 @@ h4{
     font-size: 0.8rem;
     font-weight: 400;
 }
-
 p{
     font-family: 'Heebo', sans-serif;
     font-size: 0.8rem;
     font-weight: 400;
     color: #8a5e6c;
 }
-
 /*************************************/
         /* style du header */
 /*************************************/
@@ -135,7 +99,7 @@ header{
     width:20px;
     height:25px;
 }
-
+/* classe pour animation js */
 .sticky{
     position: fixed;
     background: linear-gradient(to right bottom, rgba(255, 170, 129,0.8), rgba(255, 185, 111, 0.8),rgba(255, 117, 99, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 30, 92, 0.8));
@@ -143,7 +107,6 @@ header{
 }
 
 /* pour aerer le menu */
-
 #menu span,
 #container-burger{
     padding: 10px 20px 10px 10px;
@@ -155,7 +118,6 @@ header{
 }
 
 /* style du menu burger */
-
 /* style de l'icone burger*/
 #burger-button{
     cursor: pointer;
@@ -167,7 +129,6 @@ header{
     color: #ffffff;
     z-index: 21;
 }
-
 /* style de la side-bar */
 #burger-sidebar{
     position: fixed;
@@ -179,20 +140,16 @@ header{
     transform: translateY(-100%);
     transition: transform .2s ease-out;
 }
-
 /* style du contenu de la sidebar */
-
 /* pour faire apparaitre le contenu */
 #burger-sidebar #menu-nav{
     display: inherit;
 }
-
 /* pour aligner la liste */
 #burger-sidebar #menu-nav ul{
     display: flex;
     flex-direction: column;
 }
-
 #burger-sidebar #menu-nav a,
 .dropdown-content a{
     color: #ffffff;
@@ -200,7 +157,6 @@ header{
     background-color: #ff545d;
     border-bottom: 1px solid #ff1e5c;
 }
-
 /* pour faire apparaitre la sidebar sur la page */
 .burger-activated #burger-sidebar{
     transform: translateY(0);
@@ -265,19 +221,16 @@ header{
     -moz-clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
 }
-
 .pitch{
     padding: 20px;
     margin-bottom: 60px;
 }
-
 .pitch p{
     color: #8a5e6c;
     text-align: left;
     line-height: 1.5rem;
     font-weight: bold;
 }
-
 .pitch p:nth-of-type(3){
     padding-bottom:120px;
     margin-bottom:100px;
@@ -328,7 +281,7 @@ header{
     font-size: 0.8rem;
     text-decoration: underline #8a5e6c;
 }
-/* pour animer les flip cards */
+/* pour animer les flip-cards */
 
 .flip-card{
     background-color: transparent;
@@ -441,11 +394,11 @@ video,
 .prev2, .next2 {
   cursor: pointer;
   position: absolute;
-  top: 20%;
+  top: 10%;
   width: auto;
-  padding: 16px;
-  margin-top: -10px;
-  color: #fe4559;
+  padding: 10px;
+  color: white;
+  background-color: #ffaa81;
   font-weight: bold;
   font-size: 1.5rem;
   transition: 0.6s ease;
@@ -620,6 +573,13 @@ p{
     transition: background-color 2s ease, color 2s ease;
     transition: all 2s ease;
 }
+
+/* pour les buttons next et prev */
+.prev, .next,
+.prev2, .next2 {
+  top: 5%;
+  padding: 15px;
+}
 .prev,
 .prev2{
     left: 5%;
@@ -680,11 +640,6 @@ header ul{
     color: #ffaa81;
     transition: all 1s;
 }
-/* //////////test pour dropdown ////////////////////////////////////////*/
-/* .dropdown-content{
-    position: absolute;
-} */
-/* ////////// fin de test pour dropdown ////////////////////////////////////////*/
 
     /* class pour animation menu js */
 .underline{
@@ -838,24 +793,24 @@ header:hover i{
 /* pour les buttons next et prev */
 .prev, .next,
 .prev2, .next2 {
-  top: 50%;
+  top: 10%;
   margin-top: -22px;
-  color: white;
   font-size: 1.6rem;
 }
 .prev,
 .prev2{
-    left: 8%;
+    left: 20%;
 }
 .next,
 .next2 {
-    right: 8%;
+    right: 20%;
 }
 .prev:hover, .next:hover,
 .prev2:hover, .next2:hover {
-    background-color: #ffaa81;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #ffaa81;
 }
+
 /*************************************/
     /* style section contact */
 /*************************************/
