@@ -221,6 +221,19 @@ header{
     -moz-clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
 }
+
+.pitch{
+    padding: 20px;
+    margin-bottom: 60px;
+}
+.pitch p{
+    color: #8a5e6c;
+    text-align: left;
+    line-height: 1.5rem;
+    font-weight: bold;
+    padding-bottom:20px;
+    margin-bottom:100px;
+}
 .pitch{
     padding: 20px;
     margin-bottom: 60px;
@@ -231,14 +244,10 @@ header{
     line-height: 1.5rem;
     font-weight: bold;
 }
-.pitch p:nth-of-type(3){
-    padding-bottom:120px;
-    margin-bottom:100px;
-}
 #about a{
     display: inline;
-    color: #8a5e6c;
-    text-decoration: underline #8a5e6c;
+    color:#fe4559;
+    text-decoration: underline #fe4559;
 }
 /*************************************/
         /* style section skills*/
@@ -359,16 +368,15 @@ header{
     padding: 0;
 }
 .fade h2{
-    color: #fe4559;
+    color: #8a5e6c;
 }
 
 .fade a{
-    color: #8a5e6c;
     font-size: 1.4rem;
-    text-decoration: underline #8a5e6c;
     font-weight: bolder;
+    color:#fe4559;
+    text-decoration: underline #fe4559;
 }
-
 video,
 #projects img{
     margin:auto;
@@ -556,10 +564,10 @@ p{
     height:35px;
 }
 /* style du paragraphe dans section about */
-.pitch p:nth-of-type(3){
-    padding-bottom:100px;
-    margin-bottom:100px;
+.pitch p{
+    margin: 40px 30px 50px 30px;
 }
+
 /* style des icones section realisations */
 #projects span{
     display:initial;
@@ -716,14 +724,6 @@ header:hover i{
     padding: 50px 0 80px 0;
 }
 
-.pitch p:nth-of-type(3){
-    padding-bottom: 50px;
-    margin-bottom: 50px;
-}
-#about a{
-    color:#fe4559;
-    text-decoration: underline #fe4559;
-}
 #about a:hover{
     color: #ffaa81;
     text-decoration: underline #ffaa81;
@@ -778,10 +778,7 @@ header:hover i{
 #projects h2{
     padding: 50px 0 50px 0;
 }
-.fade a{
-    color: #fe4559;
-    text-decoration: underline #fe4559;
-}
+
 .fade a:hover{
     color: #ffaa81;
     text-decoration: underline #ffaa81;
