@@ -233,6 +233,7 @@ header{
     font-weight: bold;
     padding-bottom:20px;
     margin-bottom:100px;
+    text-align: justify; 
 }
 .pitch{
     padding: 20px;
