@@ -231,20 +231,11 @@ header{
     text-align: left;
     line-height: 1.5rem;
     font-weight: bold;
-    padding-bottom:20px;
-    margin-bottom:100px;
+    padding-bottom: 20px;
+    margin-bottom: 80px;
     text-align: justify; 
 }
-.pitch{
-    padding: 20px;
-    margin-bottom: 60px;
-}
-.pitch p{
-    color: #8a5e6c;
-    text-align: left;
-    line-height: 1.5rem;
-    font-weight: bold;
-}
+
 #about a{
     display: inline;
     color:#fe4559;
@@ -287,9 +278,9 @@ header{
 }
 .logo h5{
     margin: auto;
-    color: #8a5e6c;
     font-size: 0.8rem;
-    text-decoration: underline #8a5e6c;
+    color:#fe4559;
+    text-decoration: underline #fe4559;
 }
 /* pour animer les flip-cards */
 
@@ -499,10 +490,7 @@ iframe{
     color: #ffffff;
     background-color: #ffaa81;
 }
-#toTopBtn:hover {
-    background-color: #ffffff;
-    color:#ffaa81;
-}
+
 /*************************************/
         /* style du footer */       
 /*************************************/
@@ -730,6 +718,20 @@ header:hover i{
     text-decoration: underline #ffaa81;
     transition: all 1s;
 }
+
+.pitch p{
+    color: #8a5e6c;
+    text-align: left;
+    line-height: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+.clipping{
+    width: 50%;
+}
+.clipping.flippy{
+    align-self: flex-end;
+}
 /*************************************/
         /* style section skills*/
 /*************************************/
@@ -826,7 +828,11 @@ header:hover i{
     border: solid #f4f4f4;
     color: #ffffff;
 }
-
+/* pour le scroll-To-Top button */
+#toTopBtn:hover {
+    background-color: #ffffff;
+    color:#ffaa81;
+}
 footer{
     padding: 20px 0 20px 0;
 }
