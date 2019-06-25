@@ -336,7 +336,11 @@ header{
 .flippy{
     transform: rotateY(180deg);
 }
-
+/* pour les solitaires */
+.alone{
+    width: 50%;
+    align-self: center;
+}
 /*************************************/
     /* style de la section projects */       
 /*************************************/
@@ -759,6 +763,10 @@ header:hover i{
 /* pour animation des flip-card */
 .flip-card:hover .flip-card-inner{
     transform: rotateY(180deg);
+}
+/* pour les solitaires */
+.alone{
+    width: auto;
 }
 /*************************************/
     /* style section realisations */
