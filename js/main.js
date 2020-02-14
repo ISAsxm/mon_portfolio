@@ -2,7 +2,7 @@ $(document).ready(function()
 {
 
 // ////////////////////////////////////////////////////////////////// //
-            // pour  le menu en versions mobile //
+            // pour  le menu en version mobile //
 // ////////////////////////////////////////////////////////////////// //
 
 var content = document.getElementById('burger-content');
@@ -14,9 +14,16 @@ var button = document.getElementById('burger-button');
 
 button.addEventListener('click',function(e)
 {
+      event.stopPropagation();
       this.parentNode.classList.toggle('burger-activated');
 });
 
+$('html').click(function (e) {
+
+      if($('#container-burger').classList += "burger-activated") {
+          $('#container-burger').removeClass('burger-activated');
+      }
+});
 // ///////////////////////////////////////////// //
       // pour appeler les animations au scroll //
 // ///////////////////////////////////////////// //
