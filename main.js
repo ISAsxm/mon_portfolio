@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(document).ready(function()
+{
 
 // ////////////////////////////////////////////////////////////////// //
             // pour  le menu en versions mobile //
@@ -11,15 +12,16 @@ sideBar.innerHTML = content.innerHTML;
 
 var button = document.getElementById('burger-button');
 
-button.addEventListener('click',function(e){
-    
-   this.parentNode.classList.toggle('burger-activated');
+button.addEventListener('click',function(e)
+{
+      this.parentNode.classList.toggle('burger-activated');
 });
 
 // ///////////////////////////////////////////// //
       // pour appeler les animations au scroll //
 // ///////////////////////////////////////////// //
-window.onscroll = function(){
+window.onscroll = function()
+{
    stickyMenu();
    underlineMenu();
    scrollFunction();
@@ -32,8 +34,8 @@ window.onscroll = function(){
 var menu = document.getElementById('menu');
 var startSticky = document.getElementById('home').offsetTop;
 
-function stickyMenu(){
-
+function stickyMenu()
+{
       if(window.scrollY >= startSticky){
             menu.classList.add('sticky');
       }else {
@@ -44,8 +46,8 @@ function stickyMenu(){
 // ///////////////////////////////////////////////////////// //
       // pour le menu souligne mediaquery >1050px//
 // ///////////////////////////////////////////////////////// //
-function underlineMenu(){
-
+function underlineMenu()
+{
       var menuNav = document.querySelectorAll('#menu-nav a');
       var home = document.querySelector('header').offsetTop;
       var about = document.getElementById('about').offsetTop-10;
@@ -53,29 +55,29 @@ function underlineMenu(){
       var projects = document.getElementById('projects').offsetTop-10;
       var contact = document.getElementById('contact').offsetTop-10;
 
-      if((window.scrollY == home) && (window.scrollY < about)){
+      if((window.scrollY == home) && (window.scrollY < about)) {
             menuNav[0].classList.add('underline');
-      }else{
+      }else {
             menuNav[0].classList.remove('underline');
             } 
-      if((window.scrollY >= about) && (window.scrollY < skills)){
+      if((window.scrollY >= about) && (window.scrollY < skills)) {
             menuNav[1].classList.add('underline');
-      }else{
+      }else {
             menuNav[1].classList.remove('underline');
       }
-      if((window.scrollY >= skills) && (window.scrollY < projects)){
+      if((window.scrollY >= skills) && (window.scrollY < projects)) {
             menuNav[2].classList.add('underline');
-      }else{
+      }else {
             menuNav[2].classList.remove('underline');
       }
-      if((window.scrollY >= projects) && (window.scrollY < contact)){
+      if((window.scrollY >= projects) && (window.scrollY < contact)) {
             menuNav[3].classList.add('underline');
-      }else{
+      }else {
             menuNav[3].classList.remove('underline');
       }
-      if(window.scrollY >= contact){      
+      if(window.scrollY >= contact) {      
             menuNav[4].classList.add('underline');
-      }else{
+      }else {
             menuNav[4].classList.remove('underline');
       }
 }
@@ -84,8 +86,8 @@ function underlineMenu(){
       // pour l'effet smooth lors du scroll du menu vers les ancres //
 // ////////////////////////////////////////////////////////////////// //
 
-$('.js-scrollTo').on('click', function(){
-
+$('.js-scrollTo').on('click', function()
+{
       $('#container-burger').removeClass('burger-activated');
       var section = $(this).attr('href');
       var speed = 750;
@@ -97,18 +99,17 @@ $('.js-scrollTo').on('click', function(){
             // pour l'effet des flip card version mobile //
 // ////////////////////////////////////////////////////////////////// //
 
-$('.flip-card').on('click', function(){
-
+$('.flip-card').on('click', function()
+{
       $(this).children(':first').toggleClass('flippy');
-            
 });
 
 // ////////////////////////////////////////////////////////////////// //
                   // pour le button sroll to top //
 // ////////////////////////////////////////////////////////////////// //
 
-function scrollFunction() {
-
+function scrollFunction()
+{
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("toTopBtn").style.display = "block";
   } else {
@@ -116,10 +117,10 @@ function scrollFunction() {
   }
 }
 
-$('#toTopBtn').on('click', function(){
-      
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+$('#toTopBtn').on('click', function()
+{
+      $('html, body').animate({scrollTop:0}, 'slow');
+      return false;
 });
 
 // ////////////////////////////////////////////////////////////////// //
@@ -131,24 +132,30 @@ var slideId = ["mySlides1", "mySlides2"]
 showSlides(1, 0);
 showSlides(1, 1);
 
-function plusSlides(n, no) {
+function plusSlides(n, no)
+{
   showSlides(slideIndex[no] += n, no);
 }
 
-$('.prev').on('click', function(){
+$('.prev').on('click', function()
+{
       plusSlides(-1, 0);
 });
-$('.next').on('click', function(){
+$('.next').on('click', function()
+{
       plusSlides(1, 0);
 });
-$('.prev2').on('click', function(){
+$('.prev2').on('click', function()
+{
       plusSlides(-1, 1);
 });
-$('.next2').on('click', function(){
+$('.next2').on('click', function()
+{
       plusSlides(1, 1);
 });
 
-function showSlides(n, no) {
+function showSlides(n, no)
+{
       var i;
       var x = document.getElementsByClassName(slideId[no]);
       if (n > x.length) {slideIndex[no] = 1}    
