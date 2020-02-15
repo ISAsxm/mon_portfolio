@@ -154,7 +154,7 @@ header {
     display: flex;
     flex-direction: column;
 }
-#burger-sidebar #menu-nav {
+#burger-sidebar #menu-nav a {
     color: #ffffff;
     padding: 20px;
     background-color: #ff545d;
