@@ -6,66 +6,67 @@
 /*************************************/
 
 /* pour oter les styles par defaut des listes et des liens */
-ul{
+ul {
     padding: 0;
     margin: 0;
 }
 li,
-a{
+a {
     list-style: none;
     text-decoration: none;
     display: block;
 }
-a{
+a {
     cursor: pointer;
 }
 /* style general des sections et div */
-.container{
+.container {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.row{
+.row {
     display: flex;
 }
-.case{
+.case {
     padding: 20px;
     margin: 20px;
     background: rgba(255,255,255,0.9);
     box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 /* pour pousser les elements a droite */
-.push{
+.push {
     margin-left: auto;
 }
 
-/* police generale */
-body{
+/* font style general */
+body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
 }
-h1{
-    font-size: 2.5rem;
+h1,
+.section-title {
+    font-size: 2rem;
     font-weight: 900;
     text-transform: capitalize;
 }
-h1:not(.white){
+.section-title {
     color: #293133;
 }
-h2{
+h2 {
     font-size: 1.5rem;
     font-weight: 700;
     color: #293133;
 }
-h3{
+h3 {
     font-size: 1rem;
     font-weight: 700;
 }
-h4{
+h4 {
     font-size: 0.8rem;
     font-weight: 400;
 }
-p{
+p {
     font-family: 'Heebo', sans-serif;
     font-size: 0.8rem;
     font-weight: 400;
@@ -76,7 +77,7 @@ p{
 /*************************************/
 
 /* style principal du header */
-header{
+header {
     background-size: cover;
     height: 100vh;
     color: #ffffff;
@@ -86,7 +87,7 @@ header{
 /* style section menu dans header */
 
 /* pour positionner le menu et le logo avant le home*/
-#menu{
+#menu {
     flex-direction: row;
     align-items: center;
     order: -1;
@@ -96,14 +97,14 @@ header{
 }
 
  /*pour le logo  */
-#menu img{
+#menu img {
     padding: 10px;
     padding-right: 0;
-    width:20px;
-    height:25px;
+    width: 20px;
+    height: 25px;
 }
 /* classe pour animation js */
-.sticky{
+.sticky {
     position: fixed;
     background: linear-gradient(to right bottom, rgba(255, 170, 129,0.8), rgba(255, 185, 111, 0.8),rgba(255, 117, 99, 0.8), rgba(255, 84, 93, 0.8), rgba(255, 30, 92, 0.8));
     z-index: 999;
@@ -111,29 +112,29 @@ header{
 
 /* pour aerer le menu */
 #menu span,
-#container-burger{
+#container-burger {
     padding: 10px 20px 10px 10px;
 }
 
 /* pour effacer la nav menu */
-#menu-nav{
+#menu-nav {
     display: none;
 }
 
 /* style du menu burger */
 /* style de l'icone burger*/
-#burger-button{
+#burger-button {
     cursor: pointer;
     background: none;
     border: none;
     outline: none;
     font-size: 1.5rem;
-    padding:0;
+    padding: 0;
     color: #ffffff;
     z-index: 21;
 }
 /* style de la side-bar */
-#burger-sidebar{
+#burger-sidebar {
     position: fixed;
     z-index: 20;
     width: 100vw;
@@ -145,60 +146,59 @@ header{
 }
 /* style du contenu de la sidebar */
 /* pour faire apparaitre le contenu */
-#burger-sidebar #menu-nav{
+#burger-sidebar #menu-nav {
     display: inherit;
 }
 /* pour aligner la liste */
-#burger-sidebar #menu-nav ul{
+#burger-sidebar #menu-nav ul {
     display: flex;
     flex-direction: column;
 }
-#burger-sidebar #menu-nav a,
-.dropdown-content a{
+#burger-sidebar #menu-nav {
     color: #ffffff;
     padding: 20px;
     background-color: #ff545d;
     border-bottom: 1px solid #ff1e5c;
 }
 /* pour faire apparaitre la sidebar sur la page */
-.burger-activated #burger-sidebar{
+.burger-activated #burger-sidebar {
     transform: translateY(0);
 }    
 
 /* style section home dans header */
 
 /* pour centrer le container du titre et des logo */
-#home{
+#home {
     margin: auto;
 }
 
 /* animation du titre */
-@keyframes shadow{
+@keyframes shadow {
     from {text-shadow:0 0 rgba(0, 0,0,.8);}
     to {text-shadow:20px 20px 10px rgba(0,0,0,.2);}
 }
 
-#home h1{
+h1 {
     padding: 10px;
     z-index: 1;
     animation: shadow 4s forwards;
 }
 
 /* animation de la bulle du titre principal*/
-@keyframes wheelOpacity{
+@keyframes wheelOpacity {
     from{opacity: 0.3;}
     10%{opacity: 0.5;}
     60%{opacity: 0.7;}
     to{opacity: 0.9;}
 }
 
-.big-bubble{
+.big-bubble {
     position: absolute;
     background-color: rgba(255, 170, 128,0.3);
     border-radius: 4rem;
     width: 8rem;
     height: 8rem;
-    margin:5px;
+    margin: 5px;
     -webkit-box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
     -moz-box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
     -o-box-shadow: inset 2px 2px 5px 1px rgba(255, 255, 255, 0.3);
@@ -206,7 +206,7 @@ header{
     animation: wheelOpacity 4s;
 }
 
-#i-bubbles{
+#i-bubbles {
     display: none;
 }
 
@@ -214,22 +214,22 @@ header{
         /* style section about*/
 /*************************************/
 
-#about{
+#about {
     background: #b054c8;
     padding: 50px 0 50px 0;
 }
 
-.clipping{
+.clipping {
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     -moz-clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     clip-path: polygon(0 0, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
 }
 
-.pitch{
+.pitch {
     padding: 20px;
     margin-bottom: 60px;
 }
-.pitch p{
+.pitch p {
     color: #8a5e6c;
     text-align: left;
     line-height: 1.5rem;
@@ -239,47 +239,47 @@ header{
     text-align: justify; 
 }
 
-#about a{
+#about a {
     display: inline;
-    color:#fe4559;
+    color: #fe4559;
     text-decoration: underline #fe4559;
 }
 /*************************************/
         /* style section skills*/
 /*************************************/
 
-#skills{
+#skills {
     background: #eb3996;
     padding: 50px 0 50px 0;
 }
 
-#skills h2{
+#skills h2 {
     text-transform: uppercase;
     padding: 0 10px 20px 10px;
 }
 
-.it-skills{
+.it-skills {
     padding-bottom: 50px;
 }
 /*pour placer les div containers dans les containers */
 
-.logo-content{
+.logo-content {
     justify-content: center;
 }
 
-.logo img{
+.logo img {
     max-width: 70%;
 }
 
-.logo h4{
+.logo h4 {
     color: #b054c8;
 }
-.logo h3{
+.logo h3 {
     color: #eb3996;
     margin-bottom: 0;
     text-transform: uppercase;
 }
-.logo h5{
+.logo h5 {
     margin: auto;
     font-size: 0.8rem;
     color:#fe4559;
@@ -287,7 +287,7 @@ header{
 }
 /* pour animer les flip-cards */
 
-.flip-card{
+.flip-card {
     background-color: transparent;
     width: 200px;
     height: 200px;
@@ -295,7 +295,7 @@ header{
     padding: 20px;
 }
   
-.flip-card-inner{
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -303,7 +303,8 @@ header{
     transform-style: preserve-3d;
 }
 
-.flip-card-front, .flip-card-back{
+.flip-card-front, 
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -311,7 +312,7 @@ header{
     backface-visibility: hidden;
 }
 
-.flip-card-front{
+.flip-card-front {
     background: rgba(255,255,255,0.9);
     -webkit-box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
     box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
@@ -320,7 +321,7 @@ header{
     clip-path: inset(0 0 0 0 round 0 20% 0 20%);
 }
 
-.flip-card-back{
+.flip-card-back {
     background: #ffffff;
     transform: rotateY(180deg);
     -webkit-clip-path: inset(0 0 0 0 round 20% 0 20% 0);
@@ -328,19 +329,20 @@ header{
     clip-path: inset(0 0 0 0 round 20% 0 20% 0);
 }
 
-.flip-card-front>*, .flip-card-back>*{
+.flip-card-front > *, 
+.flip-card-back > * {
     margin: auto;
 }
 
-.flip-card-back p{
+.flip-card-back p {
     padding: 5px;
 }
 /* pour animation js au click */
-.flippy{
+.flippy {
     transform: rotateY(180deg);
 }
 /* pour les solitaires */
-.alone{
+.alone {
     width: 50%;
     align-self: center;
 }
@@ -348,44 +350,46 @@ header{
     /* style de la section projects */       
 /*************************************/
 
-#projects{
+#projects {
    background:  #fe4559;
    padding: 50px 0 50px 0;
 }
 
-#projects p{
+#projects p {
     padding: 20px;
     margin: auto;
     line-height: 2rem;
     font-weight: bold;
 }
 
-#projects h2::first-letter{
+#projects h2::first-letter {
     text-transform: uppercase;
 }
-#projects h2{
+#projects h2 {
     padding: 0;
 }
-.fade h2{
+.fade h2 {
     color: #8a5e6c;
+    font-size: 1rem;
 }
-.fade a{
+.fade a {
     font-weight: bolder;
     color:#fe4559;
     text-decoration: underline #fe4559;
 }
-video,
-#projects img{
+video, 
+#projects img {
     margin:auto;
     width: 100%;
     height: auto;
 }
 
-#projects span{
+#projects span {
     display:none;
 }
 
-.mySlides1, .mySlides2 {
+.mySlides1, 
+.mySlides2 {
     display: none
 }
 
@@ -395,22 +399,25 @@ video,
 }
 
 /* pour les buttons next et prev */
-.prev, .next,
-.prev2, .next2 {
+.prev, 
+.next,
+.prev2, 
+.next2 {
   cursor: pointer;
   position: absolute;
-  top: 10%;
+  top: 6%;
   width: auto;
   padding: 10px;
-  color: white;
+  color: rgba(255,255,255,0.9);
   background-color: #ffaa81;
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
   font-weight: bold;
   font-size: 1.5rem;
   border-radius: 3px;
   transition: all 2s ease;
 }
 .prev,
-.prev2{
+.prev2 {
     left: 0;
 }
 .next,
@@ -418,7 +425,7 @@ video,
     right: 0;
 }
 
-#projects .container{
+#projects .container {
     margin:  20px auto 20px auto;
 }
 /* pour faire une transition douce */
@@ -435,54 +442,54 @@ video,
 /*************************************/
     /* style de la section contact */       
 /*************************************/
-#contact{
+#contact {
     background: #b054c8;
     padding: 50px 0 50px 0;
 }
 
 /* pour placer les buttons dans le flux */
-#contact-button{
+#contact-button {
     justify-content: center;
 }
 
 /* style des bouttons */
-.button{
-    padding:10px;
+.button {
+    padding: 10px;
     background-color: #ffffff;
-    color:rgb(255, 109, 97);
+    color: rgb(255, 109, 97);
     border: solid rgb(255, 109, 97);
     border-radius: 10px;
     width: 30%;
 }
-.button:active{
+.button:active {
     background-image: linear-gradient(to right bottom, #ffaa81, #ff916f, #ff7563, #ff545d, #ff1e5c);
     border: solid #f4f4f4;
     color: #ffffff;
 }
 
-#contact-button a{
+#contact-button a {
     margin: 10px;
 }
 
-#contact h3{
+#contact h3 {
     color: #8a5e6c;
 }
-#contact h3:nth-of-type(1){
+#contact h3:nth-of-type(1) {
     padding-bottom: 20px;
     line-height: 1.5rem;
 }
-#contact h3:nth-of-type(2){
+#contact h3:nth-of-type(2) {
     padding-top: 20px;
     padding-bottom: 10px;
 }
-iframe{
+iframe {
     width: 100%;
 }
 
 /*************************************/
     /* style du scroll-To-Top button */       
 /*************************************/
-#toTopBtn{
+#toTopBtn {
     display: none; 
     position: fixed;
     bottom: 10px;
@@ -493,21 +500,22 @@ iframe{
     font-size: 1.5rem;
     color: #ffffff;
     background-color: #ffaa81;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
 /*************************************/
         /* style du footer */       
 /*************************************/
-footer{
+footer {
     background-image: linear-gradient(to right bottom, #ffaa81, #ff9c76, #ff8d6d, #ff7e66, #ff6d61, #ff625f, #ff575d, #ff4a5c, #ff425c, #ff385c, #ff2d5c, #ff1e5c);
-    display:flex;
+    display: flex;
     padding: 10px 0 10px 0;
 }
-footer small{
+footer small {
     color: #ffffff;
     margin: auto;
-    padding:20px;
+    padding: 20px;
 }
 /***************************************************/
         /* fin du style mobile First */
@@ -516,57 +524,60 @@ footer small{
 /***************************************************/
         /* style avec mediaquery a partir de 780px */
 /***************************************************/
-@media screen and (min-width: 780px){
+@media screen and (min-width: 780px) {
 
-    /* police generale */
-body{
+    /* font style general */
+body {
     font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
-h1{
+h1,
+.section-title {
     font-size: 3.5rem;
+    letter-spacing: 4px;
 }
 
-h2{
+h2 {
     font-size: 2rem;
     font-weight: 900;
     padding: 20px 0 50px 0;
 }
 
-h3{
+h3 {
     font-size: 1rem;
     font-weight: 900;
 }
-h4{
+h4 {
     
     font-size: 1.2rem;
     font-weight: 400;
 }
 
-p{
+p {
     font-size: 1rem;
     font-weight: 400;
 }
 
 /* pour le menu burger */
-#burger-button{
+#burger-button {
     font-size: 2rem;
 }
 /*pour le logo  */
-#menu img{
-    width:30px;
-    height:35px;
+#menu img {
+    width: 30px;
+    height: 35px;
 }
 /* style du paragraphe dans section about */
-.pitch p{
+.pitch p {
     margin: 40px 30px 50px 30px;
 }
 
 /* style des icones section realisations */
-#projects span{
-    display:initial;
+#projects span {
+    display: initial;
 }
-#projects i{
+#projects i {
     border: solid rgba(254, 69, 89,0.8);
     color: rgba(254, 69, 89,0.8);
     border-radius: 50%;
@@ -577,13 +588,15 @@ p{
 }
 
 /* pour les buttons next et prev */
-.prev, .next,
-.prev2, .next2 {
+.prev, 
+.next,
+.prev2, 
+.next2 {
   top: 5%;
   padding: 15px;
 }
 .prev,
-.prev2{
+.prev2 {
     left: 5%;
 }
 .next,
@@ -600,51 +613,51 @@ p{
         /* style avec mediaquery a partir de 1050px */
 /***************************************************/
 
-@media screen and (min-width: 1050px){
+@media screen and (min-width: 1050px) {
 
-h1:not(.white){
+.section-title {
     padding: 50px 0 50px 0;
 }
     
-h2{
+h2 {
     padding: 20px 0 50px 0;
 }
 /*************************************/
         /* style du header */
 /*************************************/ 
- /*pour le logo  */
-#menu img{
+    /*pour le logo  */
+#menu img {
      width:50px;
      height:55px;
 }
     /* pour effacer le menu burger */
 #burger-button, 
 #burger-sidebar, 
-.burger-activated{
+.burger-activated {
     display: none;
 }
     
     /* pour replacer la nav menu */
-#menu-nav{
+#menu-nav {
     display: inherit;
 }
         
     /* pour positionner la nav menu */
-header ul{
+header ul {
     display: flex; 
 }
         
-#menu a{
+#menu a {
     color: #ffffff;
     padding: 10px;
 }
-#menu-nav a:hover{
+#menu-nav a:hover {
     color: #ffaa81;
     transition: all 1s;
 }
 
     /* class pour animation menu js */
-.underline{
+.underline {
     border-bottom: 0.5px solid; 
 }
 
@@ -666,17 +679,17 @@ header ul{
     }
 }
 
-#i-bubbles{
+#i-bubbles {
     display: initial;
     margin:auto;
     width: 400px;
     height: 50px;
 }
-header:hover i{
+header:hover i {
     animation: iBubbles 1.5s infinite alternate;
 }
 
-#home i{
+#home i {
     opacity: 0;
     padding: 5px;
     width: 4px;
@@ -714,84 +727,90 @@ header:hover i{
 /*************************************/
         /* style section about*/
 /*************************************/
-#about{
+#about {
     padding: 50px 0 80px 0;
 }
 
-#about a:hover{
+#about a:hover {
     color: #ffaa81;
     text-decoration: underline #ffaa81;
     transition: all 1s;
 }
 
-.pitch p{
+.pitch p {
     color: #8a5e6c;
     text-align: left;
     line-height: 1.5rem;
     font-weight: bold;
     margin-bottom: 100px;
 }
-.clipping{
+.clipping {
     width: 50%;
 }
-.clipping.flippy{
+.clipping.flippy {
     align-self: flex-end;
 }
 /*************************************/
         /* style section skills*/
 /*************************************/
-#skills{
+#skills {
     padding: 50px 0 80px 0;
 }
 
-.logo{
+.logo {
     flex-direction: column;
 }
-
-.it-skills{
+.logo img {
+    max-width: 50%;
+    padding-top: 5px;
+}
+.it-skills {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#skills h2{
+#skills h2 {
     padding: 20px 10px 50px 10px;
 }
 
-.logo h5{
+.logo h5 {
     display: none;
 }
 /* pour animation des flip-card */
-.flip-card:hover .flip-card-inner{
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 /* pour les solitaires */
-.alone{
+.alone {
     width: auto;
 }
 /*************************************/
     /* style section realisations */
 /*************************************/
-#projects{
+#projects {
     padding: 50px 0 80px 0;
 }
 
-.proj-row{
+.proj-row {
     flex-direction: row;
 }
-.project{
+.project {
     width: 70%;
 }
 
-.project:hover i{
+.project:hover i {
     background: rgba(254, 69, 89,0.5);
     color: #ffffff !important;
 }
-#projects h2{
+#projects h2 {
     padding: 50px 0 50px 0;
 }
+.fade h2 {
+    font-size: 2rem;
+}
 
-.fade a:hover{
+.fade a:hover {
     color: #ffaa81;
     text-decoration: underline #ffaa81;
 }
@@ -800,49 +819,58 @@ header:hover i{
     margin: auto;
 }
 /* pour les buttons next et prev */
-.prev, .next,
-.prev2, .next2 {
-  top: 10%;
+.prev, 
+.next,
+.prev2, 
+.next2 {
+  top: 12%;
   margin-top: -22px;
   font-size: 1.6rem;
 }
 .prev,
-.prev2{
+.prev2 {
     left: 20%;
 }
 .next,
 .next2 {
     right: 20%;
 }
-.prev:hover, .next:hover,
-.prev2:hover, .next2:hover {
-    background-color: #ffffff;
+.prev:hover, 
+.next:hover,
+.prev2:hover, 
+.next2:hover {
+    background-color: rgba(255,255,255,0.8);
     color: #ffaa81;
 }
 
 /*************************************/
     /* style section contact */
 /*************************************/
-#contact{
+#contact {
     padding: 50px 0 80px 0;
 }
 
-.button{
+.button {
     padding:10px;
     width: 20%;
 }
 /* pour l'animation des bouttons */
-.button:hover{
+.button:hover {
     background: linear-gradient(to right bottom, #ffaa81, #ff916f, #ff7563, #ff545d, #ff1e5c);
     border: solid #f4f4f4;
     color: #ffffff;
 }
 /* pour le scroll-To-Top button */
+#toTopBtn {
+    bottom: 20px;
+    right: 20px;
+}
+
 #toTopBtn:hover {
     background-color: #ffffff;
-    color:#ffaa81;
+    color: #ffaa81;
 }
-footer{
+footer {
     padding: 20px 0 20px 0;
 }
 
