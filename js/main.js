@@ -54,12 +54,12 @@ function stickyMenu()
 // ///////////////////////////////////////////////////////// //
 function underlineMenu()
 {
-      var menuNav = document.querySelectorAll('#menu-nav a');
-      var home = document.querySelector('header').offsetTop;
-      var about = document.getElementById('about').offsetTop-10;
-      var skills = document.getElementById('skills').offsetTop-10;
-      var projects = document.getElementById('projects').offsetTop-10;
-      var contact = document.getElementById('contact').offsetTop-10;
+      let menuNav = document.querySelectorAll('#menu-nav a');
+      let home = document.querySelector('header').offsetTop;
+      let about = document.getElementById('about').offsetTop-10;
+      let skills = document.getElementById('skills').offsetTop-10;
+      let projects = document.getElementById('projects').offsetTop-10;
+      let contact = document.getElementById('contact').offsetTop-10;
 
       if((window.scrollY == home) && (window.scrollY < about)) {
             menuNav[0].classList.add('underline');
@@ -95,8 +95,8 @@ function underlineMenu()
 $('.js-scrollTo').on('click', function()
 {
       $('#container-burger').removeClass('burger-activated');
-      var section = $(this).attr('href');
-      var speed = 750;
+      let section = $(this).attr('href');
+      let speed = 750;
       $('html, body').animate({ scrollTop: $(section).offset().top}, speed);
       return false;
 });
@@ -162,8 +162,8 @@ $('.next2').on('click', function()
 
 function showSlides(n, no)
 {
-      var i;
-      var x = document.getElementsByClassName(slideId[no]);
+      let i;
+      let x = document.getElementsByClassName(slideId[no]);
       if (n > x.length) {slideIndex[no] = 1}    
       if (n < 1) {slideIndex[no] = x.length}
       for (i = 0; i < x.length; i++) {

@@ -163,7 +163,7 @@ header {
 /* pour faire apparaitre la sidebar sur la page */
 .burger-activated #burger-sidebar {
     transform: translateY(0);
-}    
+}
 
 /* style section home dans header */
 
