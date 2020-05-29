@@ -1,9 +1,9 @@
-# Architecture model of a web user interface with sass and npm.   
+# Portfolio Isabelle Hugues   
 
 
 ## Description :  
 
-Ready-to-use architecture model of a UI with sass and npm.   
+Portfolio.   
 Version : 1.0.0   
 Date : 2020-05-06   
 Responsable : HI   
@@ -14,10 +14,6 @@ Responsable : HI
 
 
 ### project init :  
-
-Change the name, version, description, author and license in package.json with your own data.  
-
-Then run :  
 
 $ __npm install__  
 
@@ -80,9 +76,3 @@ $ __npm run build:css__
 `"build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"`   
 
 ---
-
-## Informations :  
-
-
-There are several examples and comments in all the directories.  
-Delete everything you don't need but respect the architecture of the application for it to work properly.  
