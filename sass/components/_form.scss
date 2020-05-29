@@ -1,0 +1,12 @@
+.form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__group:not(:last-child) {
+
+        margin-bottom: 2rem;
+    }
+
+}

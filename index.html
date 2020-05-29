@@ -1,728 +1,741 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- never neglect this meta tag because it is this one which browsers will take into account to respect our sizes described in our css rules -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <head>
-        <meta charset="utf-8"/>
-        <meta content="IE=edge" http-equiv="X-UA-Compatible">
-        <title>Isabelle Hugues</title>
-        <meta content="width=device-width, initial-scale=1" name="viewport">
-        <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Heebo:400,700,900|Montserrat:400,700,900&display=swap" rel="stylesheet">
-        <link href="css/normalize.css" media="screen" rel="stylesheet" type="text/css">
-        <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/>
-        <link href="images/logo_hi.png" rel="icon" sizes="16x16" type="image/png">
-    </head>
-    <body>
-        <header class="container">
-            <section id="menu" class="container"><!--- start section menu avec barre de navigation et logo -->
-                <a class="js-scrollTo" href="#"><img src="images/logo_hi.png" alt="logo Isabelle Hugues"/></a>
-                <span>Isabelle HUGUES</span>
-                <div class="container push" id="container-burger">
-                    <div class="container" id="burger-content">
-                        <nav id="menu-nav">
-                            <ul>
-                                <li><a class="js-scrollTo" href="#">Accueil</a></li>
-                                <li><a class="js-scrollTo" href="#about">A propos</a></li>
-                                <li><a class="js-scrollTo" href="#skills">Compétences</a></li>
-                                <li><a class="js-scrollTo" href="#projects">Réalisations</a></li>
-                                <li><a class="js-scrollTo" href="#contact">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <button id="burger-button">&#9776;</button>
-                    <div id="burger-sidebar"></div>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Heebo:400,700,900|Montserrat:400,700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/logo_hi.png" />
+
+    <title>Isabelle Hugues | Portfolio</title>
+  </head>
+
+  <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Accueil</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#about" class="navigation__link">A propos</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#skills" class="navigation__link">Compétences</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#projects" class="navigation__link">Réalisations</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#contact" class="navigation__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!--- end nav -->
+
+    <header class="header">
+      <div class="header__logo-box">
+        <img
+          src="img/logo_hi.png"
+          alt="Logo Isabelle Hugues"
+          class="header__logo"
+        />
+        <span class="header__text">Isabelle Hugues</span>
+      </div>
+
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">développeuse</span>
+          <span class="heading-primary--sub">full stack</span>
+        </h1>
+      </div>
+    </header>
+    <!--- end section home avec titre et animation bulles -->
+
+    <main>
+      <section id="about" class="section-about">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">A propos de moi</h2>
+        </div>
+
+        <div class="row">
+          <div class="about">
+            <div class="about__text about__text--1">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Mes débuts en quelques mots
+              </h3>
+              <p class="paragraph">
+                Après m'être investie plus de 15 années en qualité de vendeuse,
+                j'ai entrepris une reconversion professionnelle mûrement
+                réfléchie dans le domaine du numérique, qui me passionne depuis
+                de nombreuses années. J'ai intégré une formation de Développeur
+                Full Stack auprès de
+                <a
+                  class="btn-text"
+                  href="https://www.it-akademy.fr/formation/developpeur-fullstack"
+                  target="_blank"
+                  >It-Akademy</a
+                >
+                afin de développer mes compétences techniques.
+              </p>
+            </div>
+            <div class="about__text about__text--2">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Et aujourd'hui ?
+              </h3>
+              <p class="paragraph">
+                Aujourd'hui, je suis une Développeuse Full Stack junior
+                dynamique et réactive, qui aime les défis et prend plaisir à
+                trouver la solution web la mieux adaptée à chaque projet.
+                Ouverte-d'esprit et très curieuse, je m'épanouis à toujours
+                repousser mes limites et possède une intarissable soif de
+                connaissances.
+              </p>
+            </div>
+            <div class="about__portrait">
+              <figure class="about__portrait__img">
+                <img
+                  src="img/portrait.jpg"
+                  alt="Portrait d'Isabelle Hugues"
+                  class="about__portrait__photo"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section-skills">
+
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary heading-secondary--white">
+            Diplômes &amp; qualifications
+          </h2>
+        </div>
+        <div class="skills">
+          <div class="feature-box">
+            <svg class="feature-box__icon">
+              <use xlink:href="img/sprite.svg#icon-graduation-cap"></use>
+            </svg>
+            <h3
+              class="heading-tertiary u-margin-bottom-small u-margin-top-small"
+            >
+              Développeuse web et mobile
+            </h3>
+            <h4 class="feature-box__title u-margin-bottom-small">
+              <span>IT-Akademy</span> | 2018-2019
+            </h4>
+            <p class="feature-box__text">
+              Formation labellisée Grande Ecole du Numérique qualifiante, niveau
+              Bac+2 informatique de 1010 heures.
+            </p>
+          </div>
+          <div class="feature-box">
+            <svg class="feature-box__icon">
+              <use xlink:href="img/sprite.svg#icon-graduation-cap"></use>
+            </svg>
+            <h3
+              class="heading-tertiary u-margin-bottom-small u-margin-top-small"
+            >
+              Développeuse full stack
+            </h3>
+            <h4 class="feature-box__title u-margin-bottom-small">
+              <span>IT-Akademy</span> | 2019-2021
+            </h4>
+            <p class="feature-box__text">
+              Titre « Développeur d’application Full Stack » enregitré au niveau
+              II (FR) / 6 (EU) du Répertoire National des Certifications
+              Professionnelles.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-cards">
+        <div class="u-center-text u-margin-bottom-big u-margin-top-huge">
+          <h2 class="heading-secondary">
+            Compétences Techniques
+          </h2>
+        </div>
+
+        <div class="skills">
+          <!-- front-end -->
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__gallery">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1">Langages Front-end</span>
+              </h4>
+              <div class="card__details">
+                <ul class="card__details__list">
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-html5"></use>
+                    </svg>
+                    <span class="card__details__text">HTML5</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-css3"></use></svg>
+                      <span class="card__details__text">CSS3</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-sass"></use></svg>
+                      <span class="card__details__text">Sass</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-javascript"></use></svg>
+                      <span class="card__details__text">JavaScript</span>
+                  </li>
+                  <li class="card__details__item">&nbsp;</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__text-box">
+                <p class="card__text">
+                  Elaboration d'interfaces utilisateurs dans le respect des normes du W3C, selon templates ou créations libres, animations d'interfaces graphiques. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- back-end -->
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__gallery">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1">Langages Back-end</span>
+              </h4>
+              <div class="card__details">
+                <ul class="card__details__list">
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-python"></use>
+                    </svg>
+                    <span class="card__details__text">Python</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-php"></use></svg>
+                      <span class="card__details__text">PHP</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-ruby"></use></svg>
+                      <span class="card__details__text">Ruby</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-java"></use></svg>
+                      <span class="card__details__text">Java</span>
+                  </li>
+                  <li class="card__details__item">&nbsp;</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__text-box">
+                <p class="card__text">
+                  Programmation Orientée Object et procédurale. Elaboration de scripts, création et consommation d'API. Communication avec des bases de données.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- frameworks -->
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__gallery">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1">Outils &frasl; Frameworks</span>
+              </h4>
+              <div class="card__details">
+                <ul class="card__details__list">
+                  <li class="card__details__item"><svg class="card__details__icon card__details__icon--django">
+                    <use xlink:href="img/sprite.svg#icon-django"></use>
+                  </svg>
+                    <span class="card__details__text">Django</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-node-dot-js"></use>
+                    </svg>
+                    <span class="card__details__text">Node.Js&frasl;Express.Js</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-react"></use>
+                    </svg>
+                      <span class="card__details__text">React-Native</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-vue-dot-js"></use>
+                    </svg>
+                      <span class="card__details__text">Vue.Js</span>
+                  </li>
+                  <!-- <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-laravel"></use>
+                    </svg>
+                      <span class="card__details__text">Laravel</span>
+                  </li> -->
+                  <li class="card__details__item">&nbsp;</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__text-box">
+                <p class="card__text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ratione excepturi nihil veritatis id tenetur suscipit placeat
+                  accusantium voluptas commodi. Qui.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- cms -->
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__gallery">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1">Bibliothèques &frasl; CMS</span>
+              </h4>
+              <div class="card__details">
+                <ul class="card__details__list">
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-jquery"></use>
+                    </svg>
+                    <span class="card__details__text">JQuery</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-bootstrap"></use>
+                    </svg>
+                      <span class="card__details__text">Bootstrap</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-wordpress"></use>
+                    </svg>
+                      <span class="card__details__text">Wordpress</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-drupal"></use>
+                    </svg>
+                      <span class="card__details__text">Drupal</span>
+                  </li>
+                  <li class="card__details__item">&nbsp;</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__text-box">
+                <p class="card__text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ratione excepturi nihil veritatis id tenetur suscipit placeat
+                  accusantium voluptas commodi. Qui.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- db -->
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__gallery">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1"
+                  >Bases de données</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul class="card__details__list">
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-mysql"></use>
+                    </svg>
+                      <span class="card__details__text">MySQL</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-mongodb"></use>
+                    </svg>
+                      <span class="card__details__text">MongoDb</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-postgresql"></use>
+                    </svg>
+                    <span class="card__details__text">PostgreSQL</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-data"></use>
+                    </svg>
+                    <span class="card__details__text">UML &amp; Merise</span>
+                  </li>
+                  <!-- <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-data"></use>
+                    </svg>
+                    <span class="card__details__text">UML</span>
+                  </li> -->
+                  <li class="card__details__item">&nbsp;</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__text-box">
+                <p class="card__text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ratione excepturi nihil veritatis id tenetur suscipit placeat
+                  accusantium voluptas commodi. Qui.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- web design -->
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__gallery">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1"
+                  >Web Design &frasl; Graphisme</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul class="card__details__list">
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-mobile"></use>
+                    </svg>
+                      <span class="card__details__text">Responsive</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-user-check"></use>
+                    </svg>
+                      <span class="card__details__text">UI / UX</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-gimp"></use>
+                    </svg>
+                    <span class="card__details__text">Gimp</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon card__details__icon--ink">
+                      <use xlink:href="img/sprite.svg#icon-inkscape"></use>
+                    </svg>
+                      <span class="card__details__text">Inkscape</span>
+                  </li>
+                  <li class="card__details__item">&nbsp;</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__text-box">
+                <p class="card__text">
+                  Utilisation des medias queries, flexbox et grid-layout. Utilisation des techniques IHM anthropocentrée. Retouches d'images, création de logos.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- environnements de w -->
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__gallery">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1">Environnement de travail</span>
+              </h4>
+              <div class="card__details">
+                <ul class="card__details__list">
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-linux"></use>
+                    </svg>
+                      <span class="card__details__text">Linux</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-apple"></use>
+                    </svg>
+                      <span class="card__details__text">Apple</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-android"></use>
+                    </svg>
+                      <span class="card__details__text">Android</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-raspberrypi"></use>
+                    </svg>
+                      <span class="card__details__text">Raspberry Pi</span>
+                  </li>
+                  <li class="card__details__item">&nbsp;</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__text-box">
+                <p class="card__text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ratione excepturi nihil veritatis id tenetur suscipit placeat
+                  accusantium voluptas commodi. Qui.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- outils -->
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__gallery">&nbsp;</div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1">Autres Technologies</span>
+              </h4>
+              <div class="card__details">
+                <ul class="card__details__list">
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-visualstudiocode"></use>
+                    </svg>
+                      <span class="card__details__text">VSCode</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-git"></use>
+                    </svg>
+                      <span class="card__details__text">Git</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-docker"></use>
+                    </svg>
+                      <span class="card__details__text">Docker</span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-postman"></use>
+                    </svg>
+                      <span class="card__details__text">Postman</span>
+                  </li>
+                  <li class="card__details__item">&nbsp;</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__text-box">
+                <p class="card__text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ratione excepturi nihil veritatis id tenetur suscipit placeat
+                  accusantium voluptas commodi. Qui.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- section projects -->
+      <section id="projects" class="section-projects">
+        <div class="bg-video">
+          <video class="bg-video__content" autoplay muted loop>
+            <source src="img/video.mp4" type="video/mp4" />
+            Your browser is not supported!
+          </video>
+        </div>
+        <div class="u-center-text u-margin-bottom-big u-margin-top-huge">
+          <h2 class="heading-secondary">
+            Réalisations
+          </h2>
+        </div>
+        <div class="row">
+          <div class="project">
+            <figure class="project__shape">
+              <img
+                src="img/project-onepage-sxm.png"
+                alt="Site Onepage SXM"
+                class="project__img"
+              />
+              <figcaption class="project__caption">
+                SXM The Friendly Island
+              </figcaption>
+            </figure>
+            <div class="project__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Site Vitrine Onepage
+              </h3>
+              <p>
+                Premier projet d'intégration : réalisation d'un site web onepage
+                à partir d'un template imposé. Technologies utilisées : HTML5,
+                CSS3, JavaScript et jQuery.
+              </p>
+              <a
+                class="btn-text u-margin-top-xs"
+                href="https://isasxm.github.io/sxm/"
+                target="_blank"
+                >Voir le projet &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="project">
+            <figure class="project__shape">
+              <img
+                src="img/project-wp-bulladom.png"
+                alt="Site Vitrine Bulladom"
+                class="project__img"
+              />
+              <figcaption class="project__caption">Bulladom</figcaption>
+            </figure>
+            <div class="project__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Site Vitrine WordPress
+              </h3>
+              <p>
+                Projet d'équipe de 5 développeurs : réalisation d'un site web
+                vitrine en 3 jours pour une société de micro-crèches.
+                Technologies utilisées : CMS WordPress, thème wp-Kids.
+              </p>
+              <a
+                class="btn-text u-margin-top-xs"
+                href="https://bulladom.com"
+                target="_blank"
+                >Voir le projet &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="project">
+            <figure class="project__shape">
+              <img
+                src="img/project-cinebamo.png"
+                alt="Application Cinebamo"
+                class="project__img"
+              />
+              <figcaption class="project__caption">Cinebamo</figcaption>
+            </figure>
+            <div class="project__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                application web &amp; mobile
+              </h3>
+              <p>
+                Projet d'équipe de 6 développeurs : réalisation d'une
+                application web et mobile. Technologies utilisées : frameworks
+                Node.js et Express.js, React-native, MongoDb, noSqlBooster,
+                Postman, Bootstrap, CSS3 et jQuery.
+              </p>
+              <a
+                class="btn-text u-margin-top-xs"
+                href="http://cinebamo.it-students.fr/"
+                target="_blank"
+                >Voir le projet &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="project">
+            <figure class="project__shape">
+              <img
+                src="img/project-wheather-forecast.png"
+                alt="Application Météo"
+                class="project__img"
+              />
+              <figcaption class="project__caption">Weather Forecast</figcaption>
+            </figure>
+            <div class="project__text">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                application de prévisions météo
+              </h3>
+              <p>
+                Projet orienté back-end : consommation d'APIs pour créer cette
+                application de prévisions météorologiques. Technologies
+                utilisées : JavaScript, AJAX, HTML5 et Sass.
+              </p>
+              <a
+                class="btn-text u-margin-top-xs"
+                href="https://isasxm.github.io/weather-forecast/"
+                target="_blank"
+                >Voir le projet &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section-contact">
+        <div class="container">
+          <div class="contact">
+            <div class="contact__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">
+                    En savoir plus
+                  </h2>
                 </div>
-            </section><!--- end section menu avec barre de navigation et logo -->
-            <section id="home" class="container"><!--- start section home avec titre et animations -->
-                <div class="big-bubble"></div>
-                <h1>développeuse web &amp; mobile</h1>
-                <div id="i-bubbles">
-                    <i class="fas fa-code"></i>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-js"></i>
-                    <i class="fab fa-php"></i>
-                    <i class="fas fa-database"></i>
-                    <i class="fas fa-code"></i>
+
+                <div class="form__group">
+                  <a
+                    href="media/cv_isabelle_hugues.pdf"
+                    target="_blank"
+                    class="btn"
+                    >Consulter mon CV</a
+                  >
                 </div>
-            </section><!--- end section home avec titre et animation bulles -->
-        </header><!--///////////// end header//////////////-->
-        <main><!--///////////// start section about//////////////-->
-            <section id="about" class="container">
-                <h2 class="section-title">A propos.</h2>
-                <div class="container pitch">
-                    <div class="clipping case">
-                        <p>Après m'être investie plus de 13 années en qualité de vendeuse, j'ai entrepris une reconversion professionnelle mûrement réfléchie dans le domaine du numérique , qui me passionne depuis de nombreuses années. J'ai intégré une formation de Développeur Web et Mobile auprès de <a href="https://www.it-akademy.fr/" target="_blank">It-Akademy</a> afin de développer mes compétences techniques en programmation, et embrasser ainsi ma nouvelle carrière.
-                        </p>
-                    </div>
-                    <div class="clipping case flippy">
-                        <p class="flippy">Aujourd'hui, je suis une développeuse web junior dynamique et réactive, qui aime les défis et prend plaisir à trouver la solution web la mieux adaptée à chaque projet. Ouverte-d'esprit et très curieuse, je m'épanouis à toujours repousser mes limites et possède une intarissable soif de connaissances.
-                        </p>
-                    </div>
-                    <div class="clipping case">
-                        <p>Mes années d'expérience dans le commerce et le service aux personnes ont renforcé ma nature empathique : les besoins des clients sont au centre de mes préoccupations et j'ai à coeur de répondre au mieux à leurs attentes au travers de mes créations.
-                        </p>
-                    </div>
+
+                <div class="u-margin-bottom-medium u-margin-top-small">
+                  <h2 class="heading-secondary">
+                    Me contacter
+                  </h2>
                 </div>
-            </section><!--///////////// end section about//////////////-->
-            <section id="skills" class="container"><!--///////////// start section skills//////////////-->
-                <h2 class="section-title">compétences.</h2>
-                <h2>Langages informatiques</h2>
-                <div class="container skills">
-                    <div class="container it-skills"><!--pour contenir toutes les cards d'une catégories-->
-                        <div class="logo-content row"><!--pour contenir 2 cards dans une catégorie-->
-                            <div class="logo row flip-card"><!--pour contenir 1 card recto/verso-->
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front"><!--pour le recto-->
-                                        <div class="logo-img">
-                                            <img alt="logo HTML5" src="images/logo_it_languages/html5_logo.png"/>
-                                        </div>
-                                        <div class="container text">
-                                            <h3>HTML5</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back"><!--pour le verso-->
-                                        <h3>HTML5</h3>
-                                        <p>Elaboration de documents HTML5 dans le respect des normes du W3C.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo CSS3" src="images/logo_it_languages/css3_logo.png"/>
-                                        </div>
-                                        <div class="container text">
-                                            <h3>CSS3</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>CSS3</h3>
-                                        <p>Mise en forme de documents HTML selon templates ou créations libres, animations d'interfaces graphiques.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo JavaScript" src="images/logo_it_languages/logo_js.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>JS</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>JS</h3>
-                                        <p>Créations de scripts pour le dynamisme et l'interactivité de pages web, manipulation du DOM suite à des évènements ou réponses du serveur via requêtes Ajax.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo PHP" src="images/logo_it_languages/php_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>PHP</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>PHP</h3>
-                                        <p>Programmation procédurale et POO. Utilisation courante pour l'élaboration de scripts, notamment afin de communiquer avec une base de données.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Python" src="images/logo_it_languages/python_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Python</h3>
-                                            <h4>Niveau débutant</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Python</h3>
-                                        <p>Initiation à la programmation procédurale, réalisation d'un script pour communiquer avec une API.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Ruby" src="images/logo_it_languages/ruby_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Ruby</h3>
-                                            <h4>Niveau débutant</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Ruby</h3>
-                                        <p>Observation du langage.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Java" src="images/logo_it_languages/java_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>JAVA</h3>
-                                            <h4>Niveau débutant</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>JAVA</h3>
-                                        <p>Suivi d'un mooc en ligne dispensé par l'EPFL sur la plateforme Coursera.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Sass" src="images/logo_it_languages/sass_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Sass</h3>
-                                            <h4>Niveau débutant</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Sass</h3>
-                                        <p>Utilisation lors de la refonte d'une application web.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h2>Bibliothèques &amp; frameworks</h2>
-                    <div class="container it-skills">
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo bootstrap" src="images/logo_it_languages/bootstrap_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Bootstrap</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Bootstrap</h3>
-                                        <p>Utilisation de Bootstrap pour réaliser des interfaces graphiques.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo JQuery" src="images/logo_it_languages/jquery_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>jQuery</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>jQuery</h3>
-                                        <p>Utilisation courante de jQuery pour communiquer avec le serveur via des requêtes ajax, manipulation du DOM suite à des évenements et/ou réponses du serveur.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo node js" src="images/logo_it_languages/nodejs_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Node.js</h3>
-                                            <h4>Niveau débutant</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Node.js</h3>
-                                        <p>Utilisation pour la création d'une application web affichant des données suite à des requêtes à une API.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo React" src="images/logo_it_languages/react_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>React Native</h3>
-                                            <h4>Niveau débutant</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>React Native</h3>
-                                        <p>Utilisation pour la création d'une application mobile cross-platform, intégration de custom componants et de componants native-base.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h2>CMS</h2>
-                    <div class="container it-skills">
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo WordPress" src="images/logo_it_languages/wordpress_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>WordPress</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>WordPress</h3>
-                                        <p>Réalisation de sites web, création de thèmes et de plugins.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Drupal" src="images/logo_it_languages/drupal_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Drupal</h3>
-                                            <h4>Niveau débutant</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Drupal</h3>
-                                        <p>Participation à la refonte d'une application web de type plateforme de rencontre.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h2>Systèmes de Gestion de Bases de Données</h2>
-                    <div class="container it-skills">
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo MySql" src="images/logo_it_languages/mysql_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>MySql</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>MySql</h3>
-                                        <p>Utilisation fréquente.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img src="images/logo_it_languages/mongodb_logo-test.png" alt="logo MongoDb"/>
-                                        </div>
-                                        <div class="container text">
-                                            <h3>MongoDb</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>mongodb</h3>
-                                        <p>Utilisation fréquente.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h2>Web Design</h2>
-                    <div class="container it-skills">
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Responsive Design" src="images/logo_it_languages/rwd_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Responsive Design</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Responsive Design</h3>
-                                        <p>Réalisations en mobile first, utilisation des medias queries, flexbox et grid-layout.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo UI/UX" src="images/logo_it_languages/uiux_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>UI/UX design</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>UI/UX design</h3>
-                                        <p>Utilisation des techniques IHM anthropocentré, personnas, parcours, scénario, story-board, zoning, wireframe et tests utilisateurs.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="logo-content row alone"><!--alone pour les cartes seules format natel-->
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Gimp" src="images/logo_it_languages/gimp_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Gimp</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Gimp</h3>
-                                        <p>Utilisation fréquente pour des retouches d'images et de photos. Création de mon logo.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h2>Outils complémentaires &amp; environnements de travail</h2>
-                    <div class="container it-skills">
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo AJAX" src="images/logo_it_languages/ajax_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>AJAX</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>AJAX</h3>
-                                        <p>Envoi de requêtes en JSON au serveur avec js et jquery via les protocoles GET, POST, PUT et DELETE, manipulation du DOM suite aux réponses du serveur.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo postman" src="images/logo_it_languages/postman_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>POSTMAN</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>POSTMAN</h3>
-                                        <p>Utilisation fréquente pour des requêtes API via les protocoles GET, POST, PUT et DELETE.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo virtualbox" src="images/logo_it_languages/virtualbox_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Virtualisation</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Virtualisation</h3>
-                                        <p>Utilisation fréquente. Création et utilisation d'environnements virtuels sous Vagrant.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Github" src="images/logo_it_languages/docker_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Docker</h3>
-                                            <h4>Niveau débutant</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Docker</h3>
-                                        <p>Utilisation fréquente de container Docker et de Docker Compose pour créer mes environnements de travail.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="logo-content row"> 
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Github" src="images/logo_it_languages/git_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Git</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Git</h3>
-                                        <p>Utilisation courante. Versionning de mes projets et de projets en commun.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Github" src="images/logo_it_languages/gitlab_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>GitLab</h3>
-                                            <h4>Niveau débutant</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>GitLab</h3>
-                                        <p>Utilisation principalement pour CI/CD dans une approche devOps.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="logo-content row">
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo VScode" src="images/logo_it_languages/vscode_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Visual Studio Code</h3>
-                                            <h4>Niveau intermédiaire</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Visual Studio Code</h3>
-                                        <p>L'éditeur de code que j'ai adopté.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="logo row flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="container flip-card-front">
-                                        <div class="logo-img">
-                                            <img alt="logo Maven" src="images/logo_it_languages/apache_maven_logo.png">
-                                        </div>
-                                        <div class="container text">
-                                            <h3>Apache Maven</h3>
-                                            <h4>Niveau débutant</h4>
-                                            <h5>Détails</h5>
-                                        </div>
-                                    </div>
-                                    <div class="container flip-card-back">
-                                        <h3>Apache Maven</h3>
-                                        <p>Utilisation pour le build d'applications Java.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="form__group u-margin-bottom-small">
+                  <a href="controller/mail.php" class="btn"
+                    >Me contacter email</a
+                  >
                 </div>
-            </section><!--///////////// end section skills//////////////-->
-            <section id="projects" class="container skills"><!--///////////// start section projet //////////////-->
-                <h2 class="section-title">Réalisations.</h2>
-                <h2>Mes projets solo :</h2>
-                <div class="slideshow-container"><!-- start 1st slider -->
-                    <!-- slide 1 -->
-                    <div class="mySlides1 fade">
-                        <div class="container case project">
-                            <h2><a href="https://isasxm.github.io/sxm/" target="_blank">site web onepage</a></h2>
-                            <p>Projet d'intégration : réalisation d'un site web onepage</p>
-                            <div class="container">
-                                <img src="images/projet_onepage_sxm.png" alt="Ceci est une photo représentant la section d'accueil de mon projet de site web onepage">
-                            </div>
-                            <span>
-                                <i class="fab fa-html5"></i>
-                                <i class="fab fa-css3-alt"></i>
-                                <i class="fab fa-js"></i>
-                            </span>
-                            <p>Technologies utilisées : HTML5, CSS3, JavaScript et jQuery</p>
-                        </div>
-                    </div>
-                    <!-- slide 2 -->
-                    <div class="mySlides1 fade">
-                        <div class="container case project">
-                            <h2>blog</h2>
-                            <p>Projet orienté back-end : réalisation d'un blog.</p>
-                            <div class="container">
-                                <video controls="controls" poster="images/projet_blog.png">
-                                    <source src="media/projet_blog.mov" type="video/mp4"/>
-                                    Voici une vidéo de mon projet blog.
-                                </video>
-                            </div>
-                            <span>
-                                <i class="fas fa-network-wired"></i>
-                                <i class="fab fa-php"></i>
-                                <i class="fas fa-database"></i>
-                            </span>
-                            <p>Technologies utilisées : PHP, MySql, JavaScript, jQuery, AJAX, Bootstrap et CSS3.</p>
-                        </div>
-                    </div>
-                    <!-- slide 3 -->
-                    <div class="mySlides1 fade">
-                        <div class="container case project">
-                            <h2><a href="https://isasxm.github.io/weather-forecast/" target="_blank">appli météo</a></h2>
-                            <p>Projet orienté back-end : consommation d'APIs pour créer cette application de prévisions météorologiques.</p>
-                            <div class="container">
-                                <img src="images/projet_weather_forecast.png" alt="Ceci est une photo représentant la section principale de mon projet de d'application web de prévisions météorologiques">
-                            </div>
-                            <span>
-                                <i class="fab fa-js"></i>
-                                <i class="fab fa-html5"></i>
-                                <i class="fab fa-css3-alt"></i>
-                            </span>
-                            <p>Technologies utilisées : JavaScript, AJAX, HTML5 et CSS3.</p>
-                        </div>
-                    </div>
-                    <!-- slide control -->
-                    <a class="prev" >&#10094;</a>
-                    <a class="next" >&#10095;</a>
-                </div><!-- end 1st slider -->
-                <h2>Mes projets en équipe :</h2><!-- start 2nd slider -->
-                <div class="slideshow-container">
-                    <!-- slide 1 -->
-                    <div class="mySlides2 fade">
-                        <div class="container case project">
-                            <h2><a href="http://cinebamo.it-students.fr/" target="_blank">application web &amp; mobile</a></h2>
-                            <p>Projet d'équipe de 6 développeurs : réalisation d'une application web et mobile</p>
-                            <div class="container">
-                                <img src="images/projet_app.png" alt="Voici une capture d'écran de mon projet d'application web et mobile">
-                            </div>
-                            <span>
-                                <i class="fab fa-git-square"></i>
-                                <i class="fab fa-node-js"></i>
-                                <i class="fas fa-database"></i>
-                            </span>
-                            <p>Technologies utilisées : frameworks Node.js et Express.js, React-native, MongoDb, noSqlBooster, Postman, Bootstrap, CSS3 et jQuery.</p>
-                        </div>
-                    </div>
-                    <!-- slide 2 -->
-                    <div class="mySlides2 fade">
-                        <div class="container case project">
-                            <h2><a href="https://bulladom.com" target="_blank">Site WordPress</a></h2>
-                            <p>Projet d'équipe de 5 développeurs : réalisation d'un site web vitrine en 3 jours</p>
-                            <div class="container">
-                                <img src="images/projet_wordpress.png" alt="Voici une capture d'écran de mon projet de site Wordpress">
-                            </div>
-                            <span>
-                                <i class="fab fa-wordpress-simple"></i>
-                                <i class="fab fa-php"></i>
-                                <i class="fas fa-database"></i>
-                            </span>
-                            <p>Technologies utilisées : CMS WordPress, thème wp-Kids</p>
-                        </div>
-                    </div>
-                    <!-- slide control -->
-                    <a class="prev2">&#10094;</a>
-                    <a class="next2">&#10095;</a>
-                </div><!-- end 2nd slider -->
-            </section><!--///////////// end section projects//////////////-->
-            <section id="contact" class="container"><!--///////////// start section contact//////////////-->
-                <h2 class="section-title">contact.</h2>
-                <div class="container case">
-                    <h3>Consultez mon CV ou contactez-moi directement par e-mail pour découvrir plus en détail mon parcours professionnel et les diverses compétences que j'ai développées au cours de mes expériences antérieures.</h3>
-                    <div id="contact-button" class="row">
-                        <a class="button" href="media/cv_isabelle_hugues.pdf" target="_blank">consulter mon CV</a>
-                        <a class="button" href="controllers/mail.php">me contacter</a>
-                    </div>
-                    <h3>J'exerce mon activité dans le secteur d'Écully et alentour.</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44519.12236280386!2d4.7385871854301!3d45.782308932837694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ec969dcc87bd%3A0x408ab2ae4bb2490!2s69130+%C3%89cully!5e0!3m2!1sfr!2sfr!4v1562860469383!5m2!1sfr!2sfr" width="400" height="300" style="border:0" allowfullscreen></iframe>
-                </div>
-            </section><!--///////////// end section contact//////////////-->
-            <!-- button scroll to top -->
-            <i class="fas fa-arrow-circle-up" id="toTopBtn"></i>
-        </main>
-        <footer class="container">
-            <small>Copyright 2019 &copy; Isabelle Hugues.</small>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright u-margin-bottom-big">
+        Copyright &copy; Isabelle Hugues, build with love in 2020.
+      </p>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
 </html>

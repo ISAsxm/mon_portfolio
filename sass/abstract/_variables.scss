@@ -1,0 +1,74 @@
+/*
+All variables should be in this file. 
+*/
+
+/*  
+    *********************
+    *                   *
+    *  COLORS VARIABLES *
+    *                   *
+    ********************* 
+*/
+
+/* COLORS THEME */
+/* #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33 */
+$color-test: #FF0066;
+$color-test-2:#FF6D61;
+
+$color-primary: #fe4559;
+$color-primary-light: #ff545d;
+$color-primary-dark: #fd3455;
+
+$color-secondary: #ff6d61;
+$color-secondary-light: #ff8368;
+$color-secondary-dark: #ff545d;
+
+$color-tertiary-light: #ffaa81;
+$color-tertiary: #ff9773;
+$color-tertiary-dark: #ff8368;
+
+$bkg-gradient-primary: linear-gradient(to right bottom, #ffaa81, #ff9773, #ff8368, #ff6d61, #ff545d, #fe4559, #fd3455, #fc1852, #f9144a, #f61143, #f30e3b, #ef0d33);
+$bkg-gradient-light: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary, .8), rgba($color-tertiary-dark, .8), rgba($color-secondary, .8), rgba($color-primary-light, .8), rgba($color-primary, .8),  rgba($color-primary-dark, .8),  rgba(252, 24, 82, .8), rgba(249, 20, 74, .8), rgba(246, 17, 67, .8), rgba(243, 14, 59, .8), rgba(239, 13, 51, .8)  ) ;
+
+$bkg-gradient-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary, .8), rgba($color-tertiary-dark, .8), rgba($color-secondary, .8), rgba($color-primary-light, .8), rgba($color-primary, .8),  rgba($color-primary-dark, .8),  rgba(252, 24, 82, .8), rgba(249, 20, 74, .8), rgba(246, 17, 67, .8), rgba(243, 14, 59, .8), rgba(239, 13, 51, .8)  ),
+    url(../img/bkg-love-binary.jpg);
+
+/* BASIC COLOR */
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #f0eeee;
+$color-grey-light-4: #ccc;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #999;
+
+
+/* SHADOW VARIABLES */
+
+$shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+$shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+$line: 1px solid $color-grey-light-2;
+
+
+
+/*  
+    *********************
+    *                   *
+    *  FONT VARIABLES   *
+    *                   *
+    ********************* 
+*/
+
+/*  FONT FAMILY */
+// $font-primary: 'Nunito', sans-serif;
+// $font-display: 'Josefin Sans', sans-serif;
+$font-primary: "Lato", sans-serif;
+$font-display: 'Heebo', sans-serif;
+
+/*  FONT SIZE */
+$default-font-size: 1.6rem;

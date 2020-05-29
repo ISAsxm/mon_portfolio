@@ -1,0 +1,197 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 52rem;
+
+    &__side {
+        height: 52rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            background-color: $color-white;
+        }
+        &--back {
+            transform: rotateY(180deg);
+            display: flex;
+            place-content: center;
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            }
+        }
+    }
+    
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+
+    }
+
+    // FRONT SIDE STYLING
+    &__gallery {
+
+        background-image: $bkg-gradient-image;
+        // background-image: linear-gradient(to right bottom, rgba( $color-grey-light-1, .9), rgba($color-grey-light-3, .9));
+        background-size: cover;
+        background-blend-mode: screen;
+        height: 23rem;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100% );
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100% );
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+    
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        
+        &--1 {background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85) , rgba($color-secondary-dark, .85));}
+    }
+
+    &__details {
+        
+        padding: 3rem;
+
+        &__list {
+
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        &__item {
+
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: min-content 1fr;
+            grid-row-gap: 1.5rem;
+            grid-column-gap: 2.5rem;
+            align-items: start;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-grey-light-2;
+            }
+           
+        }
+
+        &__icon {
+            width: 2rem;
+            height: 2rem;
+            margin-right: .4rem;
+            // stroke-width: 1px;
+            // stroke: $color-white;
+            fill: $color-secondary;
+            grid-column: 1 / span 1;
+
+
+            &--django {
+                fill: #244c33;
+            }
+    
+            &--ink {
+                fill: rgba($color-black, .7);
+            }
+            
+        }
+
+        &__text {
+
+            grid-column: 2 / -1;
+
+        }
+    }
+
+    // BACK SIDE STYLING
+
+
+    &__text-box {
+
+        margin: auto;
+        padding: 3rem;
+        
+    }
+
+    &__text {
+        
+        color: $color-white;
+        font-size: 2rem;
+        text-align: center;
+        
+    }
+     
+    @media only screen and (max-width: 62.5em), only screen and (hover:none) {
+        
+        height: auto;
+        border-radius: 3px;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    
+        &__side {
+
+            height: auto;
+            transition: all .8s ease;
+            position: relative;
+            box-shadow: none;
+            
+            &--back {
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+        
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+
+        &__details {
+            padding: 1rem 3rem;
+        }
+
+        // BACK SIDE STYLING
+        &__text-box {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+
+
+    }
+}
