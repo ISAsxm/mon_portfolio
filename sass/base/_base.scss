@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+
+    box-sizing: border-box;
+    // to set the default-size to 1rem
+    font-size: 62.5%; // 1rem == 10px; 10px/16px = 62.5%
+
+    @include responsive(tab-land) {
+        font-size: 56.25%; // 1rem == 9px, 9/16 = 56.25%
+    }
+
+    @include responsive(tab-port) {
+        font-size: 50%; // 1rem == 8px, 8/16 = 50%
+    }
+
+    @include responsive(big-desktop) {
+        font-size: 75%; // 1rem == 12px, 12/16 = 75%
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey-dark-2;
+    font-weight: 400;
+    line-height: 1.7;
+    padding: 3rem;
+
+    @include responsive(tab-port) {
+        padding: 0;
+    }
+}
+
+
+.container {
+
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 0 5rem;
+
+    &:not(:last-child) {
+        margin-bottom: 8rem;
+
+        @include responsive(tab-port) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    @include responsive(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
+.row {
+    max-width: 184rem;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 8rem;
+
+    &:not(:last-child) {
+        flex: 0 0 100%;
+        margin: auto;
+        margin-bottom: 8rem;
+
+        @include responsive(tab-port) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    @include responsive(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

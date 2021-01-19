@@ -1,0 +1,52 @@
+.header {
+    background-image: $bkg-gradient-image;
+    background-size: cover;
+    background-position: top;
+    height: 85vh;
+    color: $color-white;
+    position: relative;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        height: 95vh;
+    }
+
+    @include responsive(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
+    &__text {
+
+        font-size: 2.5rem;
+        margin-left: .5rem;
+    }
+
+    &__logo-box {
+
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+
+        display: inline-block;
+        height: 3.5rem;
+        width: 3.5rem;
+        fill: #fff;
+    }
+
+    &__text-box {
+
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    }
+}

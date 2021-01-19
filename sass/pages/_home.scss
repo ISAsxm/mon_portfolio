@@ -1,0 +1,60 @@
+.section-about {
+
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+
+    @include responsive(tab-port) {
+        padding: 20rem 0;
+    }
+}
+
+.section-skills {
+
+    padding: 20rem 0;
+    background-image: $bkg-gradient-image;
+    background-size: cover;
+    background-position: top;
+    transform: skewY(-7deg);
+    margin-top: -10.5rem;
+
+    &>* {
+        transform: skewY(7deg);
+    }
+
+    @include responsive(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.section-cards {
+
+    background-color: $color-grey-light-1;
+    padding: 25rem 0 15rem 0;
+    margin-top: -20vh;
+
+    @include responsive(tab-port) {
+        padding: 20rem 0 10rem 0;
+    }
+}
+
+.section-projects {
+
+    padding: 25rem 0;
+    margin-top: -20vh;
+    position: relative;
+
+    @include responsive(tab-port) {
+        padding: 20rem 0;
+    }
+}
+
+.section-contact {
+
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+    @include responsive(tab-port) {
+        padding: 10rem 0;
+    }
+}
