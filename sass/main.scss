@@ -1,4 +1,3 @@
-@import "abstract/functions";
 @import "abstract/mixins";
 @import "abstract/variables";
 
@@ -8,11 +7,11 @@
 @import "base/utilities";
 
 @import "components/buttons";
-@import "components/about";
+@import "components/story";
 @import "components/feature";
 @import "components/card";
 @import "components/bkg-video";
-@import "components/project";
+@import "components/thumbnail";
 @import "components/form";
 
 @import "layout/header";

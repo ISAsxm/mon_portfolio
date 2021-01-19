@@ -9,4 +9,8 @@
         margin-bottom: 2rem;
     }
 
+    @include responsive(tab-port) {
+        align-items: center;
+
+    }
 }

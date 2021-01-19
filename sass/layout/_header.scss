@@ -1,10 +1,4 @@
-/*
-Everything related to the Header must be included in this file.
-*/
 .header {
-
-    // background-image: $bkg-gradient-primary;
-    // background-image: $bkg-gradient-light;
     background-image: $bkg-gradient-image;
     background-size: cover;
     background-position: top;
@@ -24,7 +18,7 @@ Everything related to the Header must be included in this file.
     }
 
     &__text {
-        
+
         font-size: 2.5rem;
         margin-left: .5rem;
     }
@@ -38,8 +32,14 @@ Everything related to the Header must be included in this file.
         align-items: center;
     }
 
-    &__logo { height: 3.5rem; }
-    
+    &__logo {
+
+        display: inline-block;
+        height: 3.5rem;
+        width: 3.5rem;
+        fill: #fff;
+    }
+
     &__text-box {
 
         position: absolute;
@@ -49,7 +49,4 @@ Everything related to the Header must be included in this file.
         text-align: center;
 
     }
-
-
 }
-

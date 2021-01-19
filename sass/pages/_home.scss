@@ -4,7 +4,9 @@
     padding: 25rem 0;
     margin-top: -20vh;
 
-    @include responsive(tab-port) { padding: 20rem 0; }
+    @include responsive(tab-port) {
+        padding: 20rem 0;
+    }
 }
 
 .section-skills {
@@ -16,21 +18,24 @@
     transform: skewY(-7deg);
     margin-top: -10.5rem;
 
-    // pour remettre droit les enfants directs 
-    & > * {
+    &>* {
         transform: skewY(7deg);
     }
 
-    @include responsive(tab-port) { padding: 10rem 0; }
+    @include responsive(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-cards {
-    
+
     background-color: $color-grey-light-1;
     padding: 25rem 0 15rem 0;
     margin-top: -20vh;
 
-    @include responsive(tab-port) { padding: 20rem 0 10rem 0; }
+    @include responsive(tab-port) {
+        padding: 20rem 0 10rem 0;
+    }
 }
 
 .section-projects {
@@ -49,5 +54,7 @@
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
-    @include responsive(tab-port) { padding: 10rem 0; }
+    @include responsive(tab-port) {
+        padding: 10rem 0;
+    }
 }

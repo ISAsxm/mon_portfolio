@@ -1,14 +1,15 @@
-.project {
-
+.story {
     width: 75%;
     margin: 0 auto;
-    box-shadow: 0 3rem 6rem rgba($color-black, .1);
     background-color: rgba($color-white, .6);
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
-    transform: skewX(-12deg);
+    transform: skewY(-7deg);
+    outline-offset: 4rem;
+    outline: 1.5rem solid $color-primary;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
 
     @include responsive(tab-port) {
         width: 100%;
@@ -17,7 +18,9 @@
     }
 
     @include responsive(phone) {
-        transform: skewX(0);
+        transform: skewY(0);
+        box-shadow: 0 0 0 1.5rem inset $color-primary;
+        outline: unset;
     }
 
     &__shape {
@@ -27,11 +30,11 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        transform: translateX(-3rem) skewX(12deg);
+        transform: translate(-1.3rem, -2rem) skewY(7deg);
         position: relative;
         overflow: hidden;
         border-radius: 50%;
-        
+
         @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
             -webkit-clip-path: circle(50% at 50% 50%);
             clip-path: circle(50% at 50% 50%);
@@ -41,25 +44,28 @@
         }
 
         @include responsive(phone) {
-            transform: translateX(-3rem) skewX(0);
+            transform: translate(-1.3rem, -1rem) skewY(0);
+        }
+
+        @include responsive(big-desktop) {
+            transform: translate(-1.3rem, -4rem) skewY(7deg);
         }
     }
 
     &__img {
-        
-        // height: 120%;
+
+        height: 120%;
         object-fit: contain;
-        transform: scale(1.4);
-        // transform: translateX(-4rem) scale(1.4);
+        transform: translateY(3.4rem) scale(1.4);
         backface-visibility: hidden;
         transition: all .5s;
     }
 
     &__text {
-        transform: skewX(12deg);
+        transform: skewY(7deg);
 
         @include responsive(phone) {
-            transform: skewX(0);
+            transform: skewY(0);
         }
     }
 
@@ -82,10 +88,15 @@
         opacity: 1;
         transform: translate(-50%, -50%);
     }
+
     &:hover &__img {
-        transform: scale(1);
-        // transform: translateX(-4rem) scale(1);
+        transform: scale(1.2);
         filter: blur(3px) brightness(80%);
     }
-}
 
+    &__link {
+        position: relative;
+        transform: translate(1rem, 2rem);
+        z-index: 2;
+    }
+}

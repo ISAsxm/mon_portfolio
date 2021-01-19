@@ -1,9 +1,17 @@
 .skills {
 
-    margin: 15rem 15rem 0 15rem;
+    padding: 5rem 15rem 0 15rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 7rem;
     place-content: center;
+
+    @include responsive(tab-land) {
+        padding: 5rem;
+    }
+
+    @include responsive(phone) {
+        padding: 3rem;
+    }
 
 }

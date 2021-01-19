@@ -2,33 +2,35 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <!-- never neglect this meta tag because it is this one which browsers will take into account to respect our sizes described in our css rules -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name=" description"
+      content="Hello ! je suis Isabelle Hugues, Développeuse Full Stack spécialisée en Python&sol;VueJs et Scrum Master."
+    />
+    <meta name="robots" content="follow" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Heebo:400,700,900|Montserrat:400,700,900&display=swap"
+      href="https://fonts.googleapis.com/css?family=Heebo:400,700,900"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="img/logo_hi.png" />
+    <link rel="shortcut icon" type="image/svg" href="img/logo_hi.svg" />
 
-    <title>Isabelle Hugues | Portfolio</title>
+    <title>Isabelle Hugues | Développeuse Full Stack</title>
   </head>
 
   <body>
     <div class="navigation">
-      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
-
-      <label for="navi-toggle" class="navigation__button">
+      <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
+      <label for="nav-toggle" class="navigation__button">
         <span class="navigation__icon">&nbsp;</span>
       </label>
-
       <div class="navigation__background">&nbsp;</div>
       <nav class="navigation__nav">
         <ul class="navigation__list">
@@ -50,15 +52,11 @@
         </ul>
       </nav>
     </div>
-    <!--- end nav -->
-
     <header class="header">
       <div class="header__logo-box">
-        <img
-          src="img/logo_hi.png"
-          alt="Logo Isabelle Hugues"
-          class="header__logo"
-        />
+        <svg class="header__logo">
+          <use xlink:href="img/sprite.svg#icon-logo-hi"></use>
+        </svg>
         <span class="header__text">Isabelle Hugues</span>
       </div>
 
@@ -69,71 +67,63 @@
         </h1>
       </div>
     </header>
-    <!--- end section home avec titre et animation bulles -->
-
     <main>
       <section id="about" class="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">A propos de moi</h2>
         </div>
-
         <div class="row">
-          <div class="about">
-            <div class="about__text about__text--1">
+          <div class="story">
+            <a
+              href="#"
+              data-name="huguesisabelle82"
+              data-domain="gmail"
+              data-tld="com"
+              onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"
+              class="story__link"
+            >
+              <figure class="story__shape">
+                <img
+                  src="img/portrait.jpg"
+                  alt="Portrait d'Isabelle Hugues"
+                  class="story__img"
+                />
+                <figcaption class="story__caption">Contactez-moi !</figcaption>
+              </figure>
+            </a>
+            <div class="story__text">
               <h3 class="heading-tertiary u-margin-bottom-small">
-                Mes débuts en quelques mots
+                Hello World !
               </h3>
-              <p class="paragraph">
-                Après m'être investie plus de 15 années en qualité de vendeuse,
-                j'ai entrepris une reconversion professionnelle mûrement
-                réfléchie dans le domaine du numérique, qui me passionne depuis
-                de nombreuses années. J'ai intégré une formation de Développeur
-                Full Stack auprès de
-                <a
-                  class="btn-text"
-                  href="https://www.it-akademy.fr/formation/developpeur-fullstack"
-                  target="_blank"
-                  >It-Akademy</a
-                >
-                afin de développer mes compétences techniques.
-              </p>
-            </div>
-            <div class="about__text about__text--2">
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Et aujourd'hui ?
-              </h3>
-              <p class="paragraph">
-                Aujourd'hui, je suis une Développeuse Full Stack junior
-                dynamique et réactive, qui aime les défis et prend plaisir à
-                trouver la solution web la mieux adaptée à chaque projet.
+              <p>
+                Je suis Isabelle,
+                <strong>Développeuse Full Stack</strong> spécialisée en
+                <strong>Python&sol;Django</strong> côté Back-end et
+                <strong>JavaScript&sol;Vue.Js</strong> pour le Front-end.
+                <strong>Dynamique</strong> et <strong>réactive</strong>, j'aime
+                relever les défis et prend plaisir à trouver la
+                <strong>solution web</strong> la mieux adaptée à chaque projet.
+                J'ai également des compétences en
+                <strong>Agile &ndash; Scrum</strong> en tant que membre de
+                l'équipe technique et en tant que <strong>Scrum Master</strong>.
                 Ouverte-d'esprit et très curieuse, je m'épanouis à toujours
                 repousser mes limites et possède une intarissable soif de
                 connaissances.
               </p>
-            </div>
-            <div class="about__portrait">
-              <figure class="about__portrait__img">
-                <img
-                  src="img/portrait.jpg"
-                  alt="Portrait d'Isabelle Hugues"
-                  class="about__portrait__photo"
-                />
-              </figure>
             </div>
           </div>
         </div>
       </section>
 
       <section id="skills" class="section-skills">
-
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary heading-secondary--white">
             Diplômes &amp; qualifications
           </h2>
         </div>
         <div class="skills">
-          <div class="feature-box">
-            <svg class="feature-box__icon">
+          <div class="feature">
+            <svg class="feature__icon">
               <use xlink:href="img/sprite.svg#icon-graduation-cap"></use>
             </svg>
             <h3
@@ -141,16 +131,26 @@
             >
               Développeuse web et mobile
             </h3>
-            <h4 class="feature-box__title u-margin-bottom-small">
-              <span>IT-Akademy</span> | 2018-2019
+            <h4 class="feature__title u-margin-bottom-small">
+              <a
+                class="btn-text btn-text--no-underline"
+                href="https://www.it-akademy.fr/formation/developpeur-application-web-et-mobile"
+                target="_blank"
+                >It-Akademy</a
+              >
+              | 2018-2019
             </h4>
-            <p class="feature-box__text">
-              Formation labellisée Grande Ecole du Numérique qualifiante, niveau
-              Bac+2 informatique de 1010 heures.
+            <p class="feature__text">
+              Titre
+              <strong
+                >&laquo;Développeur d’application Web et Mobile&raquo;</strong
+              >
+              enregitré au niveau &#8548; (FR) &sol; 3 (EU) du Répertoire
+              National des Certifications Professionnelles.
             </p>
           </div>
-          <div class="feature-box">
-            <svg class="feature-box__icon">
+          <div class="feature">
+            <svg class="feature__icon">
               <use xlink:href="img/sprite.svg#icon-graduation-cap"></use>
             </svg>
             <h3
@@ -158,13 +158,22 @@
             >
               Développeuse full stack
             </h3>
-            <h4 class="feature-box__title u-margin-bottom-small">
-              <span>IT-Akademy</span> | 2019-2021
+            <h4 class="feature__title u-margin-bottom-small">
+              <a
+                class="btn-text btn-text--no-underline"
+                href="https://www.it-akademy.fr/formation/developpeur-fullstack"
+                target="_blank"
+                >It-Akademy</a
+              >
+              | 2019-2021
             </h4>
-            <p class="feature-box__text">
-              Titre « Développeur d’application Full Stack » enregitré au niveau
-              II (FR) / 6 (EU) du Répertoire National des Certifications
-              Professionnelles.
+            <p class="feature__text">
+              Titre
+              <strong
+                >&laquo;Développeur d’application Full Stack&raquo;</strong
+              >
+              enregitré au niveau &#8545; (FR) &sol; 6 (EU) du Répertoire
+              National des Certifications Professionnelles.
             </p>
           </div>
         </div>
@@ -172,18 +181,15 @@
 
       <section class="section-cards">
         <div class="u-center-text u-margin-bottom-big u-margin-top-huge">
-          <h2 class="heading-secondary">
-            Compétences Techniques
-          </h2>
+          <h2 class="heading-secondary">Compétences Techniques</h2>
         </div>
-
         <div class="skills">
-          <!-- front-end -->
+          <!-- front-end card -->
           <div class="card">
             <div class="card__side card__side--front">
               <div class="card__gallery">&nbsp;</div>
               <h4 class="card__heading">
-                <span class="card__heading-span card__heading-span--1">Langages Front-end</span>
+                <span class="card__heading-span">Langages Front-end</span>
               </h4>
               <div class="card__details">
                 <ul class="card__details__list">
@@ -192,40 +198,113 @@
                       <use xlink:href="img/sprite.svg#icon-html5"></use>
                     </svg>
                     <span class="card__details__text">HTML5</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-css3"></use></svg>
-                      <span class="card__details__text">CSS3</span>
+                      <use xlink:href="img/sprite.svg#icon-css3"></use>
+                    </svg>
+                    <span class="card__details__text">CSS3</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-sass"></use></svg>
-                      <span class="card__details__text">Sass</span>
+                      <use xlink:href="img/sprite.svg#icon-sass"></use>
+                    </svg>
+                    <span class="card__details__text">Sass</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-javascript"></use></svg>
-                      <span class="card__details__text">JavaScript</span>
+                      <use xlink:href="img/sprite.svg#icon-javascript"></use>
+                    </svg>
+                    <span class="card__details__text">JavaScript</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <li class="card__details__item">&nbsp;</li>
                 </ul>
               </div>
             </div>
-            <div class="card__side card__side--back card__side--back-2">
+            <div class="card__side card__side--back">
               <div class="card__text-box">
                 <p class="card__text">
-                  Elaboration d'interfaces utilisateurs dans le respect des normes du W3C, selon templates ou créations libres, animations d'interfaces graphiques. 
+                  Elaboration d'interfaces utilisateurs dans le
+                  <strong>respect des normes du W3C</strong>, selon templates ou
+                  créations libres, <strong>animations</strong> et
+                  <strong>dynamisme d'interfaces graphiques</strong>.
                 </p>
               </div>
             </div>
           </div>
-          <!-- back-end -->
+          <!-- back-end card -->
           <div class="card">
             <div class="card__side card__side--front">
               <div class="card__gallery">&nbsp;</div>
               <h4 class="card__heading">
-                <span class="card__heading-span card__heading-span--1">Langages Back-end</span>
+                <span class="card__heading-span">Langages Back-end</span>
               </h4>
               <div class="card__details">
                 <ul class="card__details__list">
@@ -234,92 +313,255 @@
                       <use xlink:href="img/sprite.svg#icon-python"></use>
                     </svg>
                     <span class="card__details__text">Python</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-php"></use></svg>
-                      <span class="card__details__text">PHP</span>
+                      <use xlink:href="img/sprite.svg#icon-php"></use>
+                    </svg>
+                    <span class="card__details__text">PHP</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-ruby"></use></svg>
-                      <span class="card__details__text">Ruby</span>
+                      <use xlink:href="img/sprite.svg#icon-ruby"></use>
+                    </svg>
+                    <span class="card__details__text">Ruby</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-java"></use></svg>
-                      <span class="card__details__text">Java</span>
+                      <use xlink:href="img/sprite.svg#icon-java"></use>
+                    </svg>
+                    <span class="card__details__text">Java</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <li class="card__details__item">&nbsp;</li>
                 </ul>
               </div>
             </div>
-            <div class="card__side card__side--back card__side--back-2">
+            <div class="card__side card__side--back">
               <div class="card__text-box">
                 <p class="card__text">
-                  Programmation Orientée Object et procédurale. Elaboration de scripts, création et consommation d'API. Communication avec des bases de données.
+                  <strong>Programmation Orientée Object</strong> et procédurale.
+                  Elaboration de scripts, création et consommation
+                  <strong>d'APIs</strong>. Communication avec des bases de
+                  données.
                 </p>
               </div>
             </div>
           </div>
-          <!-- frameworks -->
+          <!-- frameworks card -->
           <div class="card">
             <div class="card__side card__side--front">
               <div class="card__gallery">&nbsp;</div>
               <h4 class="card__heading">
-                <span class="card__heading-span card__heading-span--1">Outils &frasl; Frameworks</span>
+                <span class="card__heading-span"
+                  >Outils &frasl; Frameworks</span
+                >
               </h4>
               <div class="card__details">
                 <ul class="card__details__list">
-                  <li class="card__details__item"><svg class="card__details__icon card__details__icon--django">
-                    <use xlink:href="img/sprite.svg#icon-django"></use>
-                  </svg>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-django"></use>
+                    </svg>
                     <span class="card__details__text">Django</span>
-                  </li>
-                  <li class="card__details__item">
-                    <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-node-dot-js"></use>
-                    </svg>
-                    <span class="card__details__text">Node.Js&frasl;Express.Js</span>
-                  </li>
-                  <li class="card__details__item">
-                    <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-react"></use>
-                    </svg>
-                      <span class="card__details__text">React-Native</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-vue-dot-js"></use>
                     </svg>
-                      <span class="card__details__text">Vue.Js</span>
+                    <span class="card__details__text">Vue.Js</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <!-- <li class="card__details__item">
+                  <li class="card__details__item">
                     <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-laravel"></use>
+                      <use xlink:href="img/sprite.svg#icon-node-dot-js"></use>
                     </svg>
-                      <span class="card__details__text">Laravel</span>
-                  </li> -->
-                  <li class="card__details__item">&nbsp;</li>
+                    <span class="card__details__text">Node.Js</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-react"></use>
+                    </svg>
+                    <span class="card__details__text">React Native</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
+                  </li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-symfony"></use>
+                    </svg>
+                    <span class="card__details__text">Symfony</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="card__side card__side--back card__side--back-2">
+            <div class="card__side card__side--back">
               <div class="card__text-box">
                 <p class="card__text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ratione excepturi nihil veritatis id tenetur suscipit placeat
-                  accusantium voluptas commodi. Qui.
+                  Utilisation de Frameworks et d'environnements bas niveau pour
+                  la <strong>conception d'applications numériques</strong>.
+                  Réalisations côté <strong>Front-end</strong> et/ou
+                  <strong>Back-end</strong>.
                 </p>
               </div>
             </div>
           </div>
-          <!-- cms -->
+          <!-- cms card -->
           <div class="card">
             <div class="card__side card__side--front">
               <div class="card__gallery">&nbsp;</div>
               <h4 class="card__heading">
-                <span class="card__heading-span card__heading-span--1">Bibliothèques &frasl; CMS</span>
+                <span class="card__heading-span"
+                  >Bibliothèques &frasl; CMS</span
+                >
               </h4>
               <div class="card__details">
                 <ul class="card__details__list">
@@ -328,47 +570,141 @@
                       <use xlink:href="img/sprite.svg#icon-jquery"></use>
                     </svg>
                     <span class="card__details__text">JQuery</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-bootstrap"></use>
                     </svg>
-                      <span class="card__details__text">Bootstrap</span>
+                    <span class="card__details__text">Bootstrap</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-wordpress"></use>
                     </svg>
-                      <span class="card__details__text">Wordpress</span>
+                    <span class="card__details__text">Wordpress</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-drupal"></use>
                     </svg>
-                      <span class="card__details__text">Drupal</span>
+                    <span class="card__details__text">Drupal</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <li class="card__details__item">&nbsp;</li>
+                  <li class="card__details__item">
+                    <svg class="card__details__icon">
+                      <use xlink:href="img/sprite.svg#icon-prestashop"></use>
+                    </svg>
+                    <span class="card__details__text">PrestaShop</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="card__side card__side--back card__side--back-2">
+            <div class="card__side card__side--back">
               <div class="card__text-box">
                 <p class="card__text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ratione excepturi nihil veritatis id tenetur suscipit placeat
-                  accusantium voluptas commodi. Qui.
+                  Réalisations de <strong>sites</strong> et d'<strong
+                    >applications web</strong
+                  >
+                  avec les CMS <strong>WordPress</strong> et
+                  <strong>Drupal</strong>. Création de
+                  <strong>thèmes</strong> et <strong>plugins</strong>.
+                  Utilisation de <strong>Bootstrap</strong> pour des interfaces
+                  graphiques et <strong>JQuery</strong> pour
+                  <strong>le dynamisme de pages web</strong>.
                 </p>
               </div>
             </div>
           </div>
-          <!-- db -->
+          <!-- db card -->
           <div class="card">
             <div class="card__side card__side--front">
               <div class="card__gallery">&nbsp;</div>
               <h4 class="card__heading">
-                <span class="card__heading-span card__heading-span--1"
-                  >Bases de données</span
-                >
+                <span class="card__heading-span">Bases de données</span>
               </h4>
               <div class="card__details">
                 <ul class="card__details__list">
@@ -376,52 +712,115 @@
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-mysql"></use>
                     </svg>
-                      <span class="card__details__text">MySQL</span>
+                    <span class="card__details__text">MySQL</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-mongodb"></use>
                     </svg>
-                      <span class="card__details__text">MongoDb</span>
+                    <span class="card__details__text">MongoDb</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-postgresql"></use>
                     </svg>
                     <span class="card__details__text">PostgreSQL</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-data"></use>
                     </svg>
                     <span class="card__details__text">UML &amp; Merise</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <!-- <li class="card__details__item">
-                    <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-data"></use>
-                    </svg>
-                    <span class="card__details__text">UML</span>
-                  </li> -->
-                  <li class="card__details__item">&nbsp;</li>
                 </ul>
               </div>
             </div>
-            <div class="card__side card__side--back card__side--back-2">
+            <div class="card__side card__side--back">
               <div class="card__text-box">
                 <p class="card__text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ratione excepturi nihil veritatis id tenetur suscipit placeat
-                  accusantium voluptas commodi. Qui.
+                  <strong>Conception de bases de données</strong> avec le
+                  langage de modélisation <strong>UML</strong> ou la
+                  méthodologie <strong>Merise</strong>.
+                  <strong>Gestion de bases de données relationelles</strong> et
+                  <strong>non-relationnelles</strong>.
                 </p>
               </div>
             </div>
           </div>
-          <!-- web design -->
+          <!-- web design card -->
           <div class="card">
             <div class="card__side card__side--front">
               <div class="card__gallery">&nbsp;</div>
               <h4 class="card__heading">
-                <span class="card__heading-span card__heading-span--1"
+                <span class="card__heading-span"
                   >Web Design &frasl; Graphisme</span
                 >
               </h4>
@@ -431,44 +830,119 @@
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-mobile"></use>
                     </svg>
-                      <span class="card__details__text">Responsive</span>
+                    <span class="card__details__text">Responsive</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-user-check"></use>
                     </svg>
-                      <span class="card__details__text">UI / UX</span>
+                    <span class="card__details__text">UI / UX</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-gimp"></use>
                     </svg>
                     <span class="card__details__text">Gimp</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
-                    <svg class="card__details__icon card__details__icon--ink">
+                    <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-inkscape"></use>
                     </svg>
-                      <span class="card__details__text">Inkscape</span>
+                    <span class="card__details__text">Inkscape</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <li class="card__details__item">&nbsp;</li>
                 </ul>
               </div>
             </div>
-            <div class="card__side card__side--back card__side--back-2">
+            <div class="card__side card__side--back">
               <div class="card__text-box">
                 <p class="card__text">
-                  Utilisation des medias queries, flexbox et grid-layout. Utilisation des techniques IHM anthropocentrée. Retouches d'images, création de logos.
+                  Utilisation des <strong>medias queries</strong>,
+                  <strong>flexbox</strong> et <strong>grid-layout</strong>.
+                  Utilisation des
+                  <strong>techniques IHM anthropocentrée</strong>.
+                  <strong>Conception de maquettes</strong> et
+                  <strong>prototypes</strong> dans une approche
+                  <strong>UX</strong>. <strong>Retouche d'images</strong>,
+                  <strong>vectorisation</strong> et
+                  <strong>création de logos</strong>.
                 </p>
               </div>
             </div>
           </div>
-          <!-- environnements de w -->
+          <!-- environnements de w card -->
           <div class="card">
             <div class="card__side card__side--front">
               <div class="card__gallery">&nbsp;</div>
               <h4 class="card__heading">
-                <span class="card__heading-span card__heading-span--1">Environnement de travail</span>
+                <span class="card__heading-span">Environnement de travail</span>
               </h4>
               <div class="card__details">
                 <ul class="card__details__list">
@@ -476,89 +950,234 @@
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-linux"></use>
                     </svg>
-                      <span class="card__details__text">Linux</span>
+                    <span class="card__details__text">Linux</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-apple"></use>
                     </svg>
-                      <span class="card__details__text">Apple</span>
+                    <span class="card__details__text">Apple</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-android"></use>
                     </svg>
-                      <span class="card__details__text">Android</span>
+                    <span class="card__details__text">Android</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-raspberrypi"></use>
                     </svg>
-                      <span class="card__details__text">Raspberry Pi</span>
+                    <span class="card__details__text">Raspberry Pi</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <li class="card__details__item">&nbsp;</li>
                 </ul>
               </div>
             </div>
-            <div class="card__side card__side--back card__side--back-2">
+            <div class="card__side card__side--back">
               <div class="card__text-box">
                 <p class="card__text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ratione excepturi nihil veritatis id tenetur suscipit placeat
-                  accusantium voluptas commodi. Qui.
+                  Evolution sous divers environnements de travail. Distribution
+                  <strong>Linux</strong> pour mon PC,
+                  <strong>Android Studio</strong> et
+                  <strong>Apple/Xcode</strong> pour la
+                  <strong>réalisation d'applications mobiles</strong> natives
+                  et/ou cross-plateformes. Création de
+                  <strong>mon propre serveur d'hébergement</strong> avec une
+                  <strong>RaspberryPi</strong>.
                 </p>
               </div>
             </div>
           </div>
-          <!-- outils -->
+          <!-- utils card -->
           <div class="card">
             <div class="card__side card__side--front">
               <div class="card__gallery">&nbsp;</div>
               <h4 class="card__heading">
-                <span class="card__heading-span card__heading-span--1">Autres Technologies</span>
+                <span class="card__heading-span">Autres Technologies</span>
               </h4>
               <div class="card__details">
                 <ul class="card__details__list">
                   <li class="card__details__item">
                     <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-visualstudiocode"></use>
+                      <use
+                        xlink:href="img/sprite.svg#icon-visualstudiocode"
+                      ></use>
                     </svg>
-                      <span class="card__details__text">VSCode</span>
+                    <span class="card__details__text">VSCode</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-git"></use>
                     </svg>
-                      <span class="card__details__text">Git</span>
+                    <span class="card__details__text">Git</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
                       <use xlink:href="img/sprite.svg#icon-docker"></use>
                     </svg>
-                      <span class="card__details__text">Docker</span>
+                    <span class="card__details__text">Docker</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
                   <li class="card__details__item">
                     <svg class="card__details__icon">
-                      <use xlink:href="img/sprite.svg#icon-postman"></use>
+                      <use xlink:href="img/sprite.svg#icon-kubernetes"></use>
                     </svg>
-                      <span class="card__details__text">Postman</span>
+                    <span class="card__details__text">Kubernetes</span>
+                    <span class="card__details__star">
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg
+                        class="card__details__icon card__details__icon--star--stroke"
+                      >
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <li class="card__details__item">&nbsp;</li>
                 </ul>
               </div>
             </div>
-            <div class="card__side card__side--back card__side--back-2">
+            <div class="card__side card__side--back">
               <div class="card__text-box">
                 <p class="card__text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ratione excepturi nihil veritatis id tenetur suscipit placeat
-                  accusantium voluptas commodi. Qui.
+                  Liste non-exhaustive des
+                  <strong
+                    >technologies utilisées lors de la réalisations de
+                    projets</strong
+                  >. VSCode est <strong>mon principal éditeur de code</strong>.
+                  <strong>Git pour le versionning</strong> de mes projets,
+                  <strong>Docker</strong> et <strong>Kubernetes</strong> pour
+                  <strong>la partie réseau</strong>.
                 </p>
               </div>
             </div>
           </div>
         </div>
-
       </section>
 
       <!-- section projects -->
@@ -570,125 +1189,245 @@
           </video>
         </div>
         <div class="u-center-text u-margin-bottom-big u-margin-top-huge">
-          <h2 class="heading-secondary">
-            Réalisations
-          </h2>
+          <h2 class="heading-secondary">Réalisations</h2>
         </div>
-        <div class="row">
-          <div class="project">
-            <figure class="project__shape">
-              <img
-                src="img/project-onepage-sxm.png"
-                alt="Site Onepage SXM"
-                class="project__img"
-              />
-              <figcaption class="project__caption">
-                SXM The Friendly Island
-              </figcaption>
-            </figure>
-            <div class="project__text">
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Site Vitrine Onepage
-              </h3>
-              <p>
-                Premier projet d'intégration : réalisation d'un site web onepage
-                à partir d'un template imposé. Technologies utilisées : HTML5,
-                CSS3, JavaScript et jQuery.
-              </p>
-              <a
-                class="btn-text u-margin-top-xs"
-                href="https://isasxm.github.io/sxm/"
-                target="_blank"
-                >Voir le projet &rarr;</a
-              >
+        <div class="container-thumbnail">
+          <div class="thumbnail">
+            <div class="thumbnail__element">
+              <div
+                class="thumbnail__cover"
+                style="background-image: url(img/projects/project-swapp.png)"
+              ></div>
+              <div class="thumbnail__content">
+                <div class="thumbnail__content__border">&nbsp;</div>
+                <span class="thumbnail__badge">full-stack</span>
+                <p class="thumbnail__title">application web Swapp</p>
+                <p class="thumbnail__description">
+                  <span class="thumbnail__description__subtitle"
+                    >Application web Swapp : </span
+                  >projet d'équipe <strong>Open Source</strong> d'application de
+                  vérification de failles de sécurité et de bogues dans le code
+                  exposant <strong>une API créer avec Laravel</strong> côté
+                  Back-end. L'<strong
+                    >interface utilisateur codée avec Vue.Js</strong
+                  >
+                  comprend un accès public offrant les fonctionnalités de base
+                  et une partie nécéssitant l'authentification de l'utilisateur
+                  avec des fonctions supplémentaires, un historique des scanners
+                  et un tableau de bord.
+                  <span class="thumbnail__description__subtitle"
+                    >Technologies utilisées :</span
+                  >
+                  <span class="u-bold-text">Laravel et VueJs</span>.
+                </p>
+                <div class="thumbnail__footer">
+                  <a
+                    class="thumbnail__link btn-text btn-text--secondary u-margin-top-xs"
+                    href="http://erre-tec.hd.free.fr/"
+                    target="_blank"
+                    >Voir le projet &rarr;</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="row">
-          <div class="project">
-            <figure class="project__shape">
-              <img
-                src="img/project-wp-bulladom.png"
-                alt="Site Vitrine Bulladom"
-                class="project__img"
-              />
-              <figcaption class="project__caption">Bulladom</figcaption>
-            </figure>
-            <div class="project__text">
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Site Vitrine WordPress
-              </h3>
-              <p>
-                Projet d'équipe de 5 développeurs : réalisation d'un site web
-                vitrine en 3 jours pour une société de micro-crèches.
-                Technologies utilisées : CMS WordPress, thème wp-Kids.
-              </p>
-              <a
-                class="btn-text u-margin-top-xs"
-                href="https://bulladom.com"
-                target="_blank"
-                >Voir le projet &rarr;</a
-              >
+          <div class="thumbnail">
+            <div class="thumbnail__element">
+              <div
+                class="thumbnail__cover"
+                style="
+                  background-image: url(img/projects/project-wheather-forecast.png);
+                "
+              ></div>
+              <div class="thumbnail__content">
+                <div class="thumbnail__content__border">&nbsp;</div>
+                <span class="thumbnail__badge">front-end</span>
+                <p class="thumbnail__title">Application web Weather Forecast</p>
+                <p class="thumbnail__description">
+                  <span class="thumbnail__description__subtitle"
+                    >Application web Weather Forecast :</span
+                  >
+                  réalisation d'un
+                  <strong>client web consommant des APIs</strong> pour afficher
+                  les prévisions météorologiques sur 7 jours d'une localité
+                  rentrée par l'utilisateur via une barre de recherche. Cette
+                  <strong>création graphique</strong> est inspirée d'un template
+                  trouvé sur Pinterest que j'avais envie de reproduire dans une
+                  <strong>interface utilisateur</strong>.
+                  <span class="thumbnail__description__subtitle"
+                    >Technologies utilisées :</span
+                  >
+                  <span class="u-bold-text"
+                    >JavaScript, AJAX, HTML5 et Sass</span
+                  >.
+                </p>
+                <div class="thumbnail__footer">
+                  <a
+                    class="thumbnail__link btn-text btn-text--secondary u-margin-top-xs"
+                    href="https://isasxm.github.io/weather-forecast/"
+                    target="_blank"
+                    >Voir le projet &rarr;</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="row">
-          <div class="project">
-            <figure class="project__shape">
-              <img
-                src="img/project-cinebamo.png"
-                alt="Application Cinebamo"
-                class="project__img"
-              />
-              <figcaption class="project__caption">Cinebamo</figcaption>
-            </figure>
-            <div class="project__text">
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                application web &amp; mobile
-              </h3>
-              <p>
-                Projet d'équipe de 6 développeurs : réalisation d'une
-                application web et mobile. Technologies utilisées : frameworks
-                Node.js et Express.js, React-native, MongoDb, noSqlBooster,
-                Postman, Bootstrap, CSS3 et jQuery.
-              </p>
-              <a
-                class="btn-text u-margin-top-xs"
-                href="http://cinebamo.it-students.fr/"
-                target="_blank"
-                >Voir le projet &rarr;</a
-              >
+          <div class="thumbnail">
+            <div class="thumbnail__element">
+              <div
+                class="thumbnail__cover"
+                style="background-image: url(img/projects/project-sugart.png)"
+              ></div>
+              <div class="thumbnail__content">
+                <div class="thumbnail__content__border">&nbsp;</div>
+                <span class="thumbnail__badge">WordPress</span>
+                <p class="thumbnail__title">Site E-commerce Sug'Art</p>
+                <p class="thumbnail__description">
+                  <span class="thumbnail__description__subtitle"
+                    >Site e-commerce Sug'Art :
+                  </span>
+                  Réalisation d'un <strong>site e-commerce</strong> pour une
+                  société de création artisanale de sujets en sucre tiré
+                  soufflé. Implémentation d'une partie <strong>vitrine</strong>,
+                  <strong>e-commerce</strong> et d'un
+                  <strong>système de réservation en ligne</strong> de cours de
+                  sucre.
+                  <span class="thumbnail__description__subtitle"
+                    >Technologies utilisées :</span
+                  >
+                  <span class="u-bold-text">CMS WordPress, Elementor</span>.
+                </p>
+                <div class="thumbnail__footer">
+                  <a
+                    class="thumbnail__link btn-text btn-text--secondary u-margin-top-xs"
+                    href="http://sugart.ch/"
+                    target="_blank"
+                    >Voir le projet &rarr;</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+          <div class="thumbnail">
+            <div class="thumbnail__element">
+              <div
+                class="thumbnail__cover"
+                style="
+                  background-image: url(img/projects/project-wp-bulladom.png);
+                "
+              ></div>
+              <div class="thumbnail__content">
+                <div class="thumbnail__content__border">&nbsp;</div>
+                <span class="thumbnail__badge">WordPress</span>
+                <p class="thumbnail__title">Site Vitrine Bulladom</p>
+                <p class="thumbnail__description">
+                  <span class="thumbnail__description__subtitle"
+                    >Site Vitrine Bulladom :
+                  </span>
+                  premier projet d'équipe pour ce
+                  <strong>site vitrine réalisé et livré en 3 jours</strong> pour
+                  présenter une société de micro-crèches.
+                  <span class="thumbnail__description__subtitle"
+                    >Technologies utilisées :</span
+                  >
+                  <span class="u-bold-text">CMS WordPress, thème wp-Kids</span>.
+                </p>
+                <div class="thumbnail__footer">
+                  <a
+                    class="thumbnail__link btn-text btn-text--secondary u-margin-top-xs"
+                    href="https://bulladom.com"
+                    target="_blank"
+                    >Voir le projet &rarr;</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="thumbnail__element">
+              <div
+                class="thumbnail__cover"
+                style="background-image: url(img/projects/project-cinebamo.png)"
+              ></div>
+              <div class="thumbnail__content">
+                <div class="thumbnail__content__border">&nbsp;</div>
+                <span class="thumbnail__badge">web &amp; mobile</span>
+                <p class="thumbnail__title">
+                  Application web et mobile Cinébamo
+                </p>
+                <p class="thumbnail__description">
+                  <span class="thumbnail__description__subtitle"
+                    >Application web et mobile Cinébamo : </span
+                  >projet d'équipe d'une
+                  <strong>application web et mobile</strong> constituée d'un
+                  <strong>Back-end créé avec Express.Js</strong> consommant une
+                  API cinémathèque et
+                  <strong>exposant lui-même une API</strong> renvoyant les
+                  données après traitement. Une authentification donne accès aux
+                  fonctionnalités de l'application. L'<strong
+                    >interface utilisateur web</strong
+                  >
+                  est réalisée avec le
+                  <strong>moteur de templates Twig</strong> et
+                  <strong>l'application mobile</strong> est réalisée avec le
+                  framework <strong>React Native</strong>.
+                  <span class="thumbnail__description__subtitle"
+                    >Technologies utilisées :</span
+                  >
+                  <span class="u-bold-text"
+                    >frameworks Express.js sous Node.js, React Native, MongoDb,
+                    noSqlBooster, Twig, Bootstrap et CSS3</span
+                  >.
+                </p>
+                <div class="thumbnail__footer">
+                  <a
+                    class="thumbnail__link btn-text btn-text--secondary u-margin-top-xs"
+                    href="http://cinebamo.it-students.fr"
+                    target="_blank"
+                    >Voir le projet &rarr;</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="thumbnail__element">
+              <div
+                class="thumbnail__cover"
+                style="
+                  background-image: url(img/projects/project-onepage-sxm.png);
+                "
+              ></div>
+              <div class="thumbnail__content">
+                <div class="thumbnail__content__border">&nbsp;</div>
+                <span class="thumbnail__badge">front-end</span>
+                <p class="thumbnail__title">Site Vitrine Onepage</p>
 
-        <div class="row">
-          <div class="project">
-            <figure class="project__shape">
-              <img
-                src="img/project-wheather-forecast.png"
-                alt="Application Météo"
-                class="project__img"
-              />
-              <figcaption class="project__caption">Weather Forecast</figcaption>
-            </figure>
-            <div class="project__text">
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                application de prévisions météo
-              </h3>
-              <p>
-                Projet orienté back-end : consommation d'APIs pour créer cette
-                application de prévisions météorologiques. Technologies
-                utilisées : JavaScript, AJAX, HTML5 et Sass.
-              </p>
-              <a
-                class="btn-text u-margin-top-xs"
-                href="https://isasxm.github.io/weather-forecast/"
-                target="_blank"
-                >Voir le projet &rarr;</a
-              >
+                <p class="thumbnail__description">
+                  <span class="thumbnail__description__subtitle"
+                    >Site Vitrine Onepage :
+                  </span>
+                  mon <strong>tout premier projet d'intégration</strong> !
+                  Réalisation d'un <strong>site web onepage</strong> thème à
+                  choix à partir d'un template imposé. Celui-ci je le laisse
+                  pour le fun car c'est toujours beau de voir les progrès que
+                  l'on a fait &#128521;
+                  <span class="thumbnail__description__subtitle"
+                    >Technologies utilisées :</span
+                  >
+                  <span class="u-bold-text"
+                    >HTML5, CSS3, JavaScript et jQuery</span
+                  >.
+                </p>
+                <div class="thumbnail__footer">
+                  <a
+                    class="thumbnail__link btn-text btn-text--secondary u-margin-top-xs"
+                    href="https://isasxm.github.io/sxm/"
+                    target="_blank"
+                    >Voir le projet &rarr;</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -699,29 +1438,36 @@
             <div class="contact__form">
               <form action="#" class="form">
                 <div class="u-margin-bottom-medium">
-                  <h2 class="heading-secondary">
-                    En savoir plus
-                  </h2>
+                  <h2 class="heading-secondary">En savoir plus</h2>
                 </div>
-
                 <div class="form__group">
                   <a
-                    href="media/cv_isabelle_hugues.pdf"
+                    href="static/cv_isabelle_hugues.pdf"
                     target="_blank"
                     class="btn"
                     >Consulter mon CV</a
                   >
                 </div>
-
-                <div class="u-margin-bottom-medium u-margin-top-small">
-                  <h2 class="heading-secondary">
-                    Me contacter
-                  </h2>
+                <div class="form__group u-margin-top-small">
+                  <a
+                    href="https://github.com/ISAsxm"
+                    target="_blank"
+                    class="btn"
+                    >Consulter mon Github</a
+                  >
                 </div>
-
+                <div class="u-margin-bottom-medium u-margin-top-small">
+                  <h2 class="heading-secondary">Me contacter</h2>
+                </div>
                 <div class="form__group u-margin-bottom-small">
-                  <a href="controller/mail.php" class="btn"
-                    >Me contacter email</a
+                  <a
+                    class="btn btn--cryptedmail"
+                    href="#"
+                    data-name="huguesisabelle82"
+                    data-domain="gmail"
+                    data-tld="com"
+                    onclick="window.location.href = `mailto:${this.dataset.name}@${this.dataset.domain}.${this.dataset.tld}`;return false;"
+                    >M'envoyer un email</a
                   >
                 </div>
               </form>
@@ -732,8 +1478,11 @@
     </main>
 
     <footer class="footer">
-      <p class="footer__copyright u-margin-bottom-big">
-        Copyright &copy; Isabelle Hugues, build with love in 2020.
+      <p class="footer__copyright u-margin-bottom-big u-center-text">
+        Copyright &copy; Isabelle Hugues, built with love in
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
       </p>
     </footer>
     <script src="js/app.js"></script>
