@@ -13,6 +13,11 @@
         letter-spacing: 3.5rem;
         animation: moveInLeft 1s ease-out;
 
+        @include responsive(tab-port) {
+            letter-spacing: 2rem;
+            font-size: 4.5rem;
+        }
+
         @include responsive(phone) {
             letter-spacing: 1rem;
             font-size: 3.5rem;

@@ -15,12 +15,14 @@
         width: 100%;
         padding: 4rem;
         padding-left: 7rem;
+        margin: 4rem 0;
     }
 
     @include responsive(phone) {
         transform: skewY(0);
         box-shadow: 0 0 0 1.5rem inset $color-primary;
         outline: unset;
+        margin: 0 auto;
     }
 
     &__shape {
