@@ -47,6 +47,10 @@
     @include responsive(tab-port) {
         padding: 20rem 0;
     }
+
+    @include responsive(phone) {
+        padding: 16rem 0 8rem 0;
+    }
 }
 
 .section-contact {
