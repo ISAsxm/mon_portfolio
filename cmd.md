@@ -85,3 +85,8 @@ Delete everything you don't need but respect the architecture of the application
 
 npm outdated
 npx npm-check-updates -u
+
+"compile:sass": "node-sass sass/main.scss css/style.comp.css",
+"prefix:css": "postcss --use autoprefixer -o css/style.comp.css css/style.prefix.css",
+"compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+"build:css": "npm-run-all compile:sass prefix:css compress:css",
