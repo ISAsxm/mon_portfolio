@@ -571,7 +571,7 @@ body {
   margin: 0 auto; }
 
 .thumbnail {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   margin: 1rem 1rem 5rem 1rem;
   border-radius: 4px;
@@ -579,7 +579,7 @@ body {
   max-width: calc((100% / 2.5) - 1rem);
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
   background: black; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 37.5em) {
     .thumbnail {
       max-width: 100%; } }
   .thumbnail__element {
