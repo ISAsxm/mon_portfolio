@@ -4,6 +4,12 @@
     flex-wrap: wrap;
     padding: 1rem 2rem;
     margin: 0 auto;
+
+    @include responsive(tab-land) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 1rem 3rem;
+    }
 }
 
 
@@ -17,8 +23,9 @@
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
     background: black;
 
-    @include responsive(phone) {
+    @include responsive(tab-land) {
         max-width: 100%;
+        margin: 5rem 0;
     }
 
     &__element {
