@@ -13,12 +13,18 @@
 @import "components/bkg-video";
 @import "components/thumbnail";
 @import "components/form";
+@import "components/cookiebanner";
+@import "components/gohome";
 
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/skills";
 @import "layout/contact";
 @import "layout/footer";
+@import "layout/privacypolicies";
 
 
 @import "pages/home";
+@import "pages/notfound";
+@import "pages/maintenance";
+@import "pages/legalenotice";

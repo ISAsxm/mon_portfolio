@@ -1,0 +1,15 @@
+.legal-section,
+.cookie-section {
+
+    background-color: $color-grey-light-1;
+    margin-top: -20vh;
+}
+
+.legal-section {
+    padding: 25rem 0;
+
+    @include responsive(tab-port) {
+        padding: 20rem 0;
+    }
+
+}

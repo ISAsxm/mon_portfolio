@@ -1,0 +1,40 @@
+.cookie {
+    display: flex;
+
+    &__content {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        background-image: radial-gradient($color-primary, $color-primary);
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        transition: all .2s;
+        animation: fadeIn 2s ease-out;
+
+        &__text {
+            color: rgba($color-black, .6);
+            font-size: $default-font-size;
+            text-align: justify;
+        }
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked~.cookie__content {
+            display: none;
+        }
+
+        &__label {
+            align-self: flex-end;
+            font-size: $default-font-size;
+        }
+
+    }
+
+}

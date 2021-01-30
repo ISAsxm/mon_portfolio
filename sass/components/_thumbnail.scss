@@ -18,8 +18,10 @@
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
     background: black;
 
-    @include responsive(tab-land) {
+    @media only screen and (max-width: 64em) {
+        width: 100%;
         max-width: 100%;
+        height: 100%;
     }
 
     &__element {

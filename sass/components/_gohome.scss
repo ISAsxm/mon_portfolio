@@ -1,0 +1,16 @@
+.go-home {
+    &__button {
+        border-radius: 50%;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+
+        @include responsive(tab-port) {
+            top: 3rem;
+        }
+    }
+}

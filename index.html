@@ -9,7 +9,32 @@
       content="Hello ! je suis Isabelle Hugues, Développeuse Full Stack spécialisée en Python &amp; VueJs."
     />
     <meta name="robots" content="follow" />
-
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Développeuse Full Stack spécialisée en Python &amp; VueJs - Isabelle Hugues"
+    />
+    <meta
+      property="og:image"
+      content="https://isasxm.github.io/portfolio/img/open-graph.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Hello ! je suis Isabelle Hugues, Développeuse Full Stack spécialisée en Python &amp; VueJs, actuellement en poste chez NewGeneration dans la ville de Lyon, France."
+    />
+    <meta
+      name="twitter:title"
+      content="Développeuse Full Stack - Isabelle Hugues"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://isasxm.github.io/portfolio/img/open-graph.jpg"
+    />
+    <meta
+      name="twitter:description"
+      content="Hello ! je suis Isabelle Hugues, Développeuse Full Stack spécialisée en Python &amp; VueJs, actuellement en poste chez NewGeneration dans la ville de Lyon, France."
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
@@ -62,6 +87,11 @@
           </li>
           <li class="navigation__item">
             <a href="#contact" class="navigation__link">Contact</a>
+          </li>
+          <li class="navigation__item">
+            <a href="legal-notice.html" class="navigation__link"
+              >Mentions Légales</a
+            >
           </li>
         </ul>
       </nav>
@@ -146,7 +176,7 @@
             </h3>
             <h4 class="feature__title u-margin-bottom-small">
               <a
-                class="btn-text btn-text--no-underline"
+                class="btn-text btn-text--secondary btn-text--no-underline"
                 href="https://www.it-akademy.fr/formation/developpeur-application-web-et-mobile"
                 target="_blank"
                 >It-Akademy</a
@@ -173,7 +203,7 @@
             </h3>
             <h4 class="feature__title u-margin-bottom-small">
               <a
-                class="btn-text btn-text--no-underline"
+                class="btn-text btn-text--secondary btn-text--no-underline"
                 href="https://www.it-akademy.fr/formation/developpeur-fullstack"
                 target="_blank"
                 >It-Akademy</a
@@ -1461,7 +1491,7 @@
                   <a
                     href="static/cv_isabelle_hugues_developpeuse_full_stack.pdf"
                     target="_blank"
-                    class="btn"
+                    class="btn btn--primary"
                     >Consulter mon CV</a
                   >
                 </div>
@@ -1469,7 +1499,7 @@
                   <a
                     href="https://github.com/ISAsxm"
                     target="_blank"
-                    class="btn"
+                    class="btn btn--primary"
                     >Voir mon Github</a
                   >
                 </div>
@@ -1478,7 +1508,7 @@
                 </div>
                 <div class="form__group u-margin-bottom-small">
                   <a
-                    class="btn btn--cryptedmail mail-link"
+                    class="btn btn--primary mail-link"
                     href="#"
                     data-name="huguesisabelle82"
                     data-domain="gmail"
@@ -1492,6 +1522,7 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <p class="footer__copyright u-center-text">
         Copyright &copy; Isabelle Hugues, built with love in
@@ -1500,6 +1531,32 @@
         </script>
       </p>
     </footer>
+    <div class="cookie">
+      <input type="checkbox" class="cookie__checkbox" id="cookie-toggle" />
+      <div class="cookie__content">
+        <p class="cookie__content__text">
+          Mon site web est purement statique (fichier HTML) et ne fait pas appel
+          à des outils de mesure d'audience (Xiti, Google Analytics, etc.) ou à
+          des régies publicitaires. Cependant mon site est susceptible de
+          contenir des cookies émis par des tiers ou des cookies intégrés à des
+          applications tierces. Vous pouvez retrouver le détail de ces
+          traitements dans la section
+          <a
+            class="btn-text btn-text--white btn-text--no-underline"
+            href="legal-notice.html"
+            target="_blank"
+            >politique de confidentialité</a
+          >. En continuant à utiliser mon site, vous acceptez l'utilisation de
+          ces cookies.
+        </p>
+        <label
+          for="cookie-toggle"
+          class="btn-text btn-text--white cookie__checkbox__label"
+        >
+          OK merci j'ai compris
+        </label>
+      </div>
+    </div>
     <script src="js/app.js"></script>
   </body>
 </html>
